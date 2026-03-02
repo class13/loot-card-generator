@@ -14,6 +14,7 @@ const CardSchema = z.object({
   price: z.string().optional(),
   icon: z.string().optional(),
   imagePrompt: z.string().optional(),
+  category: z.string().optional(),
   prompt: z.string().optional(),
   negative_prompt: z.string().optional(),
   tags: z.array(z.string()).optional().default([]),

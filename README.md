@@ -129,6 +129,7 @@ cards:
 | `price` | — | string | Free-form string shown in the card footer (e.g. `2,500 gp`, `Priceless`) |
 | `icon` | — | string | Local path relative to the YAML file, or an `https://` URL |
 | `imagePrompt` | — | string | Optional short text used by `loot-card-icons` for generation prompt subject |
+| `category` | — | string | Generated item class (`weapon`, `armor`, `clothing`, etc.) from `loot-card-prompts` |
 | `prompt` | — | string | Stable Diffusion positive prompt text (used by your image pipeline) |
 | `negative_prompt` | — | string | Stable Diffusion negative prompt text |
 | `tags` | — | string[] | Small-caps chips shown in the card footer |

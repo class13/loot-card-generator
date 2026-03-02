@@ -45,12 +45,34 @@ function extractJsonObject(text) {
 
 function buildSystemPrompt() {
   return [
-    'You are a Stable Diffusion prompt writer for fantasy loot item art.',
-    'Return ONLY valid JSON with exactly two keys: "prompt" and "negative_prompt".',
-    'The "prompt" must be a concise, high-quality visual prompt for one item, no markdown.',
-    'The "negative_prompt" must be concise and focused on quality/artifact avoidance.',
-    'Do not include code fences or commentary.',
-  ].join(' ');
+    'You are a prompt compiler for Stable Diffusion XL.',
+    'Your job is to convert a Dungeons & Dragons item into a structured Stable Diffusion prompt optimized for a single isolated item image for use on a printable card.',
+    'STRICT RULES:',
+    '1. Always assume the image should show a SINGLE object.',
+    '2. The object must be centered and isolated.',
+    '3. The object must be clearly readable at small size.',
+    '4. Do NOT describe full scenes or environments.',
+    '5. Do NOT include characters unless the item absolutely requires it.',
+    '6. Avoid cinematic language.',
+    '7. Avoid storytelling.',
+    '8. Focus on physical attributes: material, shape, color, craftsmanship, motifs.',
+    '9. Keep output concise but visually precise.',
+    'You MUST output valid JSON in this exact format:',
+    '{"category":"...","positive_prompt":"...","negative_prompt":"..."}',
+    'CATEGORY RULES:',
+    'Classify the item into one of these only: weapon, armor, clothing, jewelry, potion, scroll, book, tool, container, artifact, other.',
+    'POSITIVE PROMPT STRUCTURE:',
+    'Begin with: "single fantasy [CATEGORY] item, centered, isolated object, clean background,"',
+    'Then describe: material, color, shape, craftsmanship, distinctive magical detail.',
+    'End with: "high detail, sharp focus, game asset illustration, studio lighting".',
+    'NEGATIVE PROMPT RULES:',
+    'Always include: "text, watermark, logo, blurry, low detail, cropped, multiple objects, background scenery".',
+    'Additionally exclude objects from other categories when relevant.',
+    'If clothing, also exclude: gem, ring, necklace, weapon.',
+    'If weapon, also exclude: potion, gem, clothing.',
+    'If potion, also exclude: weapon, armor, character.',
+    'Do not output anything except valid JSON.',
+  ].join('\n');
 }
 
 function buildUserPrompt(card) {
@@ -65,9 +87,9 @@ function buildUserPrompt(card) {
   if (card.flavor) parts.push(`flavor: ${cleanText(card.flavor)}`);
 
   return [
-    'Create a Stable Diffusion prompt and negative prompt for this fantasy loot item.',
-    'Keep each under 80 words.',
-    'Avoid artist names and copyrighted character names.',
+    'Create a Stable Diffusion XL prompt package for this fantasy loot item.',
+    'Keep prompts concise.',
+    'No artist names.',
     'Output JSON only.',
     parts.join('\n'),
   ].join('\n\n');
@@ -120,14 +142,31 @@ async function generatePromptsWithOllama(opts) {
     throw new Error(`Could not parse model output as JSON: ${err.message}. Raw: ${responseText.slice(0, 250)}`);
   }
 
-  const prompt = cleanText(parsed?.prompt);
+  const prompt = cleanText(parsed?.positive_prompt || parsed?.prompt);
   const negativePrompt = cleanText(parsed?.negative_prompt);
+  const category = cleanText(parsed?.category).toLowerCase();
+  const allowedCategories = new Set([
+    'weapon',
+    'armor',
+    'clothing',
+    'jewelry',
+    'potion',
+    'scroll',
+    'book',
+    'tool',
+    'container',
+    'artifact',
+    'other',
+  ]);
 
   if (!prompt || !negativePrompt) {
     throw new Error(`Model JSON missing required fields. Raw: ${responseText.slice(0, 250)}`);
   }
+  if (!allowedCategories.has(category)) {
+    throw new Error(`Model JSON has invalid or missing category. Raw: ${responseText.slice(0, 250)}`);
+  }
 
-  return { prompt, negativePrompt };
+  return { category, prompt, negativePrompt };
 }
 
 export function runPromptGenerator() {
@@ -138,7 +177,7 @@ export function runPromptGenerator() {
     .argument('<input>', 'YAML file path')
     .option('--ollama-url <url>', 'Ollama base URL', 'http://localhost:11434')
     .option('--model <name>', 'Ollama model name', 'llama3.1')
-    .option('--temperature <n>', 'Sampling temperature', (v) => toFloatInRange(v, 0.4, 0, 2), 0.4)
+    .option('--temperature <n>', 'Sampling temperature', (v) => toFloatInRange(v, 0.2, 0, 2), 0.2)
     .option('--top-p <n>', 'Top-p sampling value', (v) => toFloatInRange(v, 0.9, 0, 1), 0.9)
     .option('--max-tokens <n>', 'Max generated tokens', (v) => toPosInt(v, 220), 220)
     .option('--limit <n>', 'Generate only first N eligible cards', (v) => toPosInt(v, null))
@@ -171,7 +210,7 @@ export function runPromptGenerator() {
         for (const card of selected) {
           const index = cards.indexOf(card);
           console.log(chalk.cyan(`- ${card.name}`));
-          const { prompt, negativePrompt } = await generatePromptsWithOllama({
+          const { category, prompt, negativePrompt } = await generatePromptsWithOllama({
             ollamaUrl: options.ollamaUrl,
             model: options.model,
             temperature: options.temperature,
@@ -179,7 +218,7 @@ export function runPromptGenerator() {
             maxTokens: options.maxTokens,
             card,
           });
-          cards[index] = { ...cards[index], prompt, negative_prompt: negativePrompt };
+          cards[index] = { ...cards[index], category, prompt, negative_prompt: negativePrompt };
         }
 
         const target = path.resolve(options.writeYaml || input);
