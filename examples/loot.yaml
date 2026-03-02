@@ -1,0 +1,120 @@
+cards:
+  - name: Sunfire Amulet
+    rarity: rare
+    type: Wondrous Item (requires attunement)
+    description: |
+      While attuned, you gain **resistance to fire damage**.
+      Once per day, cast *Fireball* at 3rd level for free.
+                                  # **double asterisks** → bold   *single* → italic
+    flavor: Forged in the caldera of Mount Embros.
+    price: 2,500 gp
+    icon: icons/001-sunfire-amulet.png
+    tags:
+      - fire
+      - attunement
+  - name: Boots of the Phantom
+    rarity: uncommon
+    type: Wondrous Item
+    description: |
+      Your movement speed increases by 10 ft.
+      You leave no tracks in natural terrain and can walk on water for up to
+      *10 minutes per day* (no concentration required).
+    flavor: The thief danced on the lake's surface as the guards searched the shore.
+    price: 800 gp
+    icon: icons/002-boots-of-the-phantom.png
+    tags:
+      - movement
+      - stealth
+  - name: Vorpal Longsword +3
+    rarity: legendary
+    type: Weapon (longsword, requires attunement)
+    description: |
+      You gain **+3 to attack and damage rolls**. On a natural 20, the target
+      must succeed on a DC 15 Constitution saving throw or be **decapitated**
+      (if it has a head).
+    flavor: It sings as it flies — one note, one silence.
+    price: 50,000 gp
+    icon: icons/003-vorpal-longsword-3.png
+    tags:
+      - weapon
+      - attunement
+      - critical
+  - name: Bag of Holding
+    rarity: uncommon
+    type: Wondrous Item
+    description: |
+      This bag has an interior space considerably larger than its outside dimensions.
+      The bag can hold up to **500 pounds**, not exceeding a volume of 64 cubic feet.
+      Retrieving an item requires an *action*.
+    price: 1,000 gp
+    icon: icons/004-bag-of-holding.png
+    tags:
+      - storage
+      - utility
+  - name: Staff of the Magi
+    rarity: legendary
+    type: Staff (requires attunement by a sorcerer, warlock, or wizard)
+    description: |
+      This staff has **50 charges** and regains 4d6 + 2 charges daily at dawn.
+      Expend 1 or more charges to cast: *Magic Missile* (1), *Web* (2),
+      *Fireball* (3), *Cone of Cold* (5), *Wall of Fire* (4).
+    flavor: It remembers every spell ever channelled through it.
+    price: 100,000 gp
+    icon: icons/005-staff-of-the-magi.png
+    tags:
+      - spellcasting
+      - attunement
+      - charges
+  - name: Potion of Dragon's Breath
+    rarity: very rare
+    type: Potion
+    description: |
+      After drinking, you can use a **bonus action** to exhale a 15-foot cone of
+      *fire, lightning, acid, cold, or poison* (chosen when you drink). Each
+      creature in the cone takes **4d8 damage** (DC 13 save for half).
+      Lasts for 1 hour or until used 3 times.
+    price: 3,500 gp
+    icon: icons/006-potion-of-dragon-s-breath.png
+    tags:
+      - consumable
+      - breath weapon
+  - name: Ring of Invisibility
+    rarity: legendary
+    type: Ring (requires attunement)
+    description: |
+      While wearing this ring, you can turn **invisible** as an action.
+      Anything you are wearing or carrying is invisible with you.
+      You remain invisible until the ring is removed, you attack, or you cast a spell.
+    price: 45,000 gp
+    tags:
+      - stealth
+      - attunement
+    icon: icons/007-ring-of-invisibility.png
+  - name: Cloak of Elvenkind
+    rarity: uncommon
+    type: Wondrous Item (requires attunement)
+    description: |
+      While wearing this cloak with its hood up, **Wisdom (Perception)** checks
+      made to see you have **disadvantage**, and you have *advantage* on
+      Dexterity (Stealth) checks made to hide.
+    flavor: Woven from moonbeams and forest shadow.
+    price: 1,200 gp
+    tags:
+      - stealth
+      - attunement
+      - elven
+    icon: icons/008-cloak-of-elvenkind.png
+  - name: Philosopher's Coin
+    rarity: artifact
+    type: Wondrous Item (requires attunement)
+    description: |
+      Once per week, flip this coin. On **heads**, the GM must answer one yes/no
+      question about the campaign truthfully. On **tails**, your darkest secret
+      is revealed to all creatures within 60 ft.
+    flavor: Both sides have been heads. No one knows why.
+    price: Priceless
+    tags:
+      - artifact
+      - attunement
+      - fate
+    icon: icons/009-philosopher-s-coin.png

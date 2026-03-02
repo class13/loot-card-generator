@@ -1,0 +1,283 @@
+/* === D&D Loot Card Generator — Default Theme === */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=IM+Fell+English:ital@0;1&display=swap');
+
+/* ── Custom Properties ─────────────────────────────────────── */
+:root {
+  /* Card dimensions (standard poker card) */
+  --card-width: 63mm;
+  --card-height: 88mm;
+
+  /* Parchment background */
+  --parchment-bg: #f5e6c8;
+  --parchment-url: none; /* Injected by renderer as base64 if asset exists */
+
+  /* Typography */
+  --font-heading: 'Cinzel', 'Georgia', serif;
+  --font-body: 'IM Fell English', 'Georgia', serif;
+
+  /* Text colours */
+  --color-text: #2a1a0a;
+  --color-text-muted: #5c4a30;
+  --color-flavor: #5c4a30;
+
+  /* Gold accent */
+  --color-gold: #c9a84c;
+  --color-gold-dark: #8b6914;
+  --color-gold-light: #e6cc80;
+
+  /* Rarity colours */
+  --color-common: #9d9d9d;
+  --color-uncommon: #1eff00;
+  --color-rare: #0070dd;
+  --color-very-rare: #a335ee;
+  --color-legendary: #ff8000;
+  --color-artifact: #e6cc80;
+
+  /* Card chrome */
+  --border-width: 2px;
+  --border-radius: 4px;
+  --shadow-inset: inset 0 0 8px rgba(0, 0, 0, 0.35);
+
+  /* Header */
+  --header-bg: rgba(0, 0, 0, 0.6);
+  --header-padding: 2mm 3mm;
+
+  /* Spacing */
+  --card-padding: 3mm;
+  --gap-sm: 1mm;
+  --gap-md: 2mm;
+}
+
+/* ── Reset / Base ──────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Card Container ────────────────────────────────────────── */
+.card {
+  width: var(--card-width);
+  height: var(--card-height);
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background-color: var(--parchment-bg);
+  background-image: var(--parchment-url);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow-inset), 0 2px 6px rgba(0, 0, 0, 0.5);
+  font-family: var(--font-body);
+  color: var(--color-text);
+  position: relative;
+}
+
+/* ── Rarity Border ─────────────────────────────────────────── */
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--rarity-color, var(--color-gold));
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Outer decorative border */
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 1.5mm;
+  border-radius: calc(var(--border-radius) - 1px);
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ── Rarity Colour Assignments ─────────────────────────────── */
+.rarity-common    { --rarity-color: var(--color-common); }
+.rarity-uncommon  { --rarity-color: var(--color-uncommon); }
+.rarity-rare      { --rarity-color: var(--color-rare); }
+.rarity-very\ rare { --rarity-color: var(--color-very-rare); }
+.rarity-legendary { --rarity-color: var(--color-legendary); }
+.rarity-artifact  { --rarity-color: var(--color-artifact); }
+
+/* ── Header ────────────────────────────────────────────────── */
+.card__header {
+  background: var(--header-bg);
+  padding: var(--header-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5mm;
+  border-bottom: 1px solid var(--rarity-color, var(--color-gold));
+}
+
+.card__rarity-label {
+  font-family: var(--font-heading);
+  font-size: 5.5pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rarity-color, var(--color-gold));
+}
+
+.card__type {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 5pt;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.2;
+}
+
+/* ── Icon ──────────────────────────────────────────────────── */
+.card__icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--gap-md) 0 var(--gap-sm);
+  flex-shrink: 0;
+}
+
+.card__icon {
+  max-width: 18mm;
+  max-height: 18mm;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+/* ── Name ──────────────────────────────────────────────────── */
+.card__name {
+  font-family: var(--font-heading);
+  font-size: 8pt;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-text);
+  padding: var(--gap-md) var(--card-padding) var(--gap-sm);
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+/* ── Divider ───────────────────────────────────────────────── */
+.card__divider {
+  position: relative;
+  height: 6px;
+  margin: 0 var(--card-padding) var(--gap-md);
+  flex-shrink: 0;
+}
+
+.card__divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-gold-dark),
+    var(--color-gold),
+    var(--color-gold-dark),
+    transparent
+  );
+  transform: translateY(-50%);
+}
+
+.card__divider::after {
+  content: '◆';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6pt;
+  color: var(--color-gold);
+  background: var(--parchment-bg);
+  padding: 0 1mm;
+  line-height: 1;
+}
+
+/* ── Body ──────────────────────────────────────────────────── */
+.card__body {
+  flex: 1;
+  overflow: hidden;
+  padding: 0 var(--card-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
+.card__description {
+  font-size: 6pt;
+  line-height: 1.45;
+  color: var(--color-text);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+}
+
+.card__description em {
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.card__description strong {
+  font-weight: bold;
+}
+
+.card__flavor {
+  font-style: italic;
+  font-size: 5.5pt;
+  color: var(--color-flavor);
+  border-left: 2px solid var(--color-gold);
+  padding-left: 2mm;
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* ── Footer ────────────────────────────────────────────────── */
+.card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--gap-sm) var(--card-padding) var(--gap-md);
+  border-top: 1px solid rgba(201, 168, 76, 0.4);
+  gap: var(--gap-sm);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.card__price {
+  font-family: var(--font-heading);
+  font-size: 6pt;
+  font-weight: 700;
+  color: var(--color-gold-dark);
+}
+
+/* ── Tags ──────────────────────────────────────────────────── */
+.card__tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1mm;
+  justify-content: flex-end;
+}
+
+.card__tag {
+  font-family: var(--font-heading);
+  font-size: 4.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--color-gold-light);
+  padding: 0.5mm 1.5mm;
+  border-radius: 2px;
+  border: 0.5px solid var(--color-gold-dark);
+}

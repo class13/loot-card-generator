@@ -1,0 +1,32 @@
+/*
+ * Custom Theme Example — Dark Dungeon
+ * Override only the CSS custom properties you want to change.
+ * This file is appended after default.css and print.css,
+ * so it wins the cascade naturally.
+ */
+
+:root {
+  /* Swap parchment for a dark stone look */
+  --parchment-bg: #1a1a1a;
+
+  /* Cooler text colours */
+  --color-text: #e8d8b8;
+  --color-text-muted: #b0a080;
+  --color-flavor: #9090a0;
+
+  /* Steel-blue gold accent */
+  --color-gold: #7799cc;
+  --color-gold-dark: #4466aa;
+  --color-gold-light: #aabbee;
+
+  /* Slightly wider border */
+  --border-width: 3px;
+
+  /* Different header */
+  --header-bg: rgba(0, 0, 20, 0.8);
+}
+
+/* You can also add completely new rules below */
+.card__name {
+  text-shadow: 0 0 6px rgba(100, 150, 255, 0.6);
+}

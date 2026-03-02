@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loot Cards</title>
+  <style>
+/* === default.css === */
+/* === D&D Loot Card Generator — Default Theme === */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=IM+Fell+English:ital@0;1&display=swap');
+
+/* ── Custom Properties ─────────────────────────────────────── */
+:root {
+  /* Card dimensions (standard poker card) */
+  --card-width: 63mm;
+  --card-height: 88mm;
+
+  /* Parchment background */
+  --parchment-bg: #f5e6c8;
+  --parchment-url: none; /* Injected by renderer as base64 if asset exists */
+
+  /* Typography */
+  --font-heading: 'Cinzel', 'Georgia', serif;
+  --font-body: 'IM Fell English', 'Georgia', serif;
+
+  /* Text colours */
+  --color-text: #2a1a0a;
+  --color-text-muted: #5c4a30;
+  --color-flavor: #5c4a30;
+
+  /* Gold accent */
+  --color-gold: #c9a84c;
+  --color-gold-dark: #8b6914;
+  --color-gold-light: #e6cc80;
+
+  /* Rarity colours */
+  --color-common: #9d9d9d;
+  --color-uncommon: #1eff00;
+  --color-rare: #0070dd;
+  --color-very-rare: #a335ee;
+  --color-legendary: #ff8000;
+  --color-artifact: #e6cc80;
+
+  /* Card chrome */
+  --border-width: 2px;
+  --border-radius: 4px;
+  --shadow-inset: inset 0 0 8px rgba(0, 0, 0, 0.35);
+
+  /* Header */
+  --header-bg: rgba(0, 0, 0, 0.6);
+  --header-padding: 2mm 3mm;
+
+  /* Spacing */
+  --card-padding: 3mm;
+  --gap-sm: 1mm;
+  --gap-md: 2mm;
+}
+
+/* ── Reset / Base ──────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Card Container ────────────────────────────────────────── */
+.card {
+  width: var(--card-width);
+  height: var(--card-height);
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background-color: var(--parchment-bg);
+  background-image: var(--parchment-url);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow-inset), 0 2px 6px rgba(0, 0, 0, 0.5);
+  font-family: var(--font-body);
+  color: var(--color-text);
+  position: relative;
+}
+
+/* ── Rarity Border ─────────────────────────────────────────── */
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--rarity-color, var(--color-gold));
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Outer decorative border */
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 1.5mm;
+  border-radius: calc(var(--border-radius) - 1px);
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ── Rarity Colour Assignments ─────────────────────────────── */
+.rarity-common    { --rarity-color: var(--color-common); }
+.rarity-uncommon  { --rarity-color: var(--color-uncommon); }
+.rarity-rare      { --rarity-color: var(--color-rare); }
+.rarity-very\ rare { --rarity-color: var(--color-very-rare); }
+.rarity-legendary { --rarity-color: var(--color-legendary); }
+.rarity-artifact  { --rarity-color: var(--color-artifact); }
+
+/* ── Header ────────────────────────────────────────────────── */
+.card__header {
+  background: var(--header-bg);
+  padding: var(--header-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5mm;
+  border-bottom: 1px solid var(--rarity-color, var(--color-gold));
+}
+
+.card__rarity-label {
+  font-family: var(--font-heading);
+  font-size: 5.5pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rarity-color, var(--color-gold));
+}
+
+.card__type {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 5pt;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.2;
+}
+
+/* ── Icon ──────────────────────────────────────────────────── */
+.card__icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--gap-md) 0 var(--gap-sm);
+  flex-shrink: 0;
+}
+
+.card__icon {
+  max-width: 18mm;
+  max-height: 18mm;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+/* ── Name ──────────────────────────────────────────────────── */
+.card__name {
+  font-family: var(--font-heading);
+  font-size: 8pt;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-text);
+  padding: var(--gap-md) var(--card-padding) var(--gap-sm);
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+/* ── Divider ───────────────────────────────────────────────── */
+.card__divider {
+  position: relative;
+  height: 6px;
+  margin: 0 var(--card-padding) var(--gap-md);
+  flex-shrink: 0;
+}
+
+.card__divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-gold-dark),
+    var(--color-gold),
+    var(--color-gold-dark),
+    transparent
+  );
+  transform: translateY(-50%);
+}
+
+.card__divider::after {
+  content: '◆';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6pt;
+  color: var(--color-gold);
+  background: var(--parchment-bg);
+  padding: 0 1mm;
+  line-height: 1;
+}
+
+/* ── Body ──────────────────────────────────────────────────── */
+.card__body {
+  flex: 1;
+  overflow: hidden;
+  padding: 0 var(--card-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
+.card__description {
+  font-size: 6pt;
+  line-height: 1.45;
+  color: var(--color-text);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+}
+
+.card__description em {
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.card__description strong {
+  font-weight: bold;
+}
+
+.card__flavor {
+  font-style: italic;
+  font-size: 5.5pt;
+  color: var(--color-flavor);
+  border-left: 2px solid var(--color-gold);
+  padding-left: 2mm;
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* ── Footer ────────────────────────────────────────────────── */
+.card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--gap-sm) var(--card-padding) var(--gap-md);
+  border-top: 1px solid rgba(201, 168, 76, 0.4);
+  gap: var(--gap-sm);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.card__price {
+  font-family: var(--font-heading);
+  font-size: 6pt;
+  font-weight: 700;
+  color: var(--color-gold-dark);
+}
+
+/* ── Tags ──────────────────────────────────────────────────── */
+.card__tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1mm;
+  justify-content: flex-end;
+}
+
+.card__tag {
+  font-family: var(--font-heading);
+  font-size: 4.5pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--color-gold-light);
+  padding: 0.5mm 1.5mm;
+  border-radius: 2px;
+  border: 0.5px solid var(--color-gold-dark);
+}
+
+
+/* === print.css === */
+/* === D&D Loot Card Generator — Print / Layout CSS === */
+
+/* ── Force exact color reproduction ────────────────────────── */
+* {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ── A4 page setup ──────────────────────────────────────────── */
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+/* ── Outer wrapper (browser preview) ───────────────────────── */
+body {
+  margin: 0;
+  padding: 0;
+  background: #888;
+}
+
+/* ── Page ───────────────────────────────────────────────────── */
+.page {
+  width: 210mm;
+  height: 297mm;
+  padding: 10mm;
+  display: grid;
+  grid-template-columns: repeat(var(--columns, 3), var(--card-width, 63mm));
+  grid-template-rows: repeat(var(--rows, 3), var(--card-height, 88mm));
+  gap: 4mm;
+  justify-content: center;
+  align-content: center;
+  background: white;
+  overflow: hidden;
+  page-break-after: always;
+  break-after: always;
+}
+
+.page--last {
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+/* ── Bleed marks ────────────────────────────────────────────── */
+.page--bleed .card {
+  position: relative;
+}
+
+/* Small crop-mark corners per card (optional, toggled via class) */
+.page--bleed .card::before {
+  /* card border already handles this visually */
+}
+
+/* ── Print media overrides ──────────────────────────────────── */
+@media print {
+  body {
+    background: none;
+  }
+
+  .page {
+    margin: 0;
+    box-shadow: none;
+  }
+}
+
+</style>
+  <style>
+:root {
+  --columns: 3;
+  --rows: 3;
+  --parchment-url: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNjAwIj4KICA8ZGVmcz4KICAgIDxmaWx0ZXIgaWQ9InBhcGVyIiB4PSIwJSIgeT0iMCUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgogICAgICA8ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC45IDAuNiIgbnVtT2N0YXZlcz0iNCIKICAgICAgICAgICAgICAgICAgICBzZWVkPSIyIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIiByZXN1bHQ9Im5vaXNlIi8+CiAgICAgIDxmZUNvbG9yTWF0cml4IHR5cGU9Im1hdHJpeCIKICAgICAgICB2YWx1ZXM9IjAuMyAwIDAgMCAwLjYKICAgICAgICAgICAgICAgIDAgICAwLjIgMCAwIDAuNAogICAgICAgICAgICAgICAgMCAgIDAgMC4xIDAgMC4yCiAgICAgICAgICAgICAgICAwICAgMCAwICAgMC40IDAiCiAgICAgICAgaW49Im5vaXNlIiByZXN1bHQ9ImNvbG9yZWQiLz4KICAgICAgPGZlQmxlbmQgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iY29sb3JlZCIgbW9kZT0ibXVsdGlwbHkiIHJlc3VsdD0iYmxlbmQiLz4KICAgIDwvZmlsdGVyPgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJ2aWduZXR0ZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgICBzdG9wLWNvbG9yPSJyZ2JhKDIzMCwyMDAsMTQwLDApIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iODAlIiAgc3RvcC1jb2xvcj0icmdiYSgxNDAsOTAsMjAsMC4xNSkiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSJyZ2JhKDgwLDQwLDAsMC41NSkiLz4KICAgIDwvcmFkaWFsR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImFnZWQtdG9wIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiICBzdG9wLWNvbG9yPSJyZ2JhKDEwMCw2MCwxMCwwLjIpIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTUlIiBzdG9wLWNvbG9yPSJyZ2JhKDEwMCw2MCwxMCwwKSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYWdlZC1ib3R0b20iIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSI4NSUiIHN0b3AtY29sb3I9InJnYmEoMTAwLDYwLDEwLDApIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0icmdiYSgxMDAsNjAsMTAsMC4yKSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CgogIDwhLS0gQmFzZSBwYXJjaG1lbnQgY29sb3VyIC0tPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNkZmM4OWEiLz4KCiAgPCEtLSBTdWJ0bGUgd2FybSB2YXJpYXRpb24gLS0+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2U4ZDVhMyIgb3BhY2l0eT0iMC42Ii8+CgogIDwhLS0gUGFwZXIgdGV4dHVyZSB2aWEgbm9pc2UgZmlsdGVyIC0tPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNjOWE4NmMiIG9wYWNpdHk9IjAuNSIKICAgICAgICBmaWx0ZXI9InVybCgjcGFwZXIpIi8+CgogIDwhLS0gRWRnZSBhZ2VpbmcgLS0+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNhZ2VkLXRvcCkiLz4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2FnZWQtYm90dG9tKSIvPgoKICA8IS0tIFZpZ25ldHRlIC0tPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjdmlnbmV0dGUpIi8+Cjwvc3ZnPgo=");
+}
+</style>
+</head>
+<body>
+<div class="page page--bleed page--last">
+<article class="card rarity-rare">
+  <header class="card__header">
+    <span class="card__rarity-label">rare</span>
+    <span class="card__type">Wondrous Item (requires attunement)</span>
+  </header>
+  <div class="card__icon-wrap">
+    <img class="card__icon" src="https://game-icons.net/1x1/lorc/necklace/000000/transparent.svg" alt="Sunfire Amulet" />
+  </div>
+  <h2 class="card__name">Sunfire Amulet</h2>
+  <div class="card__divider" aria-hidden="true"></div>
+  <section class="card__body">
+    <p class="card__description">While attuned, you gain <strong>resistance to fire damage</strong>.
+Once per day, cast <em>Fireball</em> at 3rd level for free.
+                            # <strong>double asterisks</strong> → bold   <em>single</em> → italic
+</p>
+    <blockquote class="card__flavor">"Forged in the caldera of Mount Embros."</blockquote>
+  </section>
+  <footer class="card__footer">
+    <span class="card__price">◆ 2,500 gp</span>
+    <ul class="card__tags">
+      <li class="card__tag">fire</li><li class="card__tag">attunement</li>
+    </ul>
+  </footer>
+</article>
+
+<article class="card rarity-uncommon">
+  <header class="card__header">
+    <span class="card__rarity-label">uncommon</span>
+    <span class="card__type">Wondrous Item</span>
+  </header>
+  <div class="card__icon-wrap">
+    <img class="card__icon" src="https://game-icons.net/1x1/delapouite/boots/000000/transparent.svg" alt="Boots of the Phantom" />
+  </div>
+  <h2 class="card__name">Boots of the Phantom</h2>
+  <div class="card__divider" aria-hidden="true"></div>
+  <section class="card__body">
+    <p class="card__description">Your movement speed increases by 10 ft.
+You leave no tracks in natural terrain and can walk on water for up to
+<em>10 minutes per day</em> (no concentration required).
+</p>
+    <blockquote class="card__flavor">"The thief danced on the lake&#x27;s surface as the guards searched the shore."</blockquote>
+  </section>
+  <footer class="card__footer">
+    <span class="card__price">◆ 800 gp</span>
+    <ul class="card__tags">
+      <li class="card__tag">movement</li><li class="card__tag">stealth</li>
+    </ul>
+  </footer>
+</article>
+
+<article class="card rarity-legendary">
+  <header class="card__header">
+    <span class="card__rarity-label">legendary</span>
+    <span class="card__type">Weapon (longsword, requires attunement)</span>
+  </header>
+  <div class="card__icon-wrap">
+    <img class="card__icon" src="https://game-icons.net/1x1/delapouite/broadsword/000000/transparent.svg" alt="Vorpal Longsword +3" />
+  </div>
+  <h2 class="card__name">Vorpal Longsword +3</h2>
+  <div class="card__divider" aria-hidden="true"></div>
+  <section class="card__body">
+    <p class="card__description">You gain <strong>+3 to attack and damage rolls</strong>. On a natural 20, the target
+must succeed on a DC 15 Constitution saving throw or be <strong>decapitated</strong>
+(if it has a head).
+</p>
+    <blockquote class="card__flavor">"It sings as it flies — one note, one silence."</blockquote>
+  </section>
+  <footer class="card__footer">
+    <span class="card__price">◆ 50,000 gp</span>
+    <ul class="card__tags">
+      <li class="card__tag">weapon</li><li class="card__tag">attunement</li><li class="card__tag">critical</li>
+    </ul>
+  </footer>
+</article>
+
+<article class="card rarity-uncommon">
+  <header class="card__header">
+    <span class="card__rarity-label">uncommon</span>
+    <span class="card__type">Wondrous Item</span>
+  </header>
+  <div class="card__icon-wrap">
+    <img class="card__icon" src="https://game-icons.net/1x1/delapouite/sack/000000/transparent.svg" alt="Bag of Holding" />
+  </div>
+  <h2 class="card__name">Bag of Holding</h2>
+  <div class="card__divider" aria-hidden="true"></div>
+  <section class="card__body">
+    <p class="card__description">This bag has an interior space considerably larger than its outside dimensions.
+The bag can hold up to <strong>500 pounds</strong>, not exceeding a volume of 64 cubic feet.
+Retrieving an item requires an <em>action</em>.
+</p>
+    
+  </section>
+  <footer class="card__footer">
+    <span class="card__price">◆ 1,000 gp</span>
+    <ul class="card__tags">
+      <li class="card__tag">storage</li><li class="card__tag">utility</li>
+    </ul>
+  </footer>
+</article>
+
+<article class="card rarity-legendary">
+  <header class="card__header">
+    <span class="card__rarity-label">legendary</span>
+    <span class="card__type">Staff (requires attunement by a sorcerer, warlock, or wizard)</span>
+  </header>
+  <div class="card__icon-wrap">
+    <img class="card__icon" src="https://game-icons.net/1x1/delapouite/bo/000000/transparent.svg" alt="Staff of the Magi" />
+  </div>
+  <h2 class="card__name">Staff of the Magi</h2>
+  <div class="card__divider" aria-hidden="true"></div>
+  <section class="card__body">
+    <p class="card__description">This staff has <strong>50 charges</strong> and regains 4d6 + 2 charges daily at dawn.
+Expend 1 or more charges to cast: <em>Magic Missile</em> (1), <em>Web</em> (2),
+<em>Fireball</em> (3), <em>Cone of Cold</em> (5), <em>Wall of Fire</em> (4).
+</p>
+    <blockquote class="card__flavor">"It remembers every spell ever channelled through it."</blockquote>
+  </section>
+  <footer class="card__footer">
+    <span class="card__price">◆ 100,000 gp</span>
+    <ul class="card__tags">
+      <li class="card__tag">spellcasting</li><li class="card__tag">attunement</li><li class="card__tag">charges</li>
+    </ul>
+  </footer>
+</article>
+
+<article class="card rarity-very rare">
+  <header class="card__header">
+    <span class="card__rarity-label">very rare</span>
+    <span class="card__type">Potion</span>
+  </header>
+  <div class="card__icon-wrap">
+    <img class="card__icon" src="https://game-icons.net/1x1/lorc/potion-ball/000000/transparent.svg" alt="Potion of Dragon&#x27;s Breath" />
+  </div>
+  <h2 class="card__name">Potion of Dragon&#x27;s Breath</h2>
+  <div class="card__divider" aria-hidden="true"></div>
+  <section class="card__body">
+    <p class="card__description">After drinking, you can use a <strong>bonus action</strong> to exhale a 15-foot cone of
+<em>fire, lightning, acid, cold, or poison</em> (chosen when you drink). Each
+creature in the cone takes <strong>4d8 damage</strong> (DC 13 save for half).
+Lasts for 1 hour or until used 3 times.
+</p>
+    
+  </section>
+  <footer class="card__footer">
+    <span class="card__price">◆ 3,500 gp</span>
+    <ul class="card__tags">
+      <li class="card__tag">consumable</li><li class="card__tag">breath weapon</li>
+    </ul>
+  </footer>
+</article>
+
+<article class="card rarity-legendary">
+  <header class="card__header">
+    <span class="card__rarity-label">legendary</span>
+    <span class="card__type">Ring (requires attunement)</span>
+  </header>
+  <div class="card__icon-wrap">
+    <img class="card__icon" src="https://game-icons.net/1x1/lorc/ring/000000/transparent.svg" alt="Ring of Invisibility" />
+  </div>
+  <h2 class="card__name">Ring of Invisibility</h2>
+  <div class="card__divider" aria-hidden="true"></div>
+  <section class="card__body">
+    <p class="card__description">While wearing this ring, you can turn <strong>invisible</strong> as an action.
+Anything you are wearing or carrying is invisible with you.
+You remain invisible until the ring is removed, you attack, or you cast a spell.
+</p>
+    
+  </section>
+  <footer class="card__footer">
+    <span class="card__price">◆ 45,000 gp</span>
+    <ul class="card__tags">
+      <li class="card__tag">stealth</li><li class="card__tag">attunement</li>
+    </ul>
+  </footer>
+</article>
+
+<article class="card rarity-uncommon">
+  <header class="card__header">
+    <span class="card__rarity-label">uncommon</span>
+    <span class="card__type">Wondrous Item (requires attunement)</span>
+  </header>
+  <div class="card__icon-wrap">
+    <img class="card__icon" src="https://game-icons.net/1x1/delapouite/cloak/000000/transparent.svg" alt="Cloak of Elvenkind" />
+  </div>
+  <h2 class="card__name">Cloak of Elvenkind</h2>
+  <div class="card__divider" aria-hidden="true"></div>
+  <section class="card__body">
+    <p class="card__description">While wearing this cloak with its hood up, <strong>Wisdom (Perception)</strong> checks
+made to see you have <strong>disadvantage</strong>, and you have <em>advantage</em> on
+Dexterity (Stealth) checks made to hide.
+</p>
+    <blockquote class="card__flavor">"Woven from moonbeams and forest shadow."</blockquote>
+  </section>
+  <footer class="card__footer">
+    <span class="card__price">◆ 1,200 gp</span>
+    <ul class="card__tags">
+      <li class="card__tag">stealth</li><li class="card__tag">attunement</li><li class="card__tag">elven</li>
+    </ul>
+  </footer>
+</article>
+
+<article class="card rarity-artifact">
+  <header class="card__header">
+    <span class="card__rarity-label">artifact</span>
+    <span class="card__type">Wondrous Item (requires attunement)</span>
+  </header>
+  <div class="card__icon-wrap">
+    <img class="card__icon" src="https://game-icons.net/1x1/delapouite/coins/000000/transparent.svg" alt="Philosopher&#x27;s Coin" />
+  </div>
+  <h2 class="card__name">Philosopher&#x27;s Coin</h2>
+  <div class="card__divider" aria-hidden="true"></div>
+  <section class="card__body">
+    <p class="card__description">Once per week, flip this coin. On <strong>heads</strong>, the GM must answer one yes/no
+question about the campaign truthfully. On <strong>tails</strong>, your darkest secret
+is revealed to all creatures within 60 ft.
+</p>
+    <blockquote class="card__flavor">"Both sides have been heads. No one knows why."</blockquote>
+  </section>
+  <footer class="card__footer">
+    <span class="card__price">◆ Priceless</span>
+    <ul class="card__tags">
+      <li class="card__tag">artifact</li><li class="card__tag">attunement</li><li class="card__tag">fate</li>
+    </ul>
+  </footer>
+</article>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<article class="card rarity-{{rarity}}">
+  <header class="card__header">
+    <span class="card__rarity-label">{{rarity}}</span>
+    {{#if type}}<span class="card__type">{{type}}</span>{{/if}}
+  </header>
+  {{#if icon}}
+  <div class="card__icon-wrap">
+    <img class="card__icon" src="{{icon}}" alt="{{name}}" />
+  </div>
+  {{/if}}
+  <h2 class="card__name">{{name}}</h2>
+  <div class="card__divider" aria-hidden="true"></div>
+  <section class="card__body">
+    <p class="card__description">{{{descriptionHtml}}}</p>
+    {{#if flavor}}<blockquote class="card__flavor">"{{flavor}}"</blockquote>{{/if}}
+  </section>
+  <footer class="card__footer">
+    {{#if price}}<span class="card__price">◆ {{price}}</span>{{/if}}
+    {{#if tags.length}}
+    <ul class="card__tags">
+      {{#each tags}}<li class="card__tag">{{this}}</li>{{/each}}
+    </ul>
+    {{/if}}
+  </footer>
+</article>

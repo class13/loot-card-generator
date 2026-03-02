@@ -1,0 +1,15 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+### GET LoRA
+GET {{baseUrl}}/object_info/LoraLoader
+
+### GET checkpoints
+GET {{baseUrl}}/object_info/CheckpointLoaderSimple
+
+### GET queue
+GET {{baseUrl}}/queue
+
+### GET history
+GET {{baseUrl}}/history/26a8eb00-6b4c-4351-aa9d-0f219e9b5112
