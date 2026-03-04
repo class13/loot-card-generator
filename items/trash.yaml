@@ -1,0 +1,701 @@
+cards:
+  - name: single, yellowed orc tooth
+    rarity: common
+    type: Trash (The Organic & Grotesque)
+    description: A single, yellowed orc tooth
+    tags:
+      - trash
+      - the-organic-grotesque
+  - name: dried, flattened toad
+    rarity: common
+    type: Trash (The Organic & Grotesque)
+    description: A dried, flattened toad
+    tags:
+      - trash
+      - the-organic-grotesque
+  - name: tangle of greasy, matted dwarf beard hair
+    rarity: common
+    type: Trash (The Organic & Grotesque)
+    description: A tangle of greasy, matted dwarf beard hair
+    tags:
+      - trash
+      - the-organic-grotesque
+  - name: collection of "lucky" fingernail clippings
+    rarity: common
+    type: Trash (The Organic & Grotesque)
+    description: A collection of "lucky" fingernail clippings
+    tags:
+      - trash
+      - the-organic-grotesque
+  - name: vial of murky swamp water (smells like sulfur)
+    rarity: common
+    type: Trash (The Organic & Grotesque)
+    description: A vial of murky swamp water (smells like sulfur)
+    tags:
+      - trash
+      - the-organic-grotesque
+  - name: rabbit’s foot that has gone completely bald
+    rarity: common
+    type: Trash (The Organic & Grotesque)
+    description: A rabbit’s foot that has gone completely bald
+    tags:
+      - trash
+      - the-organic-grotesque
+  - name: petrified apple core
+    rarity: common
+    type: Trash (The Organic & Grotesque)
+    description: A petrified apple core
+    tags:
+      - trash
+      - the-organic-grotesque
+  - name: pouch of moth wings
+    rarity: common
+    type: Trash (The Organic & Grotesque)
+    description: A pouch of moth wings
+    tags:
+      - trash
+      - the-organic-grotesque
+  - name: jar of pickled leeches (all dead)
+    rarity: common
+    type: Trash (The Organic & Grotesque)
+    description: A jar of pickled leeches (all dead)
+    tags:
+      - trash
+      - the-organic-grotesque
+  - name: snake skin that has mostly crumbled to dust
+    rarity: common
+    type: Trash (The Organic & Grotesque)
+    description: A snake skin that has mostly crumbled to dust
+    tags:
+      - trash
+      - the-organic-grotesque
+  - name: bird’s nest made entirely of stolen sewing thread
+    rarity: common
+    type: Trash (The Organic & Grotesque)
+    description: A bird’s nest made entirely of stolen sewing thread
+    tags:
+      - trash
+      - the-organic-grotesque
+  - name: dried-up honeycomb with no honey
+    rarity: common
+    type: Trash (The Organic & Grotesque)
+    description: A dried-up honeycomb with no honey
+    tags:
+      - trash
+      - the-organic-grotesque
+  - name: bag of chicken bones used for "divination."
+    rarity: common
+    type: Trash (The Organic & Grotesque)
+    description: A bag of chicken bones used for "divination."
+    tags:
+      - trash
+      - the-organic-grotesque
+  - name: very large, very dead beetle
+    rarity: common
+    type: Trash (The Organic & Grotesque)
+    description: A very large, very dead beetle
+    tags:
+      - trash
+      - the-organic-grotesque
+  - name: scrap of cured leather that still has fur (and fleas)
+    rarity: common
+    type: Trash (The Organic & Grotesque)
+    description: A scrap of cured leather that still has fur (and fleas)
+    tags:
+      - trash
+      - the-organic-grotesque
+  - name: bent iron nail
+    rarity: common
+    type: Trash (Rusty & Broken Hardware)
+    description: A bent iron nail
+    tags:
+      - trash
+      - rusty-broken-hardware
+  - name: key that fits no known lock in the region
+    rarity: common
+    type: Trash (Rusty & Broken Hardware)
+    description: A key that fits no known lock in the region
+    tags:
+      - trash
+      - rusty-broken-hardware
+  - name: rusted buckle from a horse’s saddle
+    rarity: common
+    type: Trash (Rusty & Broken Hardware)
+    description: A rusted buckle from a horse’s saddle
+    tags:
+      - trash
+      - rusty-broken-hardware
+  - name: cracked glass marble with a chip in it
+    rarity: common
+    type: Trash (Rusty & Broken Hardware)
+    description: A cracked glass marble with a chip in it
+    tags:
+      - trash
+      - rusty-broken-hardware
+  - name: spoon that has been sharpened into a poor-quality shiv
+    rarity: common
+    type: Trash (Rusty & Broken Hardware)
+    description: A spoon that has been sharpened into a poor-quality shiv
+    tags:
+      - trash
+      - rusty-broken-hardware
+  - name: single link from a heavy iron chain
+    rarity: common
+    type: Trash (Rusty & Broken Hardware)
+    description: A single link from a heavy iron chain
+    tags:
+      - trash
+      - rusty-broken-hardware
+  - name: brass button with a coat of arms no one recognizes
+    rarity: common
+    type: Trash (Rusty & Broken Hardware)
+    description: A brass button with a coat of arms no one recognizes
+    tags:
+      - trash
+      - rusty-broken-hardware
+  - name: thimble with a hole worn through the top
+    rarity: common
+    type: Trash (Rusty & Broken Hardware)
+    description: A thimble with a hole worn through the top
+    tags:
+      - trash
+      - rusty-broken-hardware
+  - name: rusted fishhook
+    rarity: common
+    type: Trash (Rusty & Broken Hardware)
+    description: A rusted fishhook
+    tags:
+      - trash
+      - rusty-broken-hardware
+  - name: pair of tweezers that don't quite meet in the middle
+    rarity: common
+    type: Trash (Rusty & Broken Hardware)
+    description: A pair of tweezers that don't quite meet in the middle
+    tags:
+      - trash
+      - rusty-broken-hardware
+  - name: lead fishing weight
+    rarity: common
+    type: Trash (Rusty & Broken Hardware)
+    description: A lead fishing weight
+    tags:
+      - trash
+      - rusty-broken-hardware
+  - name: copper ring that turns the wearer's finger green
+    rarity: common
+    type: Trash (Rusty & Broken Hardware)
+    description: A copper ring that turns the wearer's finger green
+    tags:
+      - trash
+      - rusty-broken-hardware
+  - name: dull, notched sewing needle
+    rarity: common
+    type: Trash (Rusty & Broken Hardware)
+    description: A dull, notched sewing needle
+    tags:
+      - trash
+      - rusty-broken-hardware
+  - name: shard of a broken mirror (bad luck not included)
+    rarity: common
+    type: Trash (Rusty & Broken Hardware)
+    description: A shard of a broken mirror (bad luck not included)
+    tags:
+      - trash
+      - rusty-broken-hardware
+  - name: heavy, decorative iron nut (no bolt)
+    rarity: common
+    type: Trash (Rusty & Broken Hardware)
+    description: A heavy, decorative iron nut (no bolt)
+    tags:
+      - trash
+      - rusty-broken-hardware
+  - name: charcoal sketch of a very ugly dog
+    rarity: common
+    type: Trash (Scraps & Curiosities)
+    description: A charcoal sketch of a very ugly dog
+    tags:
+      - trash
+      - scraps-curiosities
+  - name: blood-stained handkerchief
+    rarity: common
+    type: Trash (Scraps & Curiosities)
+    description: A blood-stained handkerchief
+    tags:
+      - trash
+      - scraps-curiosities
+  - name: grocery list written in a language the party doesn't speak
+    rarity: common
+    type: Trash (Scraps & Curiosities)
+    description: A grocery list written in a language the party doesn't speak
+    tags:
+      - trash
+      - scraps-curiosities
+  - name: single playing card (the Two of Clubs)
+    rarity: common
+    type: Trash (Scraps & Curiosities)
+    description: A single playing card (the Two of Clubs)
+    tags:
+      - trash
+      - scraps-curiosities
+  - name: '"Map to Treasure" that is clearly a child''s drawing'
+    rarity: common
+    type: Trash (Scraps & Curiosities)
+    description: A "Map to Treasure" that is clearly a child's drawing
+    tags:
+      - trash
+      - scraps-curiosities
+  - name: bundle of sticks tied with a dirty ribbon
+    rarity: common
+    type: Trash (Scraps & Curiosities)
+    description: A bundle of sticks tied with a dirty ribbon
+    tags:
+      - trash
+      - scraps-curiosities
+  - name: smooth river stone with a hole naturally worn through it
+    rarity: common
+    type: Trash (Scraps & Curiosities)
+    description: A smooth river stone with a hole naturally worn through it
+    tags:
+      - trash
+      - scraps-curiosities
+  - name: wad of chewed resin (ancient gum)
+    rarity: common
+    type: Trash (Scraps & Curiosities)
+    description: A wad of chewed resin (ancient gum)
+    tags:
+      - trash
+      - scraps-curiosities
+  - name: small pouch of sawdust
+    rarity: common
+    type: Trash (Scraps & Curiosities)
+    description: A small pouch of sawdust
+    tags:
+      - trash
+      - scraps-curiosities
+  - name: scorched piece of parchment
+    rarity: common
+    type: Trash (Scraps & Curiosities)
+    description: A scorched piece of parchment
+    tags:
+      - trash
+      - scraps-curiosities
+  - name: single wooden die with two "4"s and no "6."
+    rarity: common
+    type: Trash (Scraps & Curiosities)
+    description: A single wooden die with two "4"s and no "6."
+    tags:
+      - trash
+      - scraps-curiosities
+  - name: wax seal from a letter, broken into three pieces
+    rarity: common
+    type: Trash (Scraps & Curiosities)
+    description: A wax seal from a letter, broken into three pieces
+    tags:
+      - trash
+      - scraps-curiosities
+  - name: frayed length of twine, exactly 4 inches long
+    rarity: common
+    type: Trash (Scraps & Curiosities)
+    description: A frayed length of twine, exactly 4 inches long
+    tags:
+      - trash
+      - scraps-curiosities
+  - name: cork from an expensive bottle of wine (bottle missing)
+    rarity: common
+    type: Trash (Scraps & Curiosities)
+    description: A cork from an expensive bottle of wine (bottle missing)
+    tags:
+      - trash
+      - scraps-curiosities
+  - name: handful of colorful, but worthless, glass beads
+    rarity: common
+    type: Trash (Scraps & Curiosities)
+    description: A handful of colorful, but worthless, glass beads
+    tags:
+      - trash
+      - scraps-curiosities
+  - name: piece of extremely hard, moldy hardtack
+    rarity: common
+    type: Trash (Smelly & Unpleasant)
+    description: A piece of extremely hard, moldy hardtack
+    tags:
+      - trash
+      - smelly-unpleasant
+  - name: damp lump of sheep's wool
+    rarity: common
+    type: Trash (Smelly & Unpleasant)
+    description: A damp lump of sheep's wool
+    tags:
+      - trash
+      - smelly-unpleasant
+  - name: small tin of "ointment" that smells like rancid fish
+    rarity: common
+    type: Trash (Smelly & Unpleasant)
+    description: A small tin of "ointment" that smells like rancid fish
+    tags:
+      - trash
+      - smelly-unpleasant
+  - name: wet rag that refuses to dry
+    rarity: common
+    type: Trash (Smelly & Unpleasant)
+    description: A wet rag that refuses to dry
+    tags:
+      - trash
+      - smelly-unpleasant
+  - name: pouch of pipe tobacco that has gone moldy
+    rarity: common
+    type: Trash (Smelly & Unpleasant)
+    description: A pouch of pipe tobacco that has gone moldy
+    tags:
+      - trash
+      - smelly-unpleasant
+  - name: clove of garlic that has started to sprout
+    rarity: common
+    type: Trash (Smelly & Unpleasant)
+    description: A clove of garlic that has started to sprout
+    tags:
+      - trash
+      - smelly-unpleasant
+  - name: piece of chalk that’s been ground down to a nub
+    rarity: common
+    type: Trash (Smelly & Unpleasant)
+    description: A piece of chalk that’s been ground down to a nub
+    tags:
+      - trash
+      - smelly-unpleasant
+  - name: half-melted tallow candle
+    rarity: common
+    type: Trash (Smelly & Unpleasant)
+    description: A half-melted tallow candle
+    tags:
+      - trash
+      - smelly-unpleasant
+  - name: handful of acorns with tiny faces carved into them
+    rarity: common
+    type: Trash (Smelly & Unpleasant)
+    description: A handful of acorns with tiny faces carved into them
+    tags:
+      - trash
+      - smelly-unpleasant
+  - name: small, empty bottle that once held very strong perfume
+    rarity: common
+    type: Trash (Smelly & Unpleasant)
+    description: A small, empty bottle that once held very strong perfume
+    tags:
+      - trash
+      - smelly-unpleasant
+  - name: '"Certificate of Authenticity" for an item not present'
+    rarity: common
+    type: Trash (Items of "Questionable" Value)
+    description: A "Certificate of Authenticity" for an item not present
+    tags:
+      - trash
+      - items-of-questionable-value
+  - name: IOI (I Owe You) written on a scrap of leather for 1 copper
+    rarity: common
+    type: Trash (Items of "Questionable" Value)
+    description: A IOI (I Owe You) written on a scrap of leather for 1 copper
+    tags:
+      - trash
+      - items-of-questionable-value
+  - name: single earring (the mate is lost)
+    rarity: common
+    type: Trash (Items of "Questionable" Value)
+    description: A single earring (the mate is lost)
+    tags:
+      - trash
+      - items-of-questionable-value
+  - name: glass eye that looks in two directions at once
+    rarity: common
+    type: Trash (Items of "Questionable" Value)
+    description: A glass eye that looks in two directions at once
+    tags:
+      - trash
+      - items-of-questionable-value
+  - name: whistle that makes no sound when blown
+    rarity: common
+    type: Trash (Items of "Questionable" Value)
+    description: A whistle that makes no sound when blown
+    tags:
+      - trash
+      - items-of-questionable-value
+  - name: wooden tooth
+    rarity: common
+    type: Trash (Items of "Questionable" Value)
+    description: A wooden tooth
+    tags:
+      - trash
+      - items-of-questionable-value
+  - name: '"magic" bean (it is just a kidney bean)'
+    rarity: common
+    type: Trash (Items of "Questionable" Value)
+    description: A "magic" bean (it is just a kidney bean)
+    tags:
+      - trash
+      - items-of-questionable-value
+  - name: tiny cage for a cricket (cricket has escaped)
+    rarity: common
+    type: Trash (Items of "Questionable" Value)
+    description: A tiny cage for a cricket (cricket has escaped)
+    tags:
+      - trash
+      - items-of-questionable-value
+  - name: collection of colorful poultry feathers
+    rarity: common
+    type: Trash (Items of "Questionable" Value)
+    description: A collection of colorful poultry feathers
+    tags:
+      - trash
+      - items-of-questionable-value
+  - name: stone that looks vaguely like a famous deity
+    rarity: common
+    type: Trash (Items of "Questionable" Value)
+    description: A stone that looks vaguely like a famous deity
+    tags:
+      - trash
+      - items-of-questionable-value
+  - name: small lead soldier with its head broken off
+    rarity: common
+    type: Trash (Items of "Questionable" Value)
+    description: A small lead soldier with its head broken off
+    tags:
+      - trash
+      - items-of-questionable-value
+  - name: pouch of salt mixed with sand
+    rarity: common
+    type: Trash (Items of "Questionable" Value)
+    description: A pouch of salt mixed with sand
+    tags:
+      - trash
+      - items-of-questionable-value
+  - name: comb with half its teeth missing
+    rarity: common
+    type: Trash (Items of "Questionable" Value)
+    description: A comb with half its teeth missing
+    tags:
+      - trash
+      - items-of-questionable-value
+  - name: doll made of corn husks
+    rarity: common
+    type: Trash (Items of "Questionable" Value)
+    description: A doll made of corn husks
+    tags:
+      - trash
+      - items-of-questionable-value
+  - name: jar of fireflies (all deceased)
+    rarity: common
+    type: Trash (Items of "Questionable" Value)
+    description: A jar of fireflies (all deceased)
+    tags:
+      - trash
+      - items-of-questionable-value
+  - name: fossilized seashell
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A fossilized seashell
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: bit of fluff from a Blink Dog’s tail (reputedly)
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A bit of fluff from a Blink Dog’s tail (reputedly)
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: leather strap with a broken buckle
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A leather strap with a broken buckle
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: clay pipe bowl with no stem
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A clay pipe bowl with no stem
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: handful of iron filings
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A handful of iron filings
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: charred twig from a lightning-struck tree
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A charred twig from a lightning-struck tree
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: list of names with "don't trust" written next to them
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A list of names with "don't trust" written next to them
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: rusted lock with no key
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A rusted lock with no key
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: small, empty tinderbox
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A small, empty tinderbox
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: bundle of dried lavender that has lost its scent
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A bundle of dried lavender that has lost its scent
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: piece of "dragon scale" (actually just painted carp scale)
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A piece of "dragon scale" (actually just painted carp scale)
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: tiny glass vial containing a single eyelash
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A tiny glass vial containing a single eyelash
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: heavy brass coin from a fallen empire (worth zero)
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A heavy brass coin from a fallen empire (worth zero)
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: crumpled poem about a barmaid named Helga
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A crumpled poem about a barmaid named Helga
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: leather eye patch with no string
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A leather eye patch with no string
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: stopper from a potion bottle (no potion)
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A stopper from a potion bottle (no potion)
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: handful of grave dirt
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A handful of grave dirt
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: rusted spur from a boot
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A rusted spur from a boot
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: knot of tangled fishing line
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A knot of tangled fishing line
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: small, chipped clay tile
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A small, chipped clay tile
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: dried lemon peel
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A dried lemon peel
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: shard of obsidian (too small to be a weapon)
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A shard of obsidian (too small to be a weapon)
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: bird skull painted blue
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A bird skull painted blue
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: bit of frayed silk ribbon
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A bit of frayed silk ribbon
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: copper wire bent into the shape of a ring
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A copper wire bent into the shape of a ring
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: recipe for "Rock Soup."
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A recipe for "Rock Soup."
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: single, very large iron staple
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A single, very large iron staple
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: pouch of pine needles
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A pouch of pine needles
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: broken compass needle that always points down
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A broken compass needle that always points down
+    tags:
+      - trash
+      - miscellaneous-debris
+  - name: smaller, even dirtier leather pouch (empty)
+    rarity: common
+    type: Trash (Miscellaneous Debris)
+    description: A smaller, even dirtier leather pouch (empty)
+    tags:
+      - trash
+      - miscellaneous-debris
