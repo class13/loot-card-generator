@@ -6,7 +6,15 @@ import { program } from 'commander';
 import chalk from 'chalk';
 import { loadYaml } from './loader.js';
 
-const NEGATIVE_PROMPT = '(blurry:1.3). lowres.';
+const SINGLE_SUBJECT_POSITIVE_GUARDRAIL =
+  'single object only, centered composition, isolated asset, one subject, full object in frame, no repeated elements';
+const SINGLE_SUBJECT_NEGATIVE_GUARDRAIL =
+  'multiple objects, repeated objects, duplicates, grid layout, tiled pattern, contact sheet, sprite sheet, collage, border pattern, lineup';
+const NEGATIVE_PROMPT = `(blurry:1.3). lowres. ${SINGLE_SUBJECT_NEGATIVE_GUARDRAIL}.`;
+const DEFAULT_WIDTH = 1024;
+const DEFAULT_HEIGHT = 1024;
+const DEFAULT_STEPS = 40;
+const DEFAULT_CFG = 6;
 
 function slugify(value) {
   return value
@@ -20,7 +28,25 @@ function createPrompt(card) {
   const subject = (card.imagePrompt || card.name || card.type || 'fantasy item')
     .trim()
     .replace(/[.。]+$/g, '');
-  return `2d icon. ${subject}. white background. <lora:game_icon_v1.0:1>`;
+  return `2d icon. ${subject}. white background. ${SINGLE_SUBJECT_POSITIVE_GUARDRAIL}.`;
+}
+
+function mergePrompt(base, addition) {
+  const left = String(base || '').trim().replace(/[.。]+$/g, '');
+  const right = String(addition || '').trim().replace(/[.。]+$/g, '');
+  if (!left) return right ? `${right}.` : '';
+  if (!right) return `${left}.`;
+  return `${left}. ${right}.`;
+}
+
+function resolvePrompts(card) {
+  const positive = String(card.prompt || '').trim();
+  const negative = String(card.negative_prompt || '').trim();
+  return {
+    prompt: mergePrompt(positive || createPrompt(card), SINGLE_SUBJECT_POSITIVE_GUARDRAIL),
+    negativePrompt: mergePrompt(negative || NEGATIVE_PROMPT, SINGLE_SUBJECT_NEGATIVE_GUARDRAIL),
+    fromYaml: Boolean(positive || negative),
+  };
 }
 
 async function fetchJson(url, init) {
@@ -71,6 +97,16 @@ async function listModels(baseUrl, kind) {
   }
 }
 
+async function ensureComfyAvailable(baseUrl) {
+  try {
+    await fetchJson(`${baseUrl}/system_stats`);
+  } catch (err) {
+    throw new Error(
+      `ComfyUI is not reachable at ${baseUrl}. Make sure ComfyUI is started and the URL is correct. (${err.message})`,
+    );
+  }
+}
+
 function selectModelName(preferred, choices) {
   if (!choices.length) return preferred;
   if (choices.includes(preferred)) return preferred;
@@ -88,8 +124,8 @@ function selectModelName(preferred, choices) {
 function buildWorkflow(params) {
   const {
     checkpoint,
-    lora,
     prompt,
+    negativePrompt,
     width,
     height,
     seed,
@@ -107,30 +143,20 @@ function buildWorkflow(params) {
       inputs: { ckpt_name: checkpoint },
     },
     '2': {
-      class_type: 'LoraLoader',
+      class_type: 'CLIPTextEncode',
       inputs: {
-        model: ['1', 0],
+        text: prompt,
         clip: ['1', 1],
-        lora_name: lora,
-        strength_model: 1,
-        strength_clip: 1,
       },
     },
     '3': {
       class_type: 'CLIPTextEncode',
       inputs: {
-        text: prompt,
-        clip: ['2', 1],
+        text: negativePrompt,
+        clip: ['1', 1],
       },
     },
     '4': {
-      class_type: 'CLIPTextEncode',
-      inputs: {
-        text: NEGATIVE_PROMPT,
-        clip: ['2', 1],
-      },
-    },
-    '5': {
       class_type: 'EmptyLatentImage',
       inputs: {
         width,
@@ -138,33 +164,33 @@ function buildWorkflow(params) {
         batch_size: 1,
       },
     },
-    '6': {
+    '5': {
       class_type: 'KSampler',
       inputs: {
-        model: ['2', 0],
+        model: ['1', 0],
         seed,
         steps,
         cfg,
         sampler_name: sampler,
         scheduler,
         denoise,
-        positive: ['3', 0],
-        negative: ['4', 0],
-        latent_image: ['5', 0],
+        positive: ['2', 0],
+        negative: ['3', 0],
+        latent_image: ['4', 0],
       },
     },
-    '7': {
+    '6': {
       class_type: 'VAEDecode',
       inputs: {
-        samples: ['6', 0],
+        samples: ['5', 0],
         vae: ['1', 2],
       },
     },
-    '8': {
+    '7': {
       class_type: 'SaveImage',
       inputs: {
         filename_prefix: prefix,
-        images: ['7', 0],
+        images: ['6', 0],
       },
     },
   };
@@ -212,6 +238,8 @@ function toPosFloat(value, fallback) {
   return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
 }
 
+const GENERATION_TIMEOUT = 15 * 60 * 1000;
+
 export function runIconGenerator() {
   program
     .name('loot-card-icons')
@@ -221,18 +249,18 @@ export function runIconGenerator() {
     .option('--comfy-url <url>', 'ComfyUI base URL', 'http://localhost:8000')
     .option('--out-dir <path>', 'Output icon directory, default: <yaml-dir>/icons')
     .option('--checkpoint <name>', 'Checkpoint model name in ComfyUI', 'sd_xl_base_1.0.safetensors')
-    .option('--lora <name>', 'LoRA model name in ComfyUI', 'game_icon_v1.0.safetensors')
-    .option('--width <n>', 'Image width', (v) => toPosInt(v, 1024), 1024)
-    .option('--height <n>', 'Image height', (v) => toPosInt(v, 1024), 1024)
-    .option('--steps <n>', 'Sampling steps', (v) => toPosInt(v, 30), 30)
-    .option('--cfg <n>', 'CFG scale', (v) => toPosFloat(v, 7), 7)
+    .option('--width <n>', 'Image width', (v) => toPosInt(v, DEFAULT_WIDTH), DEFAULT_WIDTH)
+    .option('--height <n>', 'Image height', (v) => toPosInt(v, DEFAULT_HEIGHT), DEFAULT_HEIGHT)
+    .option('--steps <n>', 'Sampling steps', (v) => toPosInt(v, DEFAULT_STEPS), DEFAULT_STEPS)
+    .option('--cfg <n>', 'CFG scale', (v) => toPosFloat(v, DEFAULT_CFG), DEFAULT_CFG)
     .option('--sampler <name>', 'Sampler name', 'euler')
     .option('--scheduler <name>', 'Scheduler name', 'normal')
     .option('--denoise <n>', 'Denoise value', (v) => toPosFloat(v, 1), 1)
     .option('--seed <n>', 'Base seed for deterministic runs', (v) => toPosInt(v, null))
-    .option('--fast', 'Use quick draft settings (512x512, 12 steps, cfg 4.5)')
+    .option('--draft', 'Use quick draft settings (512x512, 16 steps, cfg 5)')
+    .option('--fast', 'Alias for --draft')
     .option('--limit <n>', 'Generate only the first N eligible cards', (v) => toPosInt(v, null))
-    .option('--list-models', 'List checkpoint/LoRA names visible to ComfyUI and exit')
+    .option('--list-models', 'List checkpoint names visible to ComfyUI and exit')
     .option('--overwrite', 'Regenerate even when card already has icon')
     .option('--write-yaml <path>', 'Write a YAML file with updated icon fields')
     .option('--in-place', 'Overwrite the input YAML with updated icon fields')
@@ -247,33 +275,23 @@ export function runIconGenerator() {
         const outputDir = path.resolve(options.outDir || path.join(yamlDir, 'icons'));
         fs.mkdirSync(outputDir, { recursive: true });
 
+        await ensureComfyAvailable(comfyUrl);
         console.log(chalk.cyan('Loading ComfyUI model metadata...'));
-        const [ckptFromModels, loraFromModels, ckptFromNode, loraFromNode] = await Promise.all([
+        const [ckptFromModels, ckptFromNode] = await Promise.all([
           listModels(comfyUrl, 'checkpoints'),
-          listModels(comfyUrl, 'loras'),
           listNodeChoices(comfyUrl, 'CheckpointLoaderSimple', 'ckpt_name'),
-          listNodeChoices(comfyUrl, 'LoraLoader', 'lora_name'),
         ]);
         const ckptChoices = ckptFromModels.length ? ckptFromModels : ckptFromNode;
-        const loraChoices = loraFromModels.length ? loraFromModels : loraFromNode;
 
         if (options.listModels) {
           console.log(chalk.cyan('Checkpoints:'));
           console.log(ckptChoices.length ? ckptChoices.join('\n') : '(none)');
-          console.log(chalk.cyan('\nLoRAs:'));
-          console.log(loraChoices.length ? loraChoices.join('\n') : '(none)');
           return;
         }
 
         if (!ckptChoices.length) {
           throw new Error(
-            'ComfyUI reports no checkpoint models. Put an SDXL checkpoint in ComfyUI/models/checkpoints and click "Refresh" in ComfyUI.',
-          );
-        }
-
-        if (!loraChoices.length) {
-          throw new Error(
-            'ComfyUI reports no LoRA models. Put your LoRA in ComfyUI/models/loras and click "Refresh" in ComfyUI.',
+            'ComfyUI is running, but no checkpoint models were found. Put an SDXL checkpoint in ComfyUI/models/checkpoints and click "Refresh" in ComfyUI.',
           );
         }
 
@@ -281,22 +299,23 @@ export function runIconGenerator() {
           console.log(chalk.yellow(`Requested checkpoint not found: ${options.checkpoint}`));
           console.log(chalk.yellow(`Available checkpoints: ${ckptChoices.join(', ')}`));
         }
-        if (!loraChoices.includes(options.lora)) {
-          console.log(chalk.yellow(`Requested LoRA not found: ${options.lora}`));
-          console.log(chalk.yellow(`Available LoRAs: ${loraChoices.join(', ')}`));
-        }
 
         const checkpoint = selectModelName(options.checkpoint, ckptChoices);
-        const lora = selectModelName(options.lora, loraChoices);
         console.log(chalk.green(`Checkpoint: ${checkpoint}`));
-        console.log(chalk.green(`LoRA: ${lora}`));
 
-        const width = options.fast ? 512 : options.width;
-        const height = options.fast ? 512 : options.height;
-        const steps = options.steps;
-        const cfg = options.fast ? 4.5 : options.cfg;
-        if (options.fast) {
-          console.log(chalk.yellow('Fast mode enabled: 512x512, 12 steps, cfg 4.5'));
+        let width = options.width;
+        let height = options.height;
+        let steps = options.steps;
+        let cfg = options.cfg;
+
+        if (options.draft || options.fast) {
+          width = 512;
+          height = 512;
+          steps = 16;
+          cfg = 5;
+          console.log(chalk.yellow('Using draft settings: 512x512, 16 steps, cfg 5'));
+        } else {
+          console.log(chalk.cyan(`Using settings: ${width}x${height}, steps=${steps}, cfg=${cfg}`));
         }
 
         const updatedCards = [...cards];
@@ -316,20 +335,24 @@ export function runIconGenerator() {
             break;
           }
 
-          const prompt = createPrompt(card);
+          const { prompt, negativePrompt, fromYaml } = resolvePrompts(card);
           const fileName = `${String(i + 1).padStart(3, '0')}-${slugify(card.name)}.png`;
           const outPath = path.join(outputDir, fileName);
           const prefix = `loot_card_icon_${Date.now()}_${i + 1}`;
           const seed = options.seed ? options.seed + i : Math.floor(Math.random() * 0xffffffff);
 
           console.log(chalk.cyan(`Generating ${i + 1}/${cards.length}: ${card.name}`));
+          if (fromYaml) {
+            console.log(chalk.gray('  using YAML prompt fields'));
+          }
           console.log(chalk.gray(`  prompt: ${prompt}`));
+          console.log(chalk.gray(`  negative: ${negativePrompt}`));
 
           try {
             const workflow = buildWorkflow({
               checkpoint,
-              lora,
               prompt,
+              negativePrompt,
               width,
               height,
               seed,
@@ -342,7 +365,7 @@ export function runIconGenerator() {
             });
 
             const promptId = await queuePrompt(comfyUrl, workflow);
-            const images = await waitForImages(comfyUrl, promptId, 5 * 60 * 1000);
+            const images = await waitForImages(comfyUrl, promptId, GENERATION_TIMEOUT);
             const first = images[0];
             if (!first) throw new Error('No image in ComfyUI history output.');
 

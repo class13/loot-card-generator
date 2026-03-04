@@ -11,7 +11,7 @@ node bin/loot-cards.js examples/loot.yaml -o output.pdf
 
 ## Generate Icons With ComfyUI
 
-Generate local icon images from your card YAML using ComfyUI (`http://localhost:8000`), SDXL, and LoRA:
+Generate local icon images from your card YAML using ComfyUI (`http://localhost:8000`) and an SDXL checkpoint:
 
 ```bash
 node bin/loot-card-icons.js examples/loot.yaml --in-place
@@ -20,8 +20,10 @@ node bin/loot-card-icons.js examples/loot.yaml --in-place
 This generates PNG files in `icons/` (relative to the YAML directory), and writes `icon:` paths back to your YAML when `--in-place` is used.
 
 Prompt format per card:
-- `2d icon. {short object prompt}. white background. <lora:game_icon_v1.0:1>`
-- negative prompt: `(blurry:1.3). lowres.`
+- `2d icon. {short object prompt}. white background. single object only, centered composition, isolated asset, one subject, full object in frame, no repeated elements.`
+- negative prompt: `(blurry:1.3). lowres. multiple objects, repeated objects, duplicates, grid layout, tiled pattern, contact sheet, sprite sheet, collage, border pattern, lineup.`
+
+If a card has `prompt` and/or `negative_prompt` fields, `loot-card-icons` uses those values instead of the defaults.
 
 Optional per-card prompt override:
 
@@ -45,18 +47,18 @@ Options:
   --comfy-url <url>          ComfyUI base URL (default: "http://localhost:8000")
   --out-dir <path>           Output icon directory, default: <yaml-dir>/icons
   --checkpoint <name>        Checkpoint model name in ComfyUI (default: "sd_xl_base_1.0.safetensors")
-  --lora <name>              LoRA model name in ComfyUI (default: "game_icon_v1.0.safetensors")
   --width <n>                Image width (default: 1024)
   --height <n>               Image height (default: 1024)
-  --steps <n>                Sampling steps (default: 28)
+  --steps <n>                Sampling steps (default: 40)
   --cfg <n>                  CFG scale (default: 6)
   --sampler <name>           Sampler name (default: "euler")
   --scheduler <name>         Scheduler name (default: "normal")
   --denoise <n>              Denoise value (default: 1)
   --seed <n>                 Base seed for deterministic runs
-  --fast                     Use quick draft settings (512x512, 12 steps, cfg 4.5)
+  --draft                    Use quick draft settings (512x512, 16 steps, cfg 5)
+  --fast                     Alias for --draft
   --limit <n>                Generate only the first N eligible cards
-  --list-models              List checkpoint/LoRA names visible to ComfyUI and exit
+  --list-models              List checkpoint names visible to ComfyUI and exit
   --overwrite                Regenerate even when card already has icon
   --write-yaml <path>        Write a YAML file with updated icon fields
   --in-place                 Overwrite the input YAML with updated icon fields
@@ -67,7 +69,7 @@ Options:
 Fast iteration example:
 
 ```bash
-node bin/loot-card-icons.js examples/loot.yaml --in-place --fast --limit 3
+node bin/loot-card-icons.js examples/loot.yaml --in-place --draft --limit 3
 ```
 
 ## Generate Prompts With Ollama
@@ -75,7 +77,7 @@ node bin/loot-card-icons.js examples/loot.yaml --in-place --fast --limit 3
 Generate `prompt` and `negative_prompt` fields for each card using your local Ollama (`http://localhost:11434`):
 
 ```bash
-node bin/loot-card-prompts.js examples/loot.yaml --in-place --model llama3.1
+node bin/loot-card-prompts.js examples/loot.yaml --in-place --model llama3.1:8b
 ```
 
 Write to a separate file instead of overwriting:

@@ -9,17 +9,17 @@ cards:
     flavor: Forged in the caldera of Mount Embros.
     price: 2,500 gp
     icon: icons/001-sunfire-amulet.png
+    category: jewelry
     prompt: >-
-      single fantasy jewelry item, centered, isolated object, clean background, gold material, fiery red color, pendant
-      shape, intricately crafted, glowing orange gemstone, high detail, sharp focus, game asset illustration, studio
-      lighting
+      single fantasy jewelry item, centered, isolated object, clean background, one subject, full object in frame, no
+      repeated elements, gold material, fiery red color, pendant shape, intricately crafted, flame motif, glowing
+      gemstone, high detail, sharp focus, game asset illustration, studio lighting
     negative_prompt: >-
-      text, watermark, logo, blurry, low detail, cropped, multiple objects, background scenery, weapon, potion, scroll,
-      book, tool, container, artifact, character
+      text, watermark, logo, blurry, low detail, cropped, multiple objects, repeated objects, duplicates, grid layout,
+      tiled pattern, contact sheet, sprite sheet, collage, background scenery, weapon, potion, clothing
     tags:
       - fire
       - attunement
-    category: jewelry
   - name: Boots of the Phantom
     rarity: uncommon
     type: Wondrous Item
@@ -30,17 +30,18 @@ cards:
     flavor: The thief danced on the lake's surface as the guards searched the shore.
     price: 800 gp
     icon: icons/002-boots-of-the-phantom.png
+    category: other
     prompt: >-
-      single fantasy wondrous item, centered, isolated object, clean background, worn leather material, dark brown
-      color, knee-high boot shape, intricate lacing, glowing blue runes on the sides, high detail, sharp focus, game
-      asset illustration, studio lighting
+      single fantasy wondrous item, centered, isolated object, clean background, one subject, full object in frame, no
+      repeated elements, worn leather, dark brown color, knee-high boots, intricate lacing, glowing blue runes on the
+      sides, high detail, sharp focus, game asset illustration, studio lighting
     negative_prompt: >-
-      text, watermark, logo, blurry, low detail, cropped, multiple objects, background scenery, character, weapon,
-      potion, gem, ring, necklace, armor, clothing
+      text, watermark, logo, blurry, low detail, cropped, multiple objects, repeated objects, duplicates, grid layout,
+      tiled pattern, contact sheet, sprite sheet, collage, background scenery, character, weapon, potion, armor, gem,
+      ring, necklace, clothing
     tags:
       - movement
       - stealth
-    category: other
   - name: Vorpal Longsword +3
     rarity: legendary
     type: Weapon (longsword, requires attunement)
@@ -51,16 +52,18 @@ cards:
     flavor: It sings as it flies — one note, one silence.
     price: 50,000 gp
     icon: icons/003-vorpal-longsword-3.png
+    category: weapon
     prompt: >-
-      single fantasy weapon item, centered, isolated object, clean background, longsword, metallic material, silver
-      color, slender shape, intricately crafted, crimson runes along the blade, high detail, sharp focus, game asset
-      illustration, studio lighting
-    negative_prompt: text, watermark, logo, blurry, low detail, cropped, multiple objects, background scenery, potion, gem, clothing
+      single fantasy weapon item, centered, isolated object, clean background, one subject, full object in frame, no
+      repeated elements, longsword, metallic material, silver color, slender shape, intricately crafted, crimson
+      gemstone set into the hilt, high detail, sharp focus, game asset illustration, studio lighting
+    negative_prompt: >-
+      text, watermark, logo, blurry, low detail, cropped, multiple objects, repeated objects, duplicates, grid layout,
+      tiled pattern, contact sheet, sprite sheet, collage, background scenery, potion, clothing, gem, ring, necklace
     tags:
       - weapon
       - attunement
       - critical
-    category: weapon
   - name: Bag of Holding
     rarity: uncommon
     type: Wondrous Item
@@ -69,18 +72,17 @@ cards:
       The bag can hold up to **500 pounds**, not exceeding a volume of 64 cubic feet.
       Retrieving an item requires an *action*.
     price: 1,000 gp
-    icon: icons/004-bag-of-holding.png
+    category: artifact
     prompt: >-
-      single fantasy wondrous item, centered, isolated object, clean background, leather material, brown color, sack
-      shape, sturdy craftsmanship, enchanted golden buckle, high detail, sharp focus, game asset illustration, studio
-      lighting
+      single fantasy artifact item, centered, isolated object, clean background, one subject, full object in frame, no
+      repeated elements, leather material, brown color, irregular shape, intricately crafted, small golden lock, high
+      detail, sharp focus, game asset illustration, studio lighting
     negative_prompt: >-
-      text, watermark, logo, blurry, low detail, cropped, multiple objects, background scenery, weapon, armor,
-      character, potion, gem, ring, necklace, clothing
+      text, watermark, logo, blurry, low detail, cropped, multiple objects, repeated objects, duplicates, grid layout,
+      tiled pattern, contact sheet, sprite sheet, collage, background scenery, weapon, clothing, jewelry
     tags:
       - storage
       - utility
-    category: other
   - name: Staff of the Magi
     rarity: legendary
     type: Staff (requires attunement by a sorcerer, warlock, or wizard)
@@ -90,19 +92,18 @@ cards:
       *Fireball* (3), *Cone of Cold* (5), *Wall of Fire* (4).
     flavor: It remembers every spell ever channelled through it.
     price: 100,000 gp
-    icon: icons/005-staff-of-the-magi.png
+    category: tool
     prompt: >-
-      single fantasy tool item, centered, isolated object, clean background, wooden staff with intricate silver
-      filigree, dark wood color, long cylindrical shape, ornate craftsmanship, glowing runes along length, high detail,
-      sharp focus, game asset illustration, studio lighting
+      single fantasy tool item, centered, isolated object, clean background, one subject, full object in frame, no
+      repeated elements, wooden staff, dark wood color, ornate metal bands, intricate engravings, glowing runes along
+      length, high detail, sharp focus, game asset illustration, studio lighting
     negative_prompt: >-
-      text, watermark, logo, blurry, low detail, cropped, multiple objects, background scenery, weapon, armor,
-      character, potion, gem, ring, necklace
+      text, watermark, logo, blurry, low detail, cropped, multiple objects, repeated objects, duplicates, grid layout,
+      tiled pattern, contact sheet, sprite sheet, collage, background scenery, gem, ring, necklace, weapon, potion
     tags:
       - spellcasting
       - attunement
       - charges
-    category: tool
   - name: Potion of Dragon's Breath
     rarity: very rare
     type: Potion
@@ -112,18 +113,18 @@ cards:
       creature in the cone takes **4d8 damage** (DC 13 save for half).
       Lasts for 1 hour or until used 3 times.
     price: 3,500 gp
-    icon: icons/006-potion-of-dragon-s-breath.png
+    category: potion
     prompt: >-
-      single fantasy potion, centered, isolated object, clean background, glass vial, transparent liquid, swirling
-      colors, ornate metal cap, intricate etchings, glowing runes, high detail, sharp focus, game asset illustration,
-      studio lighting
+      single fantasy potion, centered, isolated object, clean background, one subject, full object in frame, no repeated
+      elements, glass bottle, transparent, blue liquid, ornate metal cap, intricate etchings, glowing runes, high
+      detail, sharp focus, game asset illustration, studio lighting
     negative_prompt: >-
-      text, watermark, logo, blurry, low detail, cropped, multiple objects, background scenery, weapon, armor,
-      character, gem, ring, necklace, clothing
+      text, watermark, logo, blurry, low detail, cropped, multiple objects, repeated objects, duplicates, grid layout,
+      tiled pattern, contact sheet, sprite sheet, collage, background scenery, weapon, armor, character, gem, ring,
+      necklace, clothing
     tags:
       - consumable
       - breath weapon
-    category: potion
   - name: Ring of Invisibility
     rarity: legendary
     type: Ring (requires attunement)
@@ -132,18 +133,18 @@ cards:
       Anything you are wearing or carrying is invisible with you.
       You remain invisible until the ring is removed, you attack, or you cast a spell.
     price: 45,000 gp
-    icon: icons/007-ring-of-invisibility.png
+    category: jewelry
     prompt: >-
-      single fantasy jewelry item, centered, isolated object, clean background, golden metal, dark blue gemstone,
-      circular shape, intricate craftsmanship, glowing blue aura, high detail, sharp focus, game asset illustration,
-      studio lighting
+      single fantasy jewelry item, centered, isolated object, clean background, one subject, full object in frame, no
+      repeated elements, gold material, dark blue color, circular shape, intricate craftsmanship, small gemstone at
+      center, magical aura surrounding, high detail, sharp focus, game asset illustration, studio lighting
     negative_prompt: >-
-      text, watermark, logo, blurry, low detail, cropped, multiple objects, background scenery, weapon, armor, clothing,
-      potion, scroll, book, tool, container, artifact, other
+      text, watermark, logo, blurry, low detail, cropped, multiple objects, repeated objects, duplicates, grid layout,
+      tiled pattern, contact sheet, sprite sheet, collage, background scenery, weapon, armor, clothing, potion, scroll,
+      book, tool, container, artifact, other
     tags:
       - stealth
       - attunement
-    category: jewelry
   - name: Cloak of Elvenkind
     rarity: uncommon
     type: Wondrous Item (requires attunement)
@@ -153,19 +154,18 @@ cards:
       Dexterity (Stealth) checks made to hide.
     flavor: Woven from moonbeams and forest shadow.
     price: 1,200 gp
-    icon: icons/008-cloak-of-elvenkind.png
+    category: clothing
     prompt: >-
-      single fantasy clothing item, centered, isolated object, clean background, woven fabric, dark green and silver
-      colors, flowing cloak shape, intricate elven embroidery, subtle shimmering effect, high detail, sharp focus, game
-      asset illustration, studio lighting
+      single fantasy clothing item, centered, isolated object, clean background, one subject, full object in frame, no
+      repeated elements, woven fabric, midnight blue color, flowing cloak shape, intricate elven embroidery, subtle
+      shimmering effect, high detail, sharp focus, game asset illustration, studio lighting
     negative_prompt: >-
-      text, watermark, logo, blurry, low detail, cropped, multiple objects, background scenery, gem, ring, necklace,
-      weapon
+      text, watermark, logo, blurry, low detail, cropped, multiple objects, repeated objects, duplicates, grid layout,
+      tiled pattern, contact sheet, sprite sheet, collage, background scenery, gem, ring, necklace, weapon, potion
     tags:
       - stealth
       - attunement
       - elven
-    category: clothing
   - name: Philosopher's Coin
     rarity: artifact
     type: Wondrous Item (requires attunement)
@@ -175,16 +175,16 @@ cards:
       is revealed to all creatures within 60 ft.
     flavor: Both sides have been heads. No one knows why.
     price: Priceless
-    icon: icons/009-philosopher-s-coin.png
+    category: artifact
     prompt: >-
-      single fantasy artifact item, centered, isolated object, clean background, worn copper surface, both sides feature
-      a stylized head, circular shape, intricate etched details, mysterious aura, high detail, sharp focus, game asset
-      illustration, studio lighting
+      single fantasy artifact item, centered, isolated object, clean background, one subject, full object in frame, no
+      repeated elements, metallic material, two-sided coin shape, silver color, intricate engravings, mysterious runes,
+      high detail, sharp focus, game asset illustration, studio lighting
     negative_prompt: >-
-      text, watermark, logo, blurry, low detail, cropped, multiple objects, background scenery, weapon, clothing,
-      jewelry
+      text, watermark, logo, blurry, low detail, cropped, multiple objects, repeated objects, duplicates, grid layout,
+      tiled pattern, contact sheet, sprite sheet, collage, background scenery, weapon, potion, clothing, gem, ring,
+      necklace
     tags:
       - artifact
       - attunement
       - fate
-    category: other
