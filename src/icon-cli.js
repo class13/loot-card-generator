@@ -363,6 +363,15 @@ export function runIconGenerator() {
         }
 
         const updatedCards = [...cards];
+        const shouldPersistYaml = Boolean(options.writeYaml || options.inPlace);
+        const targetYamlPath = shouldPersistYaml
+          ? path.resolve(options.inPlace ? input : options.writeYaml)
+          : null;
+        const persistYaml = () => {
+          if (!shouldPersistYaml) return;
+          const text = yaml.dump({ cards: updatedCards }, { noRefs: true, lineWidth: 120 });
+          fs.writeFileSync(targetYamlPath, text, 'utf8');
+        };
         let generated = 0;
         let skipped = 0;
         let failed = 0;
@@ -422,6 +431,7 @@ export function runIconGenerator() {
 
             const relativeIconPath = path.relative(yamlDir, outPath).split(path.sep).join('/');
             updatedCards[i] = { ...card, icon: relativeIconPath };
+            persistYaml();
             generated += 1;
           } catch (err) {
             failed += 1;
@@ -429,11 +439,9 @@ export function runIconGenerator() {
           }
         }
 
-        if (options.writeYaml || options.inPlace) {
-          const target = path.resolve(options.inPlace ? input : options.writeYaml);
-          const text = yaml.dump({ cards: updatedCards }, { noRefs: true, lineWidth: 120 });
-          fs.writeFileSync(target, text, 'utf8');
-          console.log(chalk.green(`Updated YAML written to ${target}`));
+        if (shouldPersistYaml) {
+          persistYaml();
+          console.log(chalk.green(`Updated YAML written to ${targetYamlPath}`));
         }
 
         if (limitReached) {
