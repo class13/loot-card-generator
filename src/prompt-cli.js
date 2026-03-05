@@ -25,6 +25,47 @@ function cleanText(value) {
     .trim();
 }
 
+function splitPromptFragments(value) {
+  const text = cleanText(value)
+    .replace(/<lora:[^>]+>/gi, '')
+    // Preserve decimal numbers (e.g. 1.3) while splitting on sentence dots.
+    .replace(/(\d)\.(\d)/g, '$1__DECIMAL_DOT__$2');
+
+  return text
+    .split(/[.\n,;]+/)
+    .map((part) => cleanText(part))
+    .map((part) => part.replace(/__DECIMAL_DOT__/g, '.'))
+    .filter(Boolean);
+}
+
+function normalizePositivePrompt(value) {
+  const fragments = splitPromptFragments(value).filter((part) => !/^2d icon$/i.test(part));
+  const parts = ['2d icon', ...fragments];
+  if (!parts.some((part) => /^<lora:game_icon_v1\.0:1>$/i.test(part))) {
+    parts.push('<lora:game_icon_v1.0:1>');
+  }
+  return parts.join('. ');
+}
+
+function normalizeNegativePrompt(value) {
+  const rawParts = splitPromptFragments(value).map((part) => {
+    if (/^\(blurry:1\.3\)$/i.test(part) || /^blurry$/i.test(part)) return '(blurry:1.3)';
+    if (/^low ?res$/i.test(part)) return 'lowres';
+    return part;
+  });
+
+  const deduped = [];
+  const seen = new Set();
+  for (const part of ['(blurry:1.3)', 'lowres', ...rawParts]) {
+    const key = part.toLowerCase();
+    if (!seen.has(key)) {
+      seen.add(key);
+      deduped.push(part);
+    }
+  }
+  return deduped.join('. ');
+}
+
 function extractJsonObject(text) {
   const trimmed = text.trim();
   try {
@@ -46,31 +87,26 @@ function extractJsonObject(text) {
 function buildSystemPrompt() {
   return [
     'You are a prompt compiler for Stable Diffusion XL.',
-    'Your job is to convert a Dungeons & Dragons item into a structured Stable Diffusion prompt optimized for a single isolated item image for use on a printable card.',
+    'Your job is to convert a Dungeons & Dragons item into short SD prompt fields for a single isolated item icon.',
     'STRICT RULES:',
     '1. Always assume the image should show a SINGLE object.',
-    '2. The object must be centered and isolated.',
-    '3. The object must be clearly readable at small size.',
-    '4. Do NOT describe full scenes or environments.',
-    '5. Do NOT include characters unless the item absolutely requires it.',
-    '6. Avoid cinematic language.',
-    '7. Avoid storytelling.',
-    '8. Focus on physical attributes: material, shape, color, craftsmanship, motifs.',
-    '9. Keep output concise but visually precise.',
+    '2. Keep prompts compact, fragment-based, and period-separated.',
+    '3. Do NOT describe full scenes or environments.',
+    '4. Do NOT include characters unless the item absolutely requires it.',
+    '5. Avoid cinematic language and storytelling.',
+    '6. Focus on concrete visual traits only.',
     'You MUST output valid JSON in this exact format:',
-    '{"category":"...","positive_prompt":"...","negative_prompt":"..."}',
+    '{"category":"...","prompt":"...","negative_prompt":"..."}',
     'CATEGORY RULES:',
     'Classify the item into one of these only: weapon, armor, clothing, jewelry, potion, scroll, book, tool, container, artifact, other.',
-    'POSITIVE PROMPT STRUCTURE:',
-    'Begin with: "single fantasy [CATEGORY] item, centered, isolated object, clean background, one subject, full object in frame, no repeated elements,"',
-    'Then describe: material, color, shape, craftsmanship, distinctive magical detail.',
-    'End with: "high detail, sharp focus, game asset illustration, studio lighting".',
-    'NEGATIVE PROMPT RULES:',
-    'Always include: "text, watermark, logo, blurry, low detail, cropped, multiple objects, repeated objects, duplicates, grid layout, tiled pattern, contact sheet, sprite sheet, collage, background scenery".',
-    'Additionally exclude objects from other categories when relevant.',
-    'If clothing, also exclude: gem, ring, necklace, weapon.',
-    'If weapon, also exclude: potion, gem, clothing.',
-    'If potion, also exclude: weapon, armor, character.',
+    'PROMPT FORMAT:',
+    'Use this style exactly: "2d icon. [short visual fragments]. <lora:game_icon_v1.0:1>"',
+    'Use 2-8 concise fragments after "2d icon".',
+    'Example style: "2d icon. dead frog. brown. dried. <lora:game_icon_v1.0:1>"',
+    'NEGATIVE_PROMPT FORMAT:',
+    'Always start with: "(blurry:1.3). lowres."',
+    'Then optionally append short exclusions as period-separated fragments (for example: "armor. character").',
+    'Keep it compact and practical.',
     'Do not output anything except valid JSON.',
   ].join('\n');
 }
@@ -87,8 +123,8 @@ function buildUserPrompt(card) {
   if (card.flavor) parts.push(`flavor: ${cleanText(card.flavor)}`);
 
   return [
-    'Create a Stable Diffusion XL prompt package for this fantasy loot item.',
-    'Keep prompts concise.',
+    'Create prompt fields for this fantasy loot item.',
+    'Use compact dot-separated prompt fragments.',
     'No artist names.',
     'Output JSON only.',
     parts.join('\n'),
@@ -142,8 +178,8 @@ async function generatePromptsWithOllama(opts) {
     throw new Error(`Could not parse model output as JSON: ${err.message}. Raw: ${responseText.slice(0, 250)}`);
   }
 
-  const prompt = cleanText(parsed?.positive_prompt || parsed?.prompt);
-  const negativePrompt = cleanText(parsed?.negative_prompt);
+  const prompt = normalizePositivePrompt(parsed?.prompt || parsed?.positive_prompt);
+  const negativePrompt = normalizeNegativePrompt(parsed?.negative_prompt);
   const category = cleanText(parsed?.category).toLowerCase();
   const allowedCategories = new Set([
     'weapon',
@@ -206,6 +242,11 @@ export function runPromptGenerator() {
         }
 
         console.log(chalk.cyan(`Generating prompts for ${selected.length} card(s) using model '${options.model}'...`));
+        const target = path.resolve(options.writeYaml || input);
+        const persistYaml = () => {
+          const text = yaml.dump({ cards }, { noRefs: true, lineWidth: 120 });
+          fs.writeFileSync(target, text, 'utf8');
+        };
 
         for (const card of selected) {
           const index = cards.indexOf(card);
@@ -219,11 +260,8 @@ export function runPromptGenerator() {
             card,
           });
           cards[index] = { ...cards[index], category, prompt, negative_prompt: negativePrompt };
+          persistYaml();
         }
-
-        const target = path.resolve(options.writeYaml || input);
-        const text = yaml.dump({ cards }, { noRefs: true, lineWidth: 120 });
-        fs.writeFileSync(target, text, 'utf8');
 
         console.log(chalk.green(`Updated YAML written to ${target}`));
       } catch (err) {

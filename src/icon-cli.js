@@ -6,15 +6,14 @@ import { program } from 'commander';
 import chalk from 'chalk';
 import { loadYaml } from './loader.js';
 
-const SINGLE_SUBJECT_POSITIVE_GUARDRAIL =
-  'single object only, centered composition, isolated asset, one subject, full object in frame, no repeated elements';
-const SINGLE_SUBJECT_NEGATIVE_GUARDRAIL =
-  'multiple objects, repeated objects, duplicates, grid layout, tiled pattern, contact sheet, sprite sheet, collage, border pattern, lineup';
-const NEGATIVE_PROMPT = `(blurry:1.3). lowres. ${SINGLE_SUBJECT_NEGATIVE_GUARDRAIL}.`;
+// todo: remove
+const NEGATIVE_PROMPT = `(blurry:1.3). lowres.`;
 const DEFAULT_WIDTH = 1024;
 const DEFAULT_HEIGHT = 1024;
 const DEFAULT_STEPS = 40;
 const DEFAULT_CFG = 6;
+const DEFAULT_LORA = 'game_icon_v1.0.safetensors';
+const DEFAULT_LORA_STRENGTH = 1;
 
 function slugify(value) {
   return value
@@ -24,27 +23,30 @@ function slugify(value) {
     .slice(0, 60) || 'item';
 }
 
+// todo: remove
 function createPrompt(card) {
   const subject = (card.imagePrompt || card.name || card.type || 'fantasy item')
     .trim()
     .replace(/[.。]+$/g, '');
-  return `2d icon. ${subject}. white background. ${SINGLE_SUBJECT_POSITIVE_GUARDRAIL}.`;
+  return `2d icon. ${subject}. white background.`;
 }
 
-function mergePrompt(base, addition) {
-  const left = String(base || '').trim().replace(/[.。]+$/g, '');
-  const right = String(addition || '').trim().replace(/[.。]+$/g, '');
-  if (!left) return right ? `${right}.` : '';
-  if (!right) return `${left}.`;
-  return `${left}. ${right}.`;
+function throwIfNull(value, msg) {
+  if (value == null || value === '') {
+    return Error("is empty")
+  }
 }
 
 function resolvePrompts(card) {
   const positive = String(card.prompt || '').trim();
   const negative = String(card.negative_prompt || '').trim();
+
+  throwIfNull(positive, "prompt can't be empty.")
+  throwIfNull(negative, "negative_prompt can't be empty.")
+
   return {
-    prompt: mergePrompt(positive || createPrompt(card), SINGLE_SUBJECT_POSITIVE_GUARDRAIL),
-    negativePrompt: mergePrompt(negative || NEGATIVE_PROMPT, SINGLE_SUBJECT_NEGATIVE_GUARDRAIL),
+    prompt: positive || createPrompt(card),
+    negativePrompt: negative || NEGATIVE_PROMPT,
     fromYaml: Boolean(positive || negative),
   };
 }
@@ -124,6 +126,9 @@ function selectModelName(preferred, choices) {
 function buildWorkflow(params) {
   const {
     checkpoint,
+    lora,
+    loraStrengthModel,
+    loraStrengthClip,
     prompt,
     negativePrompt,
     width,
@@ -142,18 +147,28 @@ function buildWorkflow(params) {
       class_type: 'CheckpointLoaderSimple',
       inputs: { ckpt_name: checkpoint },
     },
+    '8': {
+      class_type: 'LoraLoader',
+      inputs: {
+        model: ['1', 0],
+        clip: ['1', 1],
+        lora_name: lora,
+        strength_model: loraStrengthModel,
+        strength_clip: loraStrengthClip,
+      },
+    },
     '2': {
       class_type: 'CLIPTextEncode',
       inputs: {
         text: prompt,
-        clip: ['1', 1],
+        clip: ['8', 1],
       },
     },
     '3': {
       class_type: 'CLIPTextEncode',
       inputs: {
         text: negativePrompt,
-        clip: ['1', 1],
+        clip: ['8', 1],
       },
     },
     '4': {
@@ -167,7 +182,7 @@ function buildWorkflow(params) {
     '5': {
       class_type: 'KSampler',
       inputs: {
-        model: ['1', 0],
+        model: ['8', 0],
         seed,
         steps,
         cfg,
@@ -243,12 +258,25 @@ const GENERATION_TIMEOUT = 15 * 60 * 1000;
 export function runIconGenerator() {
   program
     .name('loot-card-icons')
-    .description('Generate local icon images from loot card YAML using ComfyUI + SDXL')
+    .description('Generate local icon images from loot card YAML using ComfyUI + SDXL + LoRA')
     .version('1.0.0')
     .argument('<input>', 'YAML file path')
     .option('--comfy-url <url>', 'ComfyUI base URL', 'http://localhost:8000')
     .option('--out-dir <path>', 'Output icon directory, default: <yaml-dir>/icons')
     .option('--checkpoint <name>', 'Checkpoint model name in ComfyUI', 'sd_xl_base_1.0.safetensors')
+    .option('--lora <name>', 'LoRA model name in ComfyUI', DEFAULT_LORA)
+    .option(
+      '--lora-strength-model <n>',
+      'LoRA strength for model branch',
+      (v) => toPosFloat(v, DEFAULT_LORA_STRENGTH),
+      DEFAULT_LORA_STRENGTH,
+    )
+    .option(
+      '--lora-strength-clip <n>',
+      'LoRA strength for CLIP branch',
+      (v) => toPosFloat(v, DEFAULT_LORA_STRENGTH),
+      DEFAULT_LORA_STRENGTH,
+    )
     .option('--width <n>', 'Image width', (v) => toPosInt(v, DEFAULT_WIDTH), DEFAULT_WIDTH)
     .option('--height <n>', 'Image height', (v) => toPosInt(v, DEFAULT_HEIGHT), DEFAULT_HEIGHT)
     .option('--steps <n>', 'Sampling steps', (v) => toPosInt(v, DEFAULT_STEPS), DEFAULT_STEPS)
@@ -260,7 +288,7 @@ export function runIconGenerator() {
     .option('--draft', 'Use quick draft settings (512x512, 16 steps, cfg 5)')
     .option('--fast', 'Alias for --draft')
     .option('--limit <n>', 'Generate only the first N eligible cards', (v) => toPosInt(v, null))
-    .option('--list-models', 'List checkpoint names visible to ComfyUI and exit')
+    .option('--list-models', 'List checkpoint and LoRA names visible to ComfyUI and exit')
     .option('--overwrite', 'Regenerate even when card already has icon')
     .option('--write-yaml <path>', 'Write a YAML file with updated icon fields')
     .option('--in-place', 'Overwrite the input YAML with updated icon fields')
@@ -277,15 +305,20 @@ export function runIconGenerator() {
 
         await ensureComfyAvailable(comfyUrl);
         console.log(chalk.cyan('Loading ComfyUI model metadata...'));
-        const [ckptFromModels, ckptFromNode] = await Promise.all([
+        const [ckptFromModels, ckptFromNode, loraFromModels, loraFromNode] = await Promise.all([
           listModels(comfyUrl, 'checkpoints'),
           listNodeChoices(comfyUrl, 'CheckpointLoaderSimple', 'ckpt_name'),
+          listModels(comfyUrl, 'loras'),
+          listNodeChoices(comfyUrl, 'LoraLoader', 'lora_name'),
         ]);
         const ckptChoices = ckptFromModels.length ? ckptFromModels : ckptFromNode;
+        const loraChoices = loraFromModels.length ? loraFromModels : loraFromNode;
 
         if (options.listModels) {
           console.log(chalk.cyan('Checkpoints:'));
           console.log(ckptChoices.length ? ckptChoices.join('\n') : '(none)');
+          console.log(chalk.cyan('\nLoRAs:'));
+          console.log(loraChoices.length ? loraChoices.join('\n') : '(none)');
           return;
         }
 
@@ -294,14 +327,25 @@ export function runIconGenerator() {
             'ComfyUI is running, but no checkpoint models were found. Put an SDXL checkpoint in ComfyUI/models/checkpoints and click "Refresh" in ComfyUI.',
           );
         }
+        if (!loraChoices.length) {
+          throw new Error(
+            'ComfyUI is running, but no LoRA models were found. Put game_icon_v1.0.safetensors in ComfyUI/models/loras and click "Refresh" in ComfyUI.',
+          );
+        }
 
         if (!ckptChoices.includes(options.checkpoint)) {
           console.log(chalk.yellow(`Requested checkpoint not found: ${options.checkpoint}`));
           console.log(chalk.yellow(`Available checkpoints: ${ckptChoices.join(', ')}`));
         }
+        if (!loraChoices.includes(options.lora)) {
+          console.log(chalk.yellow(`Requested LoRA not found: ${options.lora}`));
+          console.log(chalk.yellow(`Available LoRAs: ${loraChoices.join(', ')}`));
+        }
 
         const checkpoint = selectModelName(options.checkpoint, ckptChoices);
+        const lora = selectModelName(options.lora, loraChoices);
         console.log(chalk.green(`Checkpoint: ${checkpoint}`));
+        console.log(chalk.green(`LoRA: ${lora} (model=${options.loraStrengthModel}, clip=${options.loraStrengthClip})`));
 
         let width = options.width;
         let height = options.height;
@@ -351,6 +395,9 @@ export function runIconGenerator() {
           try {
             const workflow = buildWorkflow({
               checkpoint,
+              lora,
+              loraStrengthModel: options.loraStrengthModel,
+              loraStrengthClip: options.loraStrengthClip,
               prompt,
               negativePrompt,
               width,

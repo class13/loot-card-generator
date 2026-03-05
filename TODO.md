@@ -1,0 +1,2 @@
+- [ ] install the game icon LoRA
+- [ ] adapt the prompt generation so it fits the 

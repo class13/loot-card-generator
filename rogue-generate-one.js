@@ -6,6 +6,9 @@ import { fileURLToPath } from 'url';
 
 const COMFY_URL = process.env.COMFY_URL || 'http://localhost:8000';
 const CHECKPOINT = process.env.CHECKPOINT || 'sd_xl_base_1.0.safetensors';
+const LORA = process.env.LORA || 'game_icon_v1.0.safetensors';
+const LORA_STRENGTH_MODEL = Number(process.env.LORA_STRENGTH_MODEL || 1);
+const LORA_STRENGTH_CLIP = Number(process.env.LORA_STRENGTH_CLIP || 1);
 const WIDTH = 1024;
 const HEIGHT = 1024;
 const STEPS = 28;
@@ -54,18 +57,28 @@ function buildWorkflow(checkpoint, prompt, negativePrompt, seed, prefix) {
       class_type: 'CheckpointLoaderSimple',
       inputs: { ckpt_name: checkpoint },
     },
+    '8': {
+      class_type: 'LoraLoader',
+      inputs: {
+        model: ['1', 0],
+        clip: ['1', 1],
+        lora_name: LORA,
+        strength_model: LORA_STRENGTH_MODEL,
+        strength_clip: LORA_STRENGTH_CLIP,
+      },
+    },
     '2': {
       class_type: 'CLIPTextEncode',
       inputs: {
         text: prompt,
-        clip: ['1', 1],
+        clip: ['8', 1],
       },
     },
     '3': {
       class_type: 'CLIPTextEncode',
       inputs: {
         text: negativePrompt,
-        clip: ['1', 1],
+        clip: ['8', 1],
       },
     },
     '4': {
@@ -79,7 +92,7 @@ function buildWorkflow(checkpoint, prompt, negativePrompt, seed, prefix) {
     '5': {
       class_type: 'KSampler',
       inputs: {
-        model: ['1', 0],
+        model: ['8', 0],
         seed,
         steps: STEPS,
         cfg: CFG,
@@ -136,14 +149,26 @@ async function ensureCheckpointExists(name) {
   }
 }
 
+async function ensureLoraExists(name) {
+  const loras = await fetchJson(`${COMFY_URL}/models/loras`);
+  if (!Array.isArray(loras) || loras.length === 0) {
+    throw new Error('No LoRAs visible in ComfyUI (/models/loras is empty).');
+  }
+  if (!loras.includes(name)) {
+    throw new Error(`LoRA '${name}' not found. Available: ${loras.join(', ')}`);
+  }
+}
+
 async function main() {
   console.log(`ComfyUI: ${COMFY_URL}`);
   console.log(`Checkpoint: ${CHECKPOINT}`);
+  console.log(`LoRA: ${LORA} (model=${LORA_STRENGTH_MODEL}, clip=${LORA_STRENGTH_CLIP})`);
   console.log(`Output: ${OUTPUT_PATH}`);
   console.log(`Prompt: ${PROMPT}`);
   console.log(`Negative: ${NEGATIVE_PROMPT}`);
 
   await ensureCheckpointExists(CHECKPOINT);
+  await ensureLoraExists(LORA);
 
   const clientId = randomUUID();
   const prefix = `rogue_single_${Date.now()}`;
