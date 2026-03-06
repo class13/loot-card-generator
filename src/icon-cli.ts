@@ -6,7 +6,7 @@ import {program} from 'commander';
 import chalk from 'chalk';
 import {loadYaml} from './loader.js';
 
-const NEGATIVE_PROMPT = `(blurry:1.3). lowres.`;
+const NEGATIVE_PROMPT = `(blurry:1.3). lowres.`; // tooo: remove this
 const DEFAULT_WIDTH = 1024;
 const DEFAULT_HEIGHT = 1024;
 const DEFAULT_STEPS = 40;
@@ -100,7 +100,6 @@ interface ComfyUIOptions {
   draft?: boolean;
   fast?: boolean;
   limit: number | null;
-  listModels?: boolean;
 }
 
 function slugify(value: string): string {
@@ -113,19 +112,12 @@ function slugify(value: string): string {
   );
 }
 
-function createPrompt(card: LootCard): string {
-  const subject = (card.imagePrompt || card.name || card.type || 'fantasy item')
-    .trim()
-    .replace(/[.。]+$/g, '');
-  return `2d icon. ${subject}. white background.`;
-}
-
 function resolvePrompts(card: LootCard): PromptResolution {
   const positive = String(card.prompt || '').trim();
   const negative = String(card.negative_prompt || '').trim();
 
   return {
-    prompt: positive || createPrompt(card),
+    prompt: positive,
     negativePrompt: negative || NEGATIVE_PROMPT,
     fromYaml: Boolean(positive || negative),
   };
@@ -365,7 +357,43 @@ function toPosFloat(value: string, fallback: number): number {
 }
 
 
+async function loadChoices(comfyUI: ComfyUIImpl) {
+  await comfyUI.ensureComfyAvailable();
+  console.log(chalk.cyan('Loading ComfyUI model metadata...'));
+  const [ckptFromModels, ckptFromNode, loraFromModels, loraFromNode] = await Promise.all([
+    comfyUI.listModels('checkpoints'),
+    comfyUI.listNodeChoices('CheckpointLoaderSimple', 'ckpt_name'),
+    comfyUI.listModels('loras'),
+    comfyUI.listNodeChoices('LoraLoader', 'lora_name'),
+  ]);
+  const ckptChoices = ckptFromModels.length ? ckptFromModels : ckptFromNode;
+  const loraChoices = loraFromModels.length ? loraFromModels : loraFromNode;
+  return {ckptChoices, loraChoices};
+}
 
+function verifyChoices(ckptChoices: string[], loraChoices: string[]) {
+  if (!ckptChoices.length) {
+    new Error(
+        'ComfyUI is running, but no checkpoint models were found. Put an SDXL checkpoint in ComfyUI/models/checkpoints and click "Refresh" in ComfyUI.',
+    );
+  }
+  if (!loraChoices.length) {
+    new Error(
+        'ComfyUI is running, but no LoRA models were found. Put game_icon_v1.0.safetensors in ComfyUI/models/loras and click "Refresh" in ComfyUI.',
+    );
+  }
+}
+
+function verifyChoices2(ckptChoices: string[], comfyOptions: ComfyUIOptions, loraChoices: string[]) {
+  if (!ckptChoices.includes(comfyOptions.checkpoint)) {
+    console.log(chalk.yellow(`Requested checkpoint not found: ${comfyOptions.checkpoint}`));
+    console.log(chalk.yellow(`Available checkpoints: ${ckptChoices.join(', ')}`));
+  }
+  if (!loraChoices.includes(comfyOptions.lora)) {
+    console.log(chalk.yellow(`Requested LoRA not found: ${comfyOptions.lora}`));
+    console.log(chalk.yellow(`Available LoRAs: ${loraChoices.join(', ')}`));
+  }
+}
 
 // todo: extract this as an interface
 export function runIconGenerator(): void {
@@ -401,7 +429,6 @@ export function runIconGenerator(): void {
     .option('--draft', 'Use quick draft settings (512x512, 16 steps, cfg 5)')
     .option('--fast', 'Alias for --draft')
     .option('--limit <n>', 'Generate only the first N eligible cards', (v: string) => toPosInt(v, null), null)
-    .option('--list-models', 'List checkpoint and LoRA names visible to ComfyUI and exit')
     .option('--overwrite', 'Regenerate even when card already has icon')
     .option('--write-yaml <path>', 'Write a YAML file with updated icon fields')
     .option('--in-place', 'Overwrite the input YAML with updated icon fields')
@@ -442,48 +469,16 @@ export function runIconGenerator(): void {
 
         })
 
-        // todo: comfy specific
-        await comfyUI.ensureComfyAvailable();
-        console.log(chalk.cyan('Loading ComfyUI model metadata...'));
-        const [ckptFromModels, ckptFromNode, loraFromModels, loraFromNode] = await Promise.all([
-          comfyUI.listModels('checkpoints'),
-          comfyUI.listNodeChoices('CheckpointLoaderSimple', 'ckpt_name'),
-          comfyUI.listModels('loras'),
-          comfyUI.listNodeChoices('LoraLoader', 'lora_name'),
-        ]);
-        const ckptChoices = ckptFromModels.length ? ckptFromModels : ckptFromNode;
-        const loraChoices = loraFromModels.length ? loraFromModels : loraFromNode;
+
+        // todo: move this part to constructor of comfy UI impl
+        const {ckptChoices, loraChoices} = await loadChoices(comfyUI);
+
+        // todo: this can go in the constructor
+        verifyChoices(ckptChoices, loraChoices);
+        verifyChoices2(ckptChoices, comfyOptions, loraChoices);
 
 
-        // todo: remove listModels
-        if (comfyOptions.listModels) { // todo: extract comfy options
-          console.log(chalk.cyan('Checkpoints:'));
-          console.log(ckptChoices.length ? ckptChoices.join('\n') : '(none)');
-          console.log(chalk.cyan('\nLoRAs:'));
-          console.log(loraChoices.length ? loraChoices.join('\n') : '(none)');
-          return;
-        }
-
-        if (!ckptChoices.length) {
-          throw new Error(
-            'ComfyUI is running, but no checkpoint models were found. Put an SDXL checkpoint in ComfyUI/models/checkpoints and click "Refresh" in ComfyUI.',
-          );
-        }
-        if (!loraChoices.length) {
-          throw new Error(
-            'ComfyUI is running, but no LoRA models were found. Put game_icon_v1.0.safetensors in ComfyUI/models/loras and click "Refresh" in ComfyUI.',
-          );
-        }
-
-        if (!ckptChoices.includes(comfyOptions.checkpoint)) { 
-          console.log(chalk.yellow(`Requested checkpoint not found: ${comfyOptions.checkpoint}`)); 
-          console.log(chalk.yellow(`Available checkpoints: ${ckptChoices.join(', ')}`));
-        }
-        if (!loraChoices.includes(comfyOptions.lora)) { 
-          console.log(chalk.yellow(`Requested LoRA not found: ${comfyOptions.lora}`)); 
-          console.log(chalk.yellow(`Available LoRAs: ${loraChoices.join(', ')}`));
-        }
-
+        // todo: this can also go into the constructor
         const checkpoint = comfyUI.selectModelName(comfyOptions.checkpoint, ckptChoices);
         const lora = comfyUI.selectModelName(comfyOptions.lora, loraChoices);
         console.log(chalk.green(`Checkpoint: ${checkpoint}`));
@@ -491,6 +486,7 @@ export function runIconGenerator(): void {
           chalk.green(`LoRA: ${lora} (model=${comfyOptions.loraStrengthModel}, clip=${comfyOptions.loraStrengthClip})`), 
         );
 
+        // todo: all this can go into the constructor
         let width = comfyOptions.width; 
         let height = comfyOptions.height; 
         let steps = comfyOptions.steps; 
