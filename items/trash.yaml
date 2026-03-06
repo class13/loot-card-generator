@@ -4,7 +4,7 @@ cards:
     type: Trash (The Organic & Grotesque)
     description: A single, yellowed orc tooth
     category: other
-    prompt: 2d icon. yellowed orc tooth. single. worn. <lora:game_icon_v1.0:1>
+    prompt: 2d icon. yellowed orc tooth. single. small. worn. <lora:game_icon_v1.0:1>
     negative_prompt: (blurry:1.3). lowres. character. armor. clothing
     tags:
       - trash

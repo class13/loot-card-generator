@@ -175,7 +175,6 @@ class ComfyUIImpl {
     this.config = config
   }
 
-  // todo: baseUrl as field param
   async ensureComfyAvailable(): Promise<void> {
     try {
       await fetchJson(`${this.config.baseUrl}/system_stats`);
@@ -186,8 +185,6 @@ class ComfyUIImpl {
     }
   }
 
-
-  // todo: baseUrl as field param
   async listModels(kind: string): Promise<string[]> {
     try {
       const data = await fetchJson<unknown>(`${this.config.baseUrl}/models/${encodeURIComponent(kind)}`);
@@ -196,8 +193,6 @@ class ComfyUIImpl {
       return [];
     }
   }
-
-  // todo: baseUrl as field param
   async listNodeChoices(nodeType: string, inputName: string): Promise<string[]> {
     try {
       const info = await fetchJson<Record<string, any>>(
@@ -209,7 +204,6 @@ class ComfyUIImpl {
       return [];
     }
   }
-
 
   selectModelName(preferred: string, choices: string[]): string {
     if (!choices.length) return preferred;
@@ -347,7 +341,17 @@ class ComfyUIImpl {
     }
     return data.prompt_id;
   }
+  public async createImage(params: WorkflowBuildParams) {
+    const workflow = this.buildWorkflow(params);
 
+    const promptId = await this.queuePrompt(workflow);
+    const images = await this.waitForImages(promptId, GENERATION_TIMEOUT);
+    const first = images[0];
+    if (!first) throw new Error('No image in ComfyUI history output.');
+
+    const viewUrl = `${this.config.baseUrl}/view?filename=${encodeURIComponent(first.filename)}&subfolder=${encodeURIComponent(first.subfolder || '')}&type=${encodeURIComponent(first.type || 'output')}`;
+    return await fetchBuffer(viewUrl);
+  }
 }
 
 function toPosInt(value: string, fallback: number | null): number | null {
@@ -359,6 +363,8 @@ function toPosFloat(value: string, fallback: number): number {
   const parsed = Number.parseFloat(value);
   return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
 }
+
+
 
 
 // todo: extract this as an interface
@@ -558,15 +564,7 @@ export function runIconGenerator(): void {
               denoise: options.denoise,
               prefix,
             };
-            const workflow = comfyUI.buildWorkflow(params);
-
-            const promptId = await comfyUI.queuePrompt(workflow);
-            const images = await comfyUI.waitForImages(promptId, GENERATION_TIMEOUT);
-            const first = images[0];
-            if (!first) throw new Error('No image in ComfyUI history output.');
-
-            const viewUrl = `${comfyUrl}/view?filename=${encodeURIComponent(first.filename)}&subfolder=${encodeURIComponent(first.subfolder || '')}&type=${encodeURIComponent(first.type || 'output')}`;
-            const imageData = await fetchBuffer(viewUrl);
+            const imageData = await comfyUI.createImage(params);
             fs.writeFileSync(outPath, imageData);
 
             const relativeIconPath = path.relative(yamlDir, outPath).split(path.sep).join('/');
