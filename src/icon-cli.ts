@@ -161,9 +161,38 @@ interface ComfyUIConfiguration {
 
 class ComfyUIImpl {
   private config: ComfyUIConfiguration;
+  private ckptChoices: string[];
+  private loraChoices: string[];
 
   constructor(config: ComfyUIConfiguration) {
     this.config = config
+    this.ckptChoices = []
+    this.loraChoices = []
+  }
+
+  async init(comfyOptions: ComfyUIOptions) {
+    const {ckptChoices, loraChoices} = await this.loadChoices();
+    this.ckptChoices = ckptChoices;
+    this.loraChoices = loraChoices;
+
+    if (!this.ckptChoices.length) {
+      new Error(
+          'ComfyUI is running, but no checkpoint models were found. Put an SDXL checkpoint in ComfyUI/models/checkpoints and click "Refresh" in ComfyUI.',
+      );
+    }
+    if (!this.loraChoices.length) {
+      new Error(
+          'ComfyUI is running, but no LoRA models were found. Put game_icon_v1.0.safetensors in ComfyUI/models/loras and click "Refresh" in ComfyUI.',
+      );
+    }
+    if (!this.ckptChoices.includes(comfyOptions.checkpoint)) {
+      console.log(chalk.yellow(`Requested checkpoint not found: ${comfyOptions.checkpoint}`));
+      console.log(chalk.yellow(`Available checkpoints: ${this.ckptChoices.join(', ')}`));
+    }
+    if (!this.loraChoices.includes(comfyOptions.lora)) {
+      console.log(chalk.yellow(`Requested LoRA not found: ${comfyOptions.lora}`));
+      console.log(chalk.yellow(`Available LoRAs: ${this.loraChoices.join(', ')}`));
+    }
   }
 
   async ensureComfyAvailable(): Promise<void> {
@@ -196,18 +225,18 @@ class ComfyUIImpl {
     }
   }
 
-  selectModelName(preferred: string, choices: string[]): string {
-    if (!choices.length) return preferred;
-    if (choices.includes(preferred)) return preferred;
+  selectModelName(preferred: string): string {
+    if (!this.ckptChoices.length) return preferred;
+    if (this.ckptChoices.includes(preferred)) return preferred;
 
     const preferredBase = preferred.replace(/\.[^.]+$/, '').toLowerCase();
-    const exactBase = choices.find((c) => c.replace(/\.[^.]+$/, '').toLowerCase() === preferredBase);
+    const exactBase = this.ckptChoices.find((c) => c.replace(/\.[^.]+$/, '').toLowerCase() === preferredBase);
     if (exactBase) return exactBase;
 
-    const fuzzy = choices.find((c) => c.toLowerCase().includes(preferredBase));
+    const fuzzy = this.ckptChoices.find((c) => c.toLowerCase().includes(preferredBase));
     if (fuzzy) return fuzzy;
 
-    return choices[0];
+    return (this.ckptChoices)[0];
   }
 
   buildWorkflow(params: WorkflowBuildParams): Record<string, unknown> {
@@ -318,7 +347,6 @@ class ComfyUIImpl {
     throw new Error(`Timed out waiting for prompt ${promptId}`);
   }
 
-  // todo: comfyUI
   async queuePrompt(workflow: Record<string, unknown>): Promise<string> {
     const clientId = randomUUID();
     const payload = { prompt: workflow, client_id: clientId };
@@ -343,6 +371,20 @@ class ComfyUIImpl {
     const viewUrl = `${this.config.baseUrl}/view?filename=${encodeURIComponent(first.filename)}&subfolder=${encodeURIComponent(first.subfolder || '')}&type=${encodeURIComponent(first.type || 'output')}`;
     return await fetchBuffer(viewUrl);
   }
+
+  async loadChoices() {
+    await this.ensureComfyAvailable();
+    console.log(chalk.cyan('Loading ComfyUI model metadata...'));
+    const [ckptFromModels, ckptFromNode, loraFromModels, loraFromNode] = await Promise.all([
+      this.listModels('checkpoints'),
+      this.listNodeChoices('CheckpointLoaderSimple', 'ckpt_name'),
+      this.listModels('loras'),
+      this.listNodeChoices('LoraLoader', 'lora_name'),
+    ]);
+    const ckptChoices = ckptFromModels.length ? ckptFromModels : ckptFromNode;
+    const loraChoices = loraFromModels.length ? loraFromModels : loraFromNode;
+    return {ckptChoices, loraChoices};
+  }
 }
 
 function toPosInt(value: string, fallback: number | null): number | null {
@@ -356,45 +398,6 @@ function toPosFloat(value: string, fallback: number): number {
 }
 
 
-async function loadChoices(comfyUI: ComfyUIImpl) {
-  await comfyUI.ensureComfyAvailable();
-  console.log(chalk.cyan('Loading ComfyUI model metadata...'));
-  const [ckptFromModels, ckptFromNode, loraFromModels, loraFromNode] = await Promise.all([
-    comfyUI.listModels('checkpoints'),
-    comfyUI.listNodeChoices('CheckpointLoaderSimple', 'ckpt_name'),
-    comfyUI.listModels('loras'),
-    comfyUI.listNodeChoices('LoraLoader', 'lora_name'),
-  ]);
-  const ckptChoices = ckptFromModels.length ? ckptFromModels : ckptFromNode;
-  const loraChoices = loraFromModels.length ? loraFromModels : loraFromNode;
-  return {ckptChoices, loraChoices};
-}
-
-function verifyChoices(ckptChoices: string[], loraChoices: string[]) {
-  if (!ckptChoices.length) {
-    new Error(
-        'ComfyUI is running, but no checkpoint models were found. Put an SDXL checkpoint in ComfyUI/models/checkpoints and click "Refresh" in ComfyUI.',
-    );
-  }
-  if (!loraChoices.length) {
-    new Error(
-        'ComfyUI is running, but no LoRA models were found. Put game_icon_v1.0.safetensors in ComfyUI/models/loras and click "Refresh" in ComfyUI.',
-    );
-  }
-}
-
-function verifyChoices2(ckptChoices: string[], comfyOptions: ComfyUIOptions, loraChoices: string[]) {
-  if (!ckptChoices.includes(comfyOptions.checkpoint)) {
-    console.log(chalk.yellow(`Requested checkpoint not found: ${comfyOptions.checkpoint}`));
-    console.log(chalk.yellow(`Available checkpoints: ${ckptChoices.join(', ')}`));
-  }
-  if (!loraChoices.includes(comfyOptions.lora)) {
-    console.log(chalk.yellow(`Requested LoRA not found: ${comfyOptions.lora}`));
-    console.log(chalk.yellow(`Available LoRAs: ${loraChoices.join(', ')}`));
-  }
-}
-
-// todo: extract this as an interface
 export function runIconGenerator(): void {
   program
     .name('loot-card-icons')
@@ -460,26 +463,20 @@ export function runIconGenerator(): void {
           width:options.width,
         }
         
-        // todo: comfy specific
         const comfyUrl = comfyOptions.comfyUrl.replace(/\/+$/, '');
 
         let comfyUI = new ComfyUIImpl({
           baseUrl: comfyUrl
 
         })
+        await comfyUI.init(comfyOptions)
 
 
-        // todo: move this part to constructor of comfy UI impl
-        const {ckptChoices, loraChoices} = await loadChoices(comfyUI);
-
-        // todo: this can go in the constructor
-        verifyChoices(ckptChoices, loraChoices);
-        verifyChoices2(ckptChoices, comfyOptions, loraChoices);
 
 
         // todo: this can also go into the constructor
-        const checkpoint = comfyUI.selectModelName(comfyOptions.checkpoint, ckptChoices);
-        const lora = comfyUI.selectModelName(comfyOptions.lora, loraChoices);
+        const checkpoint = comfyUI.selectModelName(comfyOptions.checkpoint);
+        const lora = comfyUI.selectModelName(comfyOptions.lora);
         console.log(chalk.green(`Checkpoint: ${checkpoint}`));
         console.log(
           chalk.green(`LoRA: ${lora} (model=${comfyOptions.loraStrengthModel}, clip=${comfyOptions.loraStrengthClip})`), 
