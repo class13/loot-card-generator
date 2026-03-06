@@ -72,7 +72,7 @@ interface CliOptions {
   sampler: string;
   scheduler: string;
   denoise: number;
-  seed: number | null;
+  seed: number;
   draft?: boolean;
   fast?: boolean;
   limit: number | null;
@@ -95,7 +95,7 @@ interface ComfyUIOptions {
   sampler: string;
   scheduler: string;
   denoise: number;
-  seed: number | null;
+  seed: number;
   draft?: boolean;
   fast?: boolean;
   limit: number | null;
@@ -157,6 +157,20 @@ async function fetchBuffer(url: string): Promise<Buffer> {
 
 interface ComfyUIConfiguration {
   baseUrl: string;
+}
+
+interface  ComfyUIState {
+  prefix: string;
+  lora: string;
+  checkpoint: string;
+
+}
+
+interface ImageParameters {
+  height: number;
+  width: number;
+  negativePrompt: string;
+  prompt: string;
 }
 
 class ComfyUIImpl {
@@ -360,17 +374,6 @@ class ComfyUIImpl {
     }
     return data.prompt_id;
   }
-  public async createImage(params: WorkflowBuildParams) {
-    const workflow = this.buildWorkflow(params);
-
-    const promptId = await this.queuePrompt(workflow);
-    const images = await this.waitForImages(promptId, GENERATION_TIMEOUT);
-    const first = images[0];
-    if (!first) throw new Error('No image in ComfyUI history output.');
-
-    const viewUrl = `${this.config.baseUrl}/view?filename=${encodeURIComponent(first.filename)}&subfolder=${encodeURIComponent(first.subfolder || '')}&type=${encodeURIComponent(first.type || 'output')}`;
-    return await fetchBuffer(viewUrl);
-  }
 
   async loadChoices() {
     await this.ensureComfyAvailable();
@@ -385,6 +388,35 @@ class ComfyUIImpl {
     const loraChoices = loraFromModels.length ? loraFromModels : loraFromNode;
     return {ckptChoices, loraChoices};
   }
+
+  async createImage(state: ComfyUIState, comfyOptions: ComfyUIOptions, imageParameters: ImageParameters) {
+    let params: WorkflowBuildParams = {
+      checkpoint: state.checkpoint,
+      lora: state.lora,
+      loraStrengthModel: comfyOptions.loraStrengthModel,
+      loraStrengthClip: comfyOptions.loraStrengthClip,
+      prompt: imageParameters.prompt,
+      negativePrompt: imageParameters.negativePrompt,
+      width: imageParameters.width,
+      height: imageParameters.height,
+      seed: comfyOptions.seed,
+      steps: comfyOptions.steps,
+      cfg: comfyOptions.cfg,
+      sampler: comfyOptions.sampler,
+      scheduler: comfyOptions.scheduler,
+      denoise: comfyOptions.denoise,
+      prefix: state.prefix,
+    };
+    const workflow = this.buildWorkflow(params);
+
+    const promptId = await this.queuePrompt(workflow);
+    const images = await this.waitForImages(promptId, GENERATION_TIMEOUT);
+    const first = images[0];
+    if (!first) throw new Error('No image in ComfyUI history output.');
+
+    const viewUrl = `${this.config.baseUrl}/view?filename=${encodeURIComponent(first.filename)}&subfolder=${encodeURIComponent(first.subfolder || '')}&type=${encodeURIComponent(first.type || 'output')}`;
+    return await fetchBuffer(viewUrl);
+  }
 }
 
 function toPosInt(value: string, fallback: number | null): number | null {
@@ -396,7 +428,6 @@ function toPosFloat(value: string, fallback: number): number {
   const parsed = Number.parseFloat(value);
   return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
 }
-
 
 export function runIconGenerator(): void {
   program
@@ -428,8 +459,8 @@ export function runIconGenerator(): void {
     .option('--scheduler <name>', 'Scheduler name', 'normal')
     .option('--denoise <n>', 'Denoise value', (v: string) => toPosFloat(v, 1), 1)
     .option('--seed <n>', 'Base seed for deterministic runs', (v: string) => toPosInt(v, null), null)
-    .option('--draft', 'Use quick draft settings (512x512, 16 steps, cfg 5)')
-    .option('--fast', 'Alias for --draft')
+    .option('--draft', 'Use quick draft settings (512x512, 16 steps, cfg 5)') // todo: remove
+    .option('--fast', 'Alias for --draft') // todo: remove
     .option('--limit <n>', 'Generate only the first N eligible cards', (v: string) => toPosInt(v, null), null)
     .option('--overwrite', 'Regenerate even when card already has icon')
     .option('--write-yaml <path>', 'Write a YAML file with updated icon fields')
@@ -482,22 +513,6 @@ export function runIconGenerator(): void {
           chalk.green(`LoRA: ${lora} (model=${comfyOptions.loraStrengthModel}, clip=${comfyOptions.loraStrengthClip})`), 
         );
 
-        // todo: all this can go into the constructor
-        let width = comfyOptions.width; 
-        let height = comfyOptions.height; 
-        let steps = comfyOptions.steps; 
-        let cfg = comfyOptions.cfg; 
-
-        if (comfyOptions.draft || comfyOptions.fast) { 
-          width = 512;
-          height = 512;
-          steps = 16;
-          cfg = 5;
-          console.log(chalk.yellow('Using draft settings: 512x512, 16 steps, cfg 5'));
-        } else {
-          console.log(chalk.cyan(`Using settings: ${width}x${height}, steps=${steps}, cfg=${cfg}`));
-        }
-
         const updatedCards = [...cards];
         const shouldPersistYaml = Boolean(options.writeYaml || options.inPlace);
         const targetYamlPath = shouldPersistYaml
@@ -529,7 +544,6 @@ export function runIconGenerator(): void {
           const fileName = `${String(i + 1).padStart(3, '0')}-${slugify(card.name)}.png`;
           const outPath = path.join(outputDir, fileName);
           const prefix = `loot_card_icon_${Date.now()}_${i + 1}`;
-          const seed = options.seed ? options.seed + i : Math.floor(Math.random() * 0xffffffff);
 
           console.log(chalk.cyan(`Generating ${i + 1}/${cards.length}: ${card.name}`));
           if (fromYaml) {
@@ -539,24 +553,18 @@ export function runIconGenerator(): void {
           console.log(chalk.gray(`  negative: ${negativePrompt}`));
 
           try {
-            let params: WorkflowBuildParams = {
-              checkpoint,
-              lora,
-              loraStrengthModel: options.loraStrengthModel,
-              loraStrengthClip: options.loraStrengthClip,
-              prompt,
-              negativePrompt,
-              width,
-              height,
-              seed,
-              steps,
-              cfg,
-              sampler: options.sampler,
-              scheduler: options.scheduler,
-              denoise: options.denoise,
-              prefix,
-            };
-            const imageData = await comfyUI.createImage(params);
+            let imageParameters: ImageParameters = {
+              height: comfyOptions.height,
+              width: comfyOptions.width,
+              prompt: prompt,
+              negativePrompt: negativePrompt
+            }
+            let state: ComfyUIState = {
+              checkpoint: checkpoint,
+              lora: lora,
+              prefix: prefix
+            }
+            const imageData = await comfyUI.createImage(state, comfyOptions, imageParameters);
             fs.writeFileSync(outPath, imageData);
 
             const relativeIconPath = path.relative(yamlDir, outPath).split(path.sep).join('/');
