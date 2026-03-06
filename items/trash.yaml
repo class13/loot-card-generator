@@ -4,7 +4,7 @@ cards:
     type: Trash (The Organic & Grotesque)
     description: A single, yellowed orc tooth
     category: other
-    prompt: 2d icon. yellowed orc tooth. single. small. worn. <lora:game_icon_v1.0:1>
+    prompt: 2d icon. yellowed. orc tooth. single. <lora:game_icon_v1.0:1>
     negative_prompt: (blurry:1.3). lowres. character. armor. clothing
     tags:
       - trash
@@ -24,7 +24,7 @@ cards:
     type: Trash (The Organic & Grotesque)
     description: A tangle of greasy, matted dwarf beard hair
     category: other
-    prompt: 2d icon. greasy. matted. brown. tangled. fuzzy. <lora:game_icon_v1.0:1>
+    prompt: 2d icon. greasy. matted. brown. tangled. <lora:game_icon_v1.0:1>
     negative_prompt: (blurry:1.3). lowres
     tags:
       - trash
@@ -34,7 +34,7 @@ cards:
     type: Trash (The Organic & Grotesque)
     description: A collection of "lucky" fingernail clippings
     category: jewelry
-    prompt: 2d icon. fingernail clippings. yellow. brittle. <lora:game_icon_v1.0:1>
+    prompt: 2d icon. fingernail clippings. yellowed. brittle. <lora:game_icon_v1.0:1>
     negative_prompt: (blurry:1.3). lowres. character. armor. clothing
     tags:
       - trash
@@ -44,8 +44,8 @@ cards:
     type: Trash (The Organic & Grotesque)
     description: A vial of murky swamp water (smells like sulfur)
     category: other
-    prompt: 2d icon. murky water. green. cloudy. vial. <lora:game_icon_v1.0:1>
-    negative_prompt: (blurry:1.3). lowres. character. armor. clothing
+    prompt: 2d icon. murky. swamp. water. brown. cloudy. <lora:game_icon_v1.0:1>
+    negative_prompt: (blurry:1.3). lowres
     tags:
       - trash
       - the-organic-grotesque
@@ -64,8 +64,8 @@ cards:
     type: Trash (The Organic & Grotesque)
     description: A petrified apple core
     category: other
-    prompt: 2d icon. brown. dry. petrified. apple core. <lora:game_icon_v1.0:1>
-    negative_prompt: (blurry:1.3). lowres
+    prompt: 2d icon. petrified. apple core. brown. dry. <lora:game_icon_v1.0:1>
+    negative_prompt: (blurry:1.3). lowres. character
     tags:
       - trash
       - the-organic-grotesque
@@ -73,9 +73,9 @@ cards:
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A pouch of moth wings
-    category: container
-    prompt: 2d icon. moth wings. brown. dry. folded. <lora:game_icon_v1.0:1>
-    negative_prompt: (blurry:1.3). lowres. character. armor. clothing
+    category: other
+    prompt: 2d icon. moth wings. brown. delicate. <lora:game_icon_v1.0:1>
+    negative_prompt: (blurry:1.3). lowres
     tags:
       - trash
       - the-organic-grotesque
@@ -85,7 +85,7 @@ cards:
     description: A jar of pickled leeches (all dead)
     category: container
     prompt: 2d icon. jar. glass. pickled. leeches. dead. <lora:game_icon_v1.0:1>
-    negative_prompt: (blurry:1.3). lowres
+    negative_prompt: (blurry:1.3). lowres. character
     tags:
       - trash
       - the-organic-grotesque
@@ -94,7 +94,7 @@ cards:
     type: Trash (The Organic & Grotesque)
     description: A snake skin that has mostly crumbled to dust
     category: other
-    prompt: 2d icon. crumbled snake skin. dusty. brown. dry. <lora:game_icon_v1.0:1>
+    prompt: 2d icon. crumbled snake skin. brown. dusty. dry. <lora:game_icon_v1.0:1>
     negative_prompt: (blurry:1.3). lowres. character. armor. clothing
     tags:
       - trash
@@ -104,8 +104,8 @@ cards:
     type: Trash (The Organic & Grotesque)
     description: A bird’s nest made entirely of stolen sewing thread
     category: other
-    prompt: 2d icon. bird's nest. sewing thread. tangled. brown. <lora:game_icon_v1.0:1>
-    negative_prompt: (blurry:1.3). lowres. character. armor. clothing
+    prompt: 2d icon. bird's nest. sewing thread. tangled. <lora:game_icon_v1.0:1>
+    negative_prompt: (blurry:1.3). lowres. character. armor. jewelry
     tags:
       - trash
       - the-organic-grotesque
@@ -114,8 +114,8 @@ cards:
     type: Trash (The Organic & Grotesque)
     description: A dried-up honeycomb with no honey
     category: other
-    prompt: 2d icon. dried honeycomb. brown. cracked. empty. <lora:game_icon_v1.0:1>
-    negative_prompt: (blurry:1.3). lowres. character
+    prompt: 2d icon. dried honeycomb. cracked. brown. empty. <lora:game_icon_v1.0:1>
+    negative_prompt: (blurry:1.3). lowres. character. armor. clothing
     tags:
       - trash
       - the-organic-grotesque
@@ -125,7 +125,7 @@ cards:
     description: A bag of chicken bones used for "divination."
     category: other
     prompt: 2d icon. chicken bones. brown. old. tangled. <lora:game_icon_v1.0:1>
-    negative_prompt: (blurry:1.3). lowres. (blurry:1. 3). character. armor. jewelry
+    negative_prompt: (blurry:1.3). lowres. character. armor. jewelry
     tags:
       - trash
       - the-organic-grotesque
@@ -135,7 +135,7 @@ cards:
     description: A very large, very dead beetle
     category: other
     prompt: 2d icon. large. dead. beetle. brown. <lora:game_icon_v1.0:1>
-    negative_prompt: (blurry:1.3). lowres. (blurry:1. 3)
+    negative_prompt: (blurry:1.3). lowres
     tags:
       - trash
       - the-organic-grotesque
@@ -144,8 +144,8 @@ cards:
     type: Trash (The Organic & Grotesque)
     description: A scrap of cured leather that still has fur (and fleas)
     category: other
-    prompt: 2d icon. brown leather. white fur. black fleas. <lora:game_icon_v1.0:1>
-    negative_prompt: (blurry:1.3). lowres. (blurry:1. 3)
+    prompt: 2d icon. cured leather. fur. fleas. brown. worn. <lora:game_icon_v1.0:1>
+    negative_prompt: (blurry:1.3). lowres. character. armor. jewelry
     tags:
       - trash
       - the-organic-grotesque
@@ -154,8 +154,8 @@ cards:
     type: Trash (Rusty & Broken Hardware)
     description: A bent iron nail
     category: other
-    prompt: 2d icon. bent. iron. nail. rusty. broken. <lora:game_icon_v1.0:1>
-    negative_prompt: (blurry:1.3). lowres. (blurry:1. 3)
+    prompt: 2d icon. bent iron. rusty. broken. small. <lora:game_icon_v1.0:1>
+    negative_prompt: (blurry:1.3). lowres
     tags:
       - trash
       - rusty-broken-hardware
@@ -165,7 +165,7 @@ cards:
     description: A key that fits no known lock in the region
     category: other
     prompt: 2d icon. rusty key. bent. broken. old. <lora:game_icon_v1.0:1>
-    negative_prompt: (blurry:1.3). lowres. (blurry:1. 3). character. armor. jewelry
+    negative_prompt: (blurry:1.3). lowres. character. armor. jewelry
     tags:
       - trash
       - rusty-broken-hardware
@@ -174,8 +174,8 @@ cards:
     type: Trash (Rusty & Broken Hardware)
     description: A rusted buckle from a horse’s saddle
     category: other
-    prompt: 2d icon. rusty. broken. metal. buckle. worn. <lora:game_icon_v1.0:1>
-    negative_prompt: (blurry:1.3). lowres. (blurry:1. 3). character. armor. clothing
+    prompt: 2d icon. rusty. broken. metal. buckle. horse saddle. <lora:game_icon_v1.0:1>
+    negative_prompt: (blurry:1.3). lowres
     tags:
       - trash
       - rusty-broken-hardware
