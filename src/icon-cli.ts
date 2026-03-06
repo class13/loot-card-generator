@@ -6,7 +6,6 @@ import {program} from 'commander';
 import chalk from 'chalk';
 import {loadYaml} from './loader.js';
 
-const NEGATIVE_PROMPT = `(blurry:1.3). lowres.`; // tooo: remove this
 const DEFAULT_WIDTH = 1024;
 const DEFAULT_HEIGHT = 1024;
 const DEFAULT_STEPS = 40;
@@ -118,7 +117,7 @@ function resolvePrompts(card: LootCard): PromptResolution {
 
   return {
     prompt: positive,
-    negativePrompt: negative || NEGATIVE_PROMPT,
+    negativePrompt: negative,
     fromYaml: Boolean(positive || negative),
   };
 }
