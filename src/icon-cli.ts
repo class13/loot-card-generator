@@ -1,10 +1,13 @@
 import fs from 'fs';
 import path from 'path';
-import {randomUUID} from 'crypto';
 import yaml from 'js-yaml';
 import {program} from 'commander';
 import chalk from 'chalk';
 import {loadYaml} from './loader.js';
+import {ComfyUIImageGenerator} from "./image-generation/comfy-ui/comfy-ui-image-generator.js";
+import {ImageGenerator} from "./image-generation/image-generator.js";
+import {ImageParameters} from "./image-generation/image-parameters.js";
+import {ComfyUIOptions} from "./comfy-ui-options.js";
 
 const DEFAULT_WIDTH = 1024;
 const DEFAULT_HEIGHT = 1024;
@@ -12,7 +15,7 @@ const DEFAULT_STEPS = 40;
 const DEFAULT_CFG = 6;
 const DEFAULT_LORA = 'game_icon_v1.0.safetensors';
 const DEFAULT_LORA_STRENGTH = 1;
-const GENERATION_TIMEOUT = 15 * 60 * 1000;
+
 
 interface LootCard {
   name: string;
@@ -26,36 +29,6 @@ interface LootCard {
 interface LoadYamlResult {
   cards: LootCard[];
   yamlDir: string;
-}
-
-interface PromptResolution {
-  prompt: string;
-  negativePrompt: string;
-  fromYaml: boolean;
-}
-
-interface WorkflowBuildParams {
-  checkpoint: string;
-  lora: string;
-  loraStrengthModel: number;
-  loraStrengthClip: number;
-  prompt: string;
-  negativePrompt: string;
-  width: number;
-  height: number;
-  seed: number;
-  steps: number;
-  cfg: number;
-  sampler: string;
-  scheduler: string;
-  denoise: number;
-  prefix: string;
-}
-
-interface GeneratedImage {
-  filename: string;
-  subfolder?: string;
-  type?: string;
 }
 
 interface CliOptions {
@@ -82,25 +55,6 @@ interface CliOptions {
   inPlace?: boolean;
 }
 
-interface ComfyUIOptions {
-  comfyUrl: string;
-  checkpoint: string;
-  lora: string;
-  loraStrengthModel: number;
-  loraStrengthClip: number;
-  width: number;
-  height: number;
-  steps: number;
-  cfg: number;
-  sampler: string;
-  scheduler: string;
-  denoise: number;
-  seed: number;
-  draft?: boolean;
-  fast?: boolean;
-  limit: number | null;
-}
-
 function slugify(value: string): string {
   return (
     value
@@ -111,313 +65,10 @@ function slugify(value: string): string {
   );
 }
 
-function resolvePrompts(card: LootCard): PromptResolution {
-  const positive = String(card.prompt || '').trim();
-  const negative = String(card.negative_prompt || '').trim();
-
-  return {
-    prompt: positive,
-    negativePrompt: negative,
-    fromYaml: Boolean(positive || negative),
-  };
-}
-
-function getErrorMessage(err: unknown): string {
+export function getErrorMessage(err: unknown): string {
   return err instanceof Error ? err.message : String(err);
 }
 
-async function fetchJson<T>(url: string, init?: RequestInit): Promise<T> {
-  let res: Response;
-  try {
-    res = await fetch(url, init);
-  } catch (err) {
-    throw new Error(`Could not reach ComfyUI at ${url}: ${getErrorMessage(err)}`);
-  }
-  if (!res.ok) {
-    const body = await res.text();
-    throw new Error(`${res.status} ${res.statusText}: ${body.slice(0, 300)}`);
-  }
-  return (await res.json()) as T;
-}
-
-async function fetchBuffer(url: string): Promise<Buffer> {
-  let res: Response;
-  try {
-    res = await fetch(url);
-  } catch (err) {
-    throw new Error(`Could not download image from ${url}: ${getErrorMessage(err)}`);
-  }
-  if (!res.ok) {
-    const body = await res.text();
-    throw new Error(`${res.status} ${res.statusText}: ${body.slice(0, 300)}`);
-  }
-  const arr = await res.arrayBuffer();
-  return Buffer.from(arr);
-}
-
-interface ComfyUIConfiguration {
-  baseUrl: string;
-}
-
-interface  ComfyUIState {
-  prefix: string;
-  lora: string;
-  checkpoint: string;
-
-}
-
-interface ImageParameters {
-  height: number;
-  width: number;
-  negativePrompt: string;
-  prompt: string;
-}
-
-class ComfyUIImpl {
-  private config: ComfyUIConfiguration;
-  private ckptChoices: string[];
-  private loraChoices: string[];
-
-  constructor(config: ComfyUIConfiguration) {
-    this.config = config
-    this.ckptChoices = []
-    this.loraChoices = []
-  }
-
-  async init(comfyOptions: ComfyUIOptions) {
-    const {ckptChoices, loraChoices} = await this.loadChoices();
-    this.ckptChoices = ckptChoices;
-    this.loraChoices = loraChoices;
-
-    if (!this.ckptChoices.length) {
-      new Error(
-          'ComfyUI is running, but no checkpoint models were found. Put an SDXL checkpoint in ComfyUI/models/checkpoints and click "Refresh" in ComfyUI.',
-      );
-    }
-    if (!this.loraChoices.length) {
-      new Error(
-          'ComfyUI is running, but no LoRA models were found. Put game_icon_v1.0.safetensors in ComfyUI/models/loras and click "Refresh" in ComfyUI.',
-      );
-    }
-    if (!this.ckptChoices.includes(comfyOptions.checkpoint)) {
-      console.log(chalk.yellow(`Requested checkpoint not found: ${comfyOptions.checkpoint}`));
-      console.log(chalk.yellow(`Available checkpoints: ${this.ckptChoices.join(', ')}`));
-    }
-    if (!this.loraChoices.includes(comfyOptions.lora)) {
-      console.log(chalk.yellow(`Requested LoRA not found: ${comfyOptions.lora}`));
-      console.log(chalk.yellow(`Available LoRAs: ${this.loraChoices.join(', ')}`));
-    }
-  }
-
-  async ensureComfyAvailable(): Promise<void> {
-    try {
-      await fetchJson(`${this.config.baseUrl}/system_stats`);
-    } catch (err) {
-      throw new Error(
-          `ComfyUI is not reachable at ${this.config.baseUrl}. Make sure ComfyUI is started and the URL is correct. (${getErrorMessage(err)})`,
-      );
-    }
-  }
-
-  async listModels(kind: string): Promise<string[]> {
-    try {
-      const data = await fetchJson<unknown>(`${this.config.baseUrl}/models/${encodeURIComponent(kind)}`);
-      return Array.isArray(data) ? data : [];
-    } catch {
-      return [];
-    }
-  }
-  async listNodeChoices(nodeType: string, inputName: string): Promise<string[]> {
-    try {
-      const info = await fetchJson<Record<string, any>>(
-          `${this.config.baseUrl}/object_info/${encodeURIComponent(nodeType)}`,
-      );
-      const values = info?.[nodeType]?.input?.required?.[inputName]?.[0];
-      return Array.isArray(values) ? values : [];
-    } catch {
-      return [];
-    }
-  }
-
-  selectModelName(preferred: string): string {
-    if (!this.ckptChoices.length) return preferred;
-    if (this.ckptChoices.includes(preferred)) return preferred;
-
-    const preferredBase = preferred.replace(/\.[^.]+$/, '').toLowerCase();
-    const exactBase = this.ckptChoices.find((c) => c.replace(/\.[^.]+$/, '').toLowerCase() === preferredBase);
-    if (exactBase) return exactBase;
-
-    const fuzzy = this.ckptChoices.find((c) => c.toLowerCase().includes(preferredBase));
-    if (fuzzy) return fuzzy;
-
-    return (this.ckptChoices)[0];
-  }
-
-  buildWorkflow(params: WorkflowBuildParams): Record<string, unknown> {
-    const {
-      checkpoint,
-      lora,
-      loraStrengthModel,
-      loraStrengthClip,
-      prompt,
-      negativePrompt,
-      width,
-      height,
-      seed,
-      steps,
-      cfg,
-      sampler,
-      scheduler,
-      denoise,
-      prefix,
-    } = params;
-
-    return {
-      '1': {
-        class_type: 'CheckpointLoaderSimple',
-        inputs: { ckpt_name: checkpoint },
-      },
-      '8': {
-        class_type: 'LoraLoader',
-        inputs: {
-          model: ['1', 0],
-          clip: ['1', 1],
-          lora_name: lora,
-          strength_model: loraStrengthModel,
-          strength_clip: loraStrengthClip,
-        },
-      },
-      '2': {
-        class_type: 'CLIPTextEncode',
-        inputs: {
-          text: prompt,
-          clip: ['8', 1],
-        },
-      },
-      '3': {
-        class_type: 'CLIPTextEncode',
-        inputs: {
-          text: negativePrompt,
-          clip: ['8', 1],
-        },
-      },
-      '4': {
-        class_type: 'EmptyLatentImage',
-        inputs: {
-          width,
-          height,
-          batch_size: 1,
-        },
-      },
-      '5': {
-        class_type: 'KSampler',
-        inputs: {
-          model: ['8', 0],
-          seed,
-          steps,
-          cfg,
-          sampler_name: sampler,
-          scheduler,
-          denoise,
-          positive: ['2', 0],
-          negative: ['3', 0],
-          latent_image: ['4', 0],
-        },
-      },
-      '6': {
-        class_type: 'VAEDecode',
-        inputs: {
-          samples: ['5', 0],
-          vae: ['1', 2],
-        },
-      },
-      '7': {
-        class_type: 'SaveImage',
-        inputs: {
-          filename_prefix: prefix,
-          images: ['6', 0],
-        },
-      },
-    };
-  }
-
-  async waitForImages(promptId: string, timeoutMs: number): Promise<GeneratedImage[]> {
-    const started = Date.now();
-    while (Date.now() - started < timeoutMs) {
-      const history = await fetchJson<Record<string, any>>(
-          `${this.config.baseUrl}/history/${encodeURIComponent(promptId)}`,
-      );
-      const job = history?.[promptId];
-      const outputs = job?.outputs;
-      if (outputs) {
-        const images: GeneratedImage[] = [];
-        for (const output of Object.values(outputs) as Array<{ images?: GeneratedImage[] }>) {
-          if (Array.isArray(output.images)) images.push(...output.images);
-        }
-        if (images.length) return images;
-      }
-      await new Promise((resolve) => setTimeout(resolve, 600));
-    }
-    throw new Error(`Timed out waiting for prompt ${promptId}`);
-  }
-
-  async queuePrompt(workflow: Record<string, unknown>): Promise<string> {
-    const clientId = randomUUID();
-    const payload = { prompt: workflow, client_id: clientId };
-    const data = await fetchJson<{ prompt_id?: string }>(`${this.config.baseUrl}/prompt`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
-    if (!data.prompt_id) {
-      throw new Error('ComfyUI did not return a prompt_id.');
-    }
-    return data.prompt_id;
-  }
-
-  async loadChoices() {
-    await this.ensureComfyAvailable();
-    console.log(chalk.cyan('Loading ComfyUI model metadata...'));
-    const [ckptFromModels, ckptFromNode, loraFromModels, loraFromNode] = await Promise.all([
-      this.listModels('checkpoints'),
-      this.listNodeChoices('CheckpointLoaderSimple', 'ckpt_name'),
-      this.listModels('loras'),
-      this.listNodeChoices('LoraLoader', 'lora_name'),
-    ]);
-    const ckptChoices = ckptFromModels.length ? ckptFromModels : ckptFromNode;
-    const loraChoices = loraFromModels.length ? loraFromModels : loraFromNode;
-    return {ckptChoices, loraChoices};
-  }
-
-  async createImage(state: ComfyUIState, comfyOptions: ComfyUIOptions, imageParameters: ImageParameters) {
-    let params: WorkflowBuildParams = {
-      checkpoint: state.checkpoint,
-      lora: state.lora,
-      loraStrengthModel: comfyOptions.loraStrengthModel,
-      loraStrengthClip: comfyOptions.loraStrengthClip,
-      prompt: imageParameters.prompt,
-      negativePrompt: imageParameters.negativePrompt,
-      width: imageParameters.width,
-      height: imageParameters.height,
-      seed: comfyOptions.seed,
-      steps: comfyOptions.steps,
-      cfg: comfyOptions.cfg,
-      sampler: comfyOptions.sampler,
-      scheduler: comfyOptions.scheduler,
-      denoise: comfyOptions.denoise,
-      prefix: state.prefix,
-    };
-    const workflow = this.buildWorkflow(params);
-
-    const promptId = await this.queuePrompt(workflow);
-    const images = await this.waitForImages(promptId, GENERATION_TIMEOUT);
-    const first = images[0];
-    if (!first) throw new Error('No image in ComfyUI history output.');
-
-    const viewUrl = `${this.config.baseUrl}/view?filename=${encodeURIComponent(first.filename)}&subfolder=${encodeURIComponent(first.subfolder || '')}&type=${encodeURIComponent(first.type || 'output')}`;
-    return await fetchBuffer(viewUrl);
-  }
-}
 
 function toPosInt(value: string, fallback: number | null): number | null {
   const parsed = Number.parseInt(value, 10);
@@ -496,22 +147,15 @@ export function runIconGenerator(): void {
         
         const comfyUrl = comfyOptions.comfyUrl.replace(/\/+$/, '');
 
-        let comfyUI = new ComfyUIImpl({
+        let comfyUI = new ComfyUIImageGenerator({
           baseUrl: comfyUrl
 
         })
         await comfyUI.init(comfyOptions)
 
+        let generator: ImageGenerator = comfyUI
 
 
-
-        // todo: this can also go into the constructor
-        const checkpoint = comfyUI.selectModelName(comfyOptions.checkpoint);
-        const lora = comfyUI.selectModelName(comfyOptions.lora);
-        console.log(chalk.green(`Checkpoint: ${checkpoint}`));
-        console.log(
-          chalk.green(`LoRA: ${lora} (model=${comfyOptions.loraStrengthModel}, clip=${comfyOptions.loraStrengthClip})`), 
-        );
 
         const updatedCards = [...cards];
         const shouldPersistYaml = Boolean(options.writeYaml || options.inPlace);
@@ -540,31 +184,24 @@ export function runIconGenerator(): void {
             break;
           }
 
-          const { prompt, negativePrompt, fromYaml } = resolvePrompts(card);
+          const prompt = String(card.prompt || '').trim();
+          const negativePrompt = String(card.negative_prompt || '').trim();
+
           const fileName = `${String(i + 1).padStart(3, '0')}-${slugify(card.name)}.png`;
           const outPath = path.join(outputDir, fileName);
           const prefix = `loot_card_icon_${Date.now()}_${i + 1}`;
 
           console.log(chalk.cyan(`Generating ${i + 1}/${cards.length}: ${card.name}`));
-          if (fromYaml) {
-            console.log(chalk.gray('  using YAML prompt fields'));
-          }
           console.log(chalk.gray(`  prompt: ${prompt}`));
           console.log(chalk.gray(`  negative: ${negativePrompt}`));
 
           try {
             let imageParameters: ImageParameters = {
-              height: comfyOptions.height,
-              width: comfyOptions.width,
               prompt: prompt,
-              negativePrompt: negativePrompt
-            }
-            let state: ComfyUIState = {
-              checkpoint: checkpoint,
-              lora: lora,
+              negativePrompt: negativePrompt,
               prefix: prefix
             }
-            const imageData = await comfyUI.createImage(state, comfyOptions, imageParameters);
+            const imageData = await generator.createImage(imageParameters);
             fs.writeFileSync(outPath, imageData);
 
             const relativeIconPath = path.relative(yamlDir, outPath).split(path.sep).join('/');
