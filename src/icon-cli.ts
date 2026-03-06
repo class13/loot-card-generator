@@ -46,8 +46,6 @@ interface CliOptions {
   scheduler: string;
   denoise: number;
   seed: number;
-  draft?: boolean;
-  fast?: boolean;
   limit: number | null;
   listModels?: boolean;
   overwrite?: boolean;
@@ -110,8 +108,6 @@ export function runIconGenerator(): void {
     .option('--scheduler <name>', 'Scheduler name', 'normal')
     .option('--denoise <n>', 'Denoise value', (v: string) => toPosFloat(v, 1), 1)
     .option('--seed <n>', 'Base seed for deterministic runs', (v: string) => toPosInt(v, null), null)
-    .option('--draft', 'Use quick draft settings (512x512, 16 steps, cfg 5)') // todo: remove
-    .option('--fast', 'Alias for --draft') // todo: remove
     .option('--limit <n>', 'Generate only the first N eligible cards', (v: string) => toPosInt(v, null), null)
     .option('--overwrite', 'Regenerate even when card already has icon')
     .option('--write-yaml <path>', 'Write a YAML file with updated icon fields')
