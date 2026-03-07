@@ -29,7 +29,7 @@ h11==0.16.0
 hf-xet==1.3.2
 httpcore==1.0.9
 httpx==0.28.1
-huggingface_hub==1.6.0
+huggingface-hub==0.25.2
 humanfriendly==10.0
 idna==3.11
 ImageIO==2.37.2
