@@ -1,2 +1,3 @@
-- [ ] install the game icon LoRA
-- [ ] adapt the prompt generation so it fits the 
+- [x] regenerate the prompts
+- [ ] go through all the images. delete them if they dont fit. and adapt the prompt generally or specifically
+- [ ] regenerate the deleted images

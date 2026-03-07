@@ -5,7 +5,9 @@ cards:
     description: A single, yellowed orc tooth
     icon: icons/001-single-yellowed-orc-tooth.png
     category: other
-    prompt: game item icon. yellowed orc tooth. worn. pointed. small. white background. comic style
+    prompt: >-
+      game item icon. yellowed. orc tooth. single. small. worn. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. character. armor. clothing
     tags:
       - trash
@@ -16,7 +18,9 @@ cards:
     description: A dried, flattened toad
     icon: icons/002-dried-flattened-toad.png
     category: other
-    prompt: game item icon. dried toad. flattened. brown. desiccated. white background. comic style
+    prompt: >-
+      game item icon. dried. flattened. toad. brown. warty. grimy. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres
     tags:
       - trash
@@ -25,853 +29,1025 @@ cards:
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A tangle of greasy, matted dwarf beard hair
+    icon: icons/003-tangle-of-greasy-matted-dwarf-beard-hair.png
     category: other
-    prompt: game item icon. tangled beard hair. matted. greasy. brown. dry. comic style. white background.
+    prompt: >-
+      game item icon. greasy. matted. brown. tangled. beard hair. wiry. unkempt. white background. comic style. avoid
+      any kind of frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres
     tags:
       - trash
       - the-organic-grotesque
-    icon: icons/003-tangle-of-greasy-matted-dwarf-beard-hair.png
   - name: collection of "lucky" fingernail clippings
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A collection of "lucky" fingernail clippings
+    icon: icons/004-collection-of-lucky-fingernail-clippings.png
     category: jewelry
-    prompt: game item icon. fingernail clippings. yellowed. brittle. scattered. small. organic. white background. comic style
+    prompt: >-
+      game item icon. nail clippings. yellowed. brittle. tangled. small. irregular. organic. white background. comic
+      style. avoid any kind of frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. character. armor. clothing
     tags:
       - trash
       - the-organic-grotesque
-    icon: icons/004-collection-of-lucky-fingernail-clippings.png
   - name: vial of murky swamp water (smells like sulfur)
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A vial of murky swamp water (smells like sulfur)
+    icon: icons/005-vial-of-murky-swamp-water-smells-like-sulfur.png
     category: other
-    prompt: game item icon. vial with murky water. white background. comic style
+    prompt: >-
+      game item icon. murky water. vial. brown. cloudy. smelly. grimy. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres
     tags:
       - trash
       - the-organic-grotesque
-    icon: icons/005-vial-of-murky-swamp-water-smells-like-sulfur.png
   - name: rabbit’s foot that has gone completely bald
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A rabbit’s foot that has gone completely bald
+    icon: icons/006-rabbit-s-foot-that-has-gone-completely-bald.png
     category: jewelry
-    prompt: game item icon. bald rabbit's foot. grey. wrinkled. white background. comic style
+    prompt: >-
+      game item icon. bald. rabbit's foot. brown. dry. wrinkled. worn. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. character. armor. clothing
     tags:
       - trash
       - the-organic-grotesque
-    icon: icons/006-rabbit-s-foot-that-has-gone-completely-bald.png
   - name: petrified apple core
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A petrified apple core
+    icon: icons/007-petrified-apple-core.png
     category: other
-    prompt: game item icon. petrified apple core. brown. dry. cracked. white background. comic style
+    prompt: >-
+      game item icon. petrified. brown. dry. wooden. cracked. small. organic. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. character
     tags:
       - trash
       - the-organic-grotesque
-    icon: icons/007-petrified-apple-core.png
   - name: pouch of moth wings
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A pouch of moth wings
+    icon: icons/008-pouch-of-moth-wings.png
     category: other
-    prompt: game item icon. moth wings. brown. dry. crumpled. white background. comic style
+    prompt: >-
+      game item icon. moth wings. brown. dry. fragile. crumpled. worn leather. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres
     tags:
       - trash
       - the-organic-grotesque
-    icon: icons/008-pouch-of-moth-wings.png
   - name: jar of pickled leeches (all dead)
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A jar of pickled leeches (all dead)
+    icon: icons/009-jar-of-pickled-leeches-all-dead.png
     category: container
-    prompt: game item icon. pickled leeches. dead. transparent jar. brown liquid. comic style. white background.
+    prompt: >-
+      game item icon. pickled leeches. dead. glass jar. murky liquid. greenish tint. small size. white background. comic
+      style. avoid any kind of frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. character
     tags:
       - trash
       - the-organic-grotesque
-    icon: icons/009-jar-of-pickled-leeches-all-dead.png
   - name: snake skin that has mostly crumbled to dust
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A snake skin that has mostly crumbled to dust
+    icon: icons/010-snake-skin-that-has-mostly-crumbled-to-dust.png
     category: other
-    prompt: game item icon. crumbled snake skin. brown. dusty. dry. white background. comic style
+    prompt: >-
+      game item icon. crumbled. brown. dusty. snake skin. worn. fragile. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. character. armor. clothing
     tags:
       - trash
       - the-organic-grotesque
-    icon: icons/010-snake-skin-that-has-mostly-crumbled-to-dust.png
   - name: bird’s nest made entirely of stolen sewing thread
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A bird’s nest made entirely of stolen sewing thread
+    icon: icons/011-bird-s-nest-made-entirely-of-stolen-sewing-thread.png
     category: other
-    prompt: game item icon. bird's nest. sewing thread. tangled. dirty. white background. comic style
+    prompt: >-
+      game item icon. bird's nest. sewing thread. tangled. brown. organic. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. character. armor. jewelry
     tags:
       - trash
       - the-organic-grotesque
-    icon: icons/011-bird-s-nest-made-entirely-of-stolen-sewing-thread.png
   - name: dried-up honeycomb with no honey
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A dried-up honeycomb with no honey
+    icon: icons/012-dried-up-honeycomb-with-no-honey.png
     category: other
-    prompt: game item icon. dried honeycomb. cracked. brown. empty. white background. comic style
+    prompt: >-
+      game item icon. dried honeycomb. cracked. brown. empty. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. character. armor. clothing
     tags:
       - trash
       - the-organic-grotesque
-    icon: icons/012-dried-up-honeycomb-with-no-honey.png
   - name: bag of chicken bones used for "divination."
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A bag of chicken bones used for "divination."
+    icon: icons/013-bag-of-chicken-bones-used-for-divination.png
     category: other
-    prompt: game item icon. chicken bones. brown. old. tangled. white background. comic style
+    prompt: >-
+      game item icon. bag of chicken bones. brown. gnarled. twisted. old. weathered. white background. comic style.
+      avoid any kind of frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. character. armor. jewelry
     tags:
       - trash
       - the-organic-grotesque
-    icon: icons/013-bag-of-chicken-bones-used-for-divination.png
   - name: very large, very dead beetle
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A very large, very dead beetle
+    icon: icons/014-very-large-very-dead-beetle.png
     category: other
-    prompt: game item icon. large beetle. dead. brown. dry. white background. comic style
+    prompt: >-
+      game item icon. large. dead. beetle. brown. exoskeleton. grimy. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres
     tags:
       - trash
       - the-organic-grotesque
-    icon: icons/014-very-large-very-dead-beetle.png
   - name: scrap of cured leather that still has fur (and fleas)
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A scrap of cured leather that still has fur (and fleas)
+    icon: icons/015-scrap-of-cured-leather-that-still-has-fur-and-fleas.png
     category: other
-    prompt: game item icon. cured leather. fur. fleas. brown. worn. dirty. white background. comic style
+    prompt: >-
+      game item icon. cured leather. brown. fuzzy. fleas. organic. grotesque. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. character. armor. jewelry
     tags:
       - trash
       - the-organic-grotesque
-    icon: icons/015-scrap-of-cured-leather-that-still-has-fur-and-fleas.png
   - name: bent iron nail
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A bent iron nail
+    icon: icons/016-bent-iron-nail.png
     category: other
-    prompt: game item icon. bent iron. rusty. bent. broken. small. grey. white background. comic style
+    prompt: game item icon. rusty iron nail. white background. comic style. avoid any kind of frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres
     tags:
       - trash
       - rusty-broken-hardware
-    icon: icons/016-bent-iron-nail.png
   - name: key that fits no known lock in the region
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A key that fits no known lock in the region
+    icon: icons/017-key-that-fits-no-known-lock-in-the-region.png
     category: other
-    prompt: game item icon. rusty key. bent. broken. old. worn. metal. dirty. white background. comic style
+    prompt: >-
+      game item icon. rusted. broken. old key. worn. tarnished. small. insignificant. white background. comic style.
+      avoid any kind of frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. character. armor. jewelry
     tags:
       - trash
       - rusty-broken-hardware
-    icon: icons/017-key-that-fits-no-known-lock-in-the-region.png
   - name: rusted buckle from a horse’s saddle
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A rusted buckle from a horse’s saddle
+    icon: icons/018-rusted-buckle-from-a-horse-s-saddle.png
     category: other
-    prompt: game item icon. rusty metal. broken. old leather. horse saddle. worn. dirty. white background. comic style
+    prompt: >-
+      game item icon. rusted. buckle. horse saddle. rusty metal. broken hardware. worn leather. white background. comic
+      style. avoid any kind of frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres
     tags:
       - trash
       - rusty-broken-hardware
-    icon: icons/018-rusted-buckle-from-a-horse-s-saddle.png
   - name: cracked glass marble with a chip in it
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A cracked glass marble with a chip in it
+    icon: icons/019-cracked-glass-marble-with-a-chip-in-it.png
     category: other
-    prompt: game item icon. cracked glass. white marble. chip. broken. rusty. trash. comic style. white background.
+    prompt: >-
+      game item icon. a cracked marble (you know the toy, not the material). white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. (blurry:1. 3)
     tags:
       - trash
       - rusty-broken-hardware
-    icon: icons/019-cracked-glass-marble-with-a-chip-in-it.png
   - name: spoon that has been sharpened into a poor-quality shiv
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A spoon that has been sharpened into a poor-quality shiv
+    icon: icons/020-spoon-that-has-been-sharpened-into-a-poor-quality-shiv.png
     category: other
-    prompt: game item icon. rusty spoon. sharpened edge. poor quality. metal. worn. white background. comic style
+    prompt: >-
+      game item icon. poorly sharpened. rusty. metal. pointed. crude. broken spoon. white background. comic style. avoid
+      any kind of frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. (blurry:1. 3). character. armor. clothing
     tags:
       - trash
       - rusty-broken-hardware
-    icon: icons/020-spoon-that-has-been-sharpened-into-a-poor-quality-shiv.png
   - name: single link from a heavy iron chain
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A single link from a heavy iron chain
+    icon: icons/021-single-link-from-a-heavy-iron-chain.png
     category: other
-    prompt: game item icon. iron chain link. rusty. broken. rough. dirty. white background. comic style
+    prompt: >-
+      game item icon. iron. chain link. rusty. broken. heavy. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. (blurry:1. 3). character. armor. clothing
     tags:
       - trash
       - rusty-broken-hardware
-    icon: icons/021-single-link-from-a-heavy-iron-chain.png
   - name: brass button with a coat of arms no one recognizes
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A brass button with a coat of arms no one recognizes
+    icon: icons/022-brass-button-with-a-coat-of-arms-no-one-recognizes.png
     category: other
-    prompt: game item icon. brass button. coat of arms. unknown symbol. rusty. worn. small. white background. comic style
+    prompt: >-
+      game item icon. brass. button. coat of arms. rusty. broken. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. (blurry:1. 3). character. armor. clothing
     tags:
       - trash
       - rusty-broken-hardware
-    icon: icons/022-brass-button-with-a-coat-of-arms-no-one-recognizes.png
   - name: thimble with a hole worn through the top
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A thimble with a hole worn through the top
+    icon: icons/023-thimble-with-a-hole-worn-through-the-top.png
     category: other
-    prompt: game item icon. thimble. rusty. hole. top. worn. white background. comic style
+    prompt: >-
+      game item icon. thimble. worn. rusty. hole. metal. small. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. (blurry:1. 3). character
     tags:
       - trash
       - rusty-broken-hardware
-    icon: icons/023-thimble-with-a-hole-worn-through-the-top.png
   - name: rusted fishhook
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A rusted fishhook
+    icon: icons/024-rusted-fishhook.png
     category: other
-    prompt: game item icon. rusty fishhook. old metal. bent. broken. small. worn. white background. comic style
+    prompt: >-
+      game item icon. rusted. fishhook. rusty metal. old. broken. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. (blurry:1. 3)
     tags:
       - trash
       - rusty-broken-hardware
-    icon: icons/024-rusted-fishhook.png
   - name: pair of tweezers that don't quite meet in the middle
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A pair of tweezers that don't quite meet in the middle
+    icon: icons/025-pair-of-tweezers-that-don-t-quite-meet-in-the-middle.png
     category: tool
-    prompt: game item icon. rusty tweezers. broken. mismatched. old metal. worn. dirty. white background. comic style
+    prompt: >-
+      game item icon. tweezers. rusty. broken. mismatched. small. grimy. worn. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. (blurry:1. 3)
     tags:
       - trash
       - rusty-broken-hardware
-    icon: icons/025-pair-of-tweezers-that-don-t-quite-meet-in-the-middle.png
   - name: lead fishing weight
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A lead fishing weight
+    icon: icons/026-lead-fishing-weight.png
     category: other
-    prompt: game item icon. lead weight. rusty. broken. old fishing gear. metal. dirty. white background. comic style
+    prompt: >-
+      game item icon. lead. fishing weight. rusty. metal. heavy. rounded. worn. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres. (blurry:1. 3)
     tags:
       - trash
       - rusty-broken-hardware
-    icon: icons/026-lead-fishing-weight.png
   - name: copper ring that turns the wearer's finger green
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A copper ring that turns the wearer's finger green
+    icon: icons/027-copper-ring-that-turns-the-wearer-s-finger-green.png
     category: jewelry
-    prompt: game item icon. copper ring. worn. rusty. green finger. comic style. white background.
+    prompt: >-
+      game item icon. rusty copper ring. white background. comic style. avoid any kind of frames. avoid duplicated
+      items..
     negative_prompt: (blurry:1.3). lowres. (blurry:1. 3). character
     tags:
       - trash
       - rusty-broken-hardware
-    icon: icons/027-copper-ring-that-turns-the-wearer-s-finger-green.png
   - name: dull, notched sewing needle
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A dull, notched sewing needle
-    prompt: game item icon. rusty sewing needle. notched. dull. metal. worn. white background. comic style
+    icon: icons/028-dull-notched-sewing-needle.png
+    prompt: >-
+      game item icon. dull. notched. sewing needle. rusty. old. metal. bent. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
     tags:
       - trash
       - rusty-broken-hardware
-    icon: icons/028-dull-notched-sewing-needle.png
   - name: shard of a broken mirror (bad luck not included)
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A shard of a broken mirror (bad luck not included)
-    prompt: game item icon. broken glass shard. rusty metal. old. dirty. white background. comic style
+    icon: icons/029-shard-of-a-broken-mirror-bad-luck-not-included.png
+    prompt: >-
+      game item icon. shard. broken. mirror. rusty. metal. jagged. small. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
     tags:
       - trash
       - rusty-broken-hardware
-    icon: icons/029-shard-of-a-broken-mirror-bad-luck-not-included.png
   - name: heavy, decorative iron nut (no bolt)
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A heavy, decorative iron nut (no bolt)
-    prompt: game item icon. iron nut. heavy. decorative. rusty. broken. no bolt. white background. comic style
+    icon: icons/030-heavy-decorative-iron-nut-no-bolt.png
+    prompt: >-
+      game item icon. iron. heavy. decorative. rusty. broken. flat. round. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
     tags:
       - trash
       - rusty-broken-hardware
-    icon: icons/030-heavy-decorative-iron-nut-no-bolt.png
   - name: charcoal sketch of a very ugly dog
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A charcoal sketch of a very ugly dog
-    prompt: game item icon. charcoal sketch. ugly dog. brown. smudged. white background. comic style
+    icon: icons/031-charcoal-sketch-of-a-very-ugly-dog.png
+    prompt: >-
+      game item icon. a piece of parchment with a childs drawing of a dog. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
     tags:
       - trash
       - scraps-curiosities
-    icon: icons/031-charcoal-sketch-of-a-very-ugly-dog.png
   - name: blood-stained handkerchief
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A blood-stained handkerchief
-    prompt: game item icon. blood-stained. white cloth. torn. dirty. white background. comic style
+    icon: icons/032-blood-stained-handkerchief.png
+    prompt: >-
+      game item icon. blood-stained. white. torn. crumpled. dirty. worn. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
     tags:
       - trash
       - scraps-curiosities
-    icon: icons/032-blood-stained-handkerchief.png
   - name: grocery list written in a language the party doesn't speak
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A grocery list written in a language the party doesn't speak
-    prompt: game item icon. scribbled list. foreign script. yellowed paper. torn edge. white background. comic style
+    icon: icons/033-grocery-list-written-in-a-language-the-party-doesn-t-speak.png
+    prompt: >-
+      game item icon. grocery list. handwritten. foreign script. yellowed paper. worn creases. white background. comic
+      style. avoid any kind of frames. avoid duplicated items..
     tags:
       - trash
       - scraps-curiosities
-    icon: icons/033-grocery-list-written-in-a-language-the-party-doesn-t-speak.png
   - name: single playing card (the Two of Clubs)
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A single playing card (the Two of Clubs)
-    prompt: game item icon. playing card. two of clubs. worn. torn. white background. comic style
+    icon: icons/034-single-playing-card-the-two-of-clubs.png
+    prompt: >-
+      game item icon. playing card. two of clubs. worn. torn edges. browned paper. simple design. white background.
+      comic style. avoid any kind of frames. avoid duplicated items..
     tags:
       - trash
       - scraps-curiosities
-    icon: icons/034-single-playing-card-the-two-of-clubs.png
   - name: '"Map to Treasure" that is clearly a child''s drawing'
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A "Map to Treasure" that is clearly a child's drawing
-    prompt: game item icon. child's drawing. scribbles. crayon colors. messy lines. torn edges. white background. comic style
+    icon: icons/035-map-to-treasure-that-is-clearly-a-child-s-drawing.png
+    prompt: >-
+      game item icon. child's drawing. crayon. scribbled. yellow. torn. paper. crumpled. white background. comic style.
+      avoid any kind of frames. avoid duplicated items..
     tags:
       - trash
       - scraps-curiosities
-    icon: icons/035-map-to-treasure-that-is-clearly-a-child-s-drawing.png
   - name: bundle of sticks tied with a dirty ribbon
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A bundle of sticks tied with a dirty ribbon
-    prompt: game item icon. bundle of sticks. tied with ribbon. dirty. worn. wooden. brown. white background. comic style
+    icon: icons/036-bundle-of-sticks-tied-with-a-dirty-ribbon.png
+    prompt: >-
+      game item icon. bundle of sticks. tied with ribbon. dirty. wooden. rough. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
     tags:
       - trash
       - scraps-curiosities
-    icon: icons/036-bundle-of-sticks-tied-with-a-dirty-ribbon.png
   - name: smooth river stone with a hole naturally worn through it
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A smooth river stone with a hole naturally worn through it
-    prompt: game item icon. smooth river stone. hole. worn. natural. common. comic style. white background.
+    icon: icons/037-smooth-river-stone-with-a-hole-naturally-worn-through-it.png
+    prompt: >-
+      game item icon. smooth river stone. hole. worn. natural. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
     tags:
       - trash
       - scraps-curiosities
-    icon: icons/037-smooth-river-stone-with-a-hole-naturally-worn-through-it.png
   - name: wad of chewed resin (ancient gum)
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A wad of chewed resin (ancient gum)
-    prompt: game item icon. wad of resin. chewed. brown. sticky. old. worn. white background. comic style
+    icon: icons/038-wad-of-chewed-resin-ancient-gum.png
+    prompt: >-
+      game item icon. chewed. resin. wad. brown. rough. white background. comic style. avoid any kind of frames. avoid
+      duplicated items..
     tags:
       - trash
       - scraps-curiosities
-    icon: icons/038-wad-of-chewed-resin-ancient-gum.png
   - name: small pouch of sawdust
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A small pouch of sawdust
-    prompt: game item icon. small pouch. brown fabric. tied string. sawdust spilling. white background. comic style
+    icon: icons/039-small-pouch-of-sawdust.png
+    prompt: >-
+      game item icon. small. pouch. brown. dusty. worn. tattered. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - scraps-curiosities
-    icon: icons/039-small-pouch-of-sawdust.png
   - name: scorched piece of parchment
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A scorched piece of parchment
-    prompt: game item icon. charred parchment. torn. yellowed. white background. comic style
+    icon: icons/040-scorched-piece-of-parchment.png
+    prompt: >-
+      game item icon. scorched. parchment. brown. torn. frayed. worn. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - scraps-curiosities
-    icon: icons/040-scorched-piece-of-parchment.png
   - name: single wooden die with two "4"s and no "6."
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A single wooden die with two "4"s and no "6."
-    prompt: game item icon. wooden die. 4s on sides. no 6. common. trash. white background. comic style
+    icon: icons/041-single-wooden-die-with-two-4-s-and-no-6.png
+    prompt: >-
+      game item icon. wooden dice. worn. white background. comic style. avoid any kind of frames. avoid duplicated
+      items..
     tags:
       - trash
       - scraps-curiosities
-    icon: icons/041-single-wooden-die-with-two-4-s-and-no-6.png
   - name: wax seal from a letter, broken into three pieces
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A wax seal from a letter, broken into three pieces
-    prompt: game item icon. wax seal. broken. three pieces. brown. old. worn. white background. comic style
+    icon: icons/042-wax-seal-from-a-letter-broken-into-three-pieces.png
+    prompt: >-
+      game item icon. wax. seal. broken. three pieces. yellowed. cracked. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
     tags:
       - trash
       - scraps-curiosities
-    icon: icons/042-wax-seal-from-a-letter-broken-into-three-pieces.png
   - name: frayed length of twine, exactly 4 inches long
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A frayed length of twine, exactly 4 inches long
-    prompt: game item icon. frayed twine. 4 inches long. brown. tangled. worn. white background. comic style
+    icon: icons/043-frayed-length-of-twine-exactly-4-inches-long.png
+    prompt: >-
+      game item icon. frayed twine. brown. 4 inches long. tangled. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - scraps-curiosities
-    icon: icons/043-frayed-length-of-twine-exactly-4-inches-long.png
   - name: cork from an expensive bottle of wine (bottle missing)
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A cork from an expensive bottle of wine (bottle missing)
-    prompt: game item icon. wine cork. brown. worn. torn. white background. comic style
+    icon: icons/044-cork-from-an-expensive-bottle-of-wine-bottle-missing.png
+    prompt: >-
+      game item icon. cork. brown. worn. small. wooden. cracked. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - scraps-curiosities
-    icon: icons/044-cork-from-an-expensive-bottle-of-wine-bottle-missing.png
   - name: handful of colorful, but worthless, glass beads
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A handful of colorful, but worthless, glass beads
-    prompt: game item icon. colorful glass beads. small. scattered. worthless. white background. comic style
+    icon: icons/045-handful-of-colorful-but-worthless-glass-beads.png
+    prompt: >-
+      game item icon. colorful glass beads. small. irregular shapes. various colors. worthless. trash. white background.
+      comic style. avoid any kind of frames. avoid duplicated items..
     tags:
       - trash
       - scraps-curiosities
-    icon: icons/045-handful-of-colorful-but-worthless-glass-beads.png
   - name: piece of extremely hard, moldy hardtack
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A piece of extremely hard, moldy hardtack
-    prompt: game item icon. moldy hardtack. brown. cracked. dry. white background. comic style
+    icon: icons/046-piece-of-extremely-hard-moldy-hardtack.png
+    prompt: >-
+      game item icon. moldy. hard. brown. cracked. dry. stale. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
     tags:
       - trash
       - smelly-unpleasant
-    icon: icons/046-piece-of-extremely-hard-moldy-hardtack.png
   - name: damp lump of sheep's wool
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A damp lump of sheep's wool
-    prompt: game item icon. damp. grey. lumpy. fuzzy. dirty. white background. comic style
+    icon: icons/047-damp-lump-of-sheep-s-wool.png
+    prompt: >-
+      game item icon. damp. grey. lumpy. woolly. dirty. smelly. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
     tags:
       - trash
       - smelly-unpleasant
-    icon: icons/047-damp-lump-of-sheep-s-wool.png
   - name: small tin of "ointment" that smells like rancid fish
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A small tin of "ointment" that smells like rancid fish
-    prompt: game item icon. small tin. metal. rusty. smelly. rancid fish smell. white background. comic style
+    icon: icons/048-small-tin-of-ointment-that-smells-like-rancid-fish.png
+    prompt: >-
+      game item icon. small tin. metal. rusty. smelly. rancid fish scent. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
     tags:
       - trash
       - smelly-unpleasant
-    icon: icons/048-small-tin-of-ointment-that-smells-like-rancid-fish.png
   - name: wet rag that refuses to dry
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A wet rag that refuses to dry
-    prompt: game item icon. wet rag. soggy. brown. mildew. mold. smelly. comic style. white background
+    icon: icons/049-wet-rag-that-refuses-to-dry.png
+    prompt: >-
+      game item icon. wet rag. dirty. stained. smelly. grey. tattered. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - smelly-unpleasant
-    icon: icons/049-wet-rag-that-refuses-to-dry.png
   - name: pouch of pipe tobacco that has gone moldy
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A pouch of pipe tobacco that has gone moldy
-    prompt: game item icon. moldy tobacco. brown. fuzzy. stained leather. smelly. comic style. white background.
+    icon: icons/050-pouch-of-pipe-tobacco-that-has-gone-moldy.png
+    prompt: >-
+      game item icon. moldy. brown. wrinkled. tobacco pouch. old leather. stained. white background. comic style. avoid
+      any kind of frames. avoid duplicated items..
     tags:
       - trash
       - smelly-unpleasant
-    icon: icons/050-pouch-of-pipe-tobacco-that-has-gone-moldy.png
   - name: clove of garlic that has started to sprout
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A clove of garlic that has started to sprout
-    prompt: game item icon. green sprout. small. brown. wrinkled. white background. comic style
+    icon: icons/051-clove-of-garlic-that-has-started-to-sprout.png
+    prompt: >-
+      game item icon. green sprout. small. brown. wrinkled. smelly. trash. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
     tags:
       - trash
       - smelly-unpleasant
-    icon: icons/051-clove-of-garlic-that-has-started-to-sprout.png
   - name: piece of chalk that’s been ground down to a nub
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A piece of chalk that’s been ground down to a nub
-    prompt: game item icon. small. worn down. grey. dirty. white background. comic style
+    icon: icons/052-piece-of-chalk-that-s-been-ground-down-to-a-nub.png
+    prompt: >-
+      game item icon. leftover piece of chalk. white background. comic style. avoid any kind of frames. avoid duplicated
+      items..
     tags:
       - trash
       - smelly-unpleasant
-    icon: icons/052-piece-of-chalk-that-s-been-ground-down-to-a-nub.png
   - name: half-melted tallow candle
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A half-melted tallow candle
-    prompt: game item icon. melted candle. tallow. smelly. grimy. brown. white background. comic style
+    icon: icons/053-half-melted-tallow-candle.png
+    prompt: >-
+      game item icon. melted. tallow. candle. smelly. brown. drips. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - smelly-unpleasant
-    icon: icons/053-half-melted-tallow-candle.png
   - name: handful of acorns with tiny faces carved into them
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A handful of acorns with tiny faces carved into them
-    prompt: game item icon. small acorns. tiny faces. carved. brown. smudged. white background. comic style
+    icon: icons/054-handful-of-acorns-with-tiny-faces-carved-into-them.png
+    prompt: >-
+      game item icon. acorns. tiny faces. carved. wooden. weathered. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - smelly-unpleasant
-    icon: icons/054-handful-of-acorns-with-tiny-faces-carved-into-them.png
   - name: small, empty bottle that once held very strong perfume
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A small, empty bottle that once held very strong perfume
-    prompt: game item icon. small empty bottle. brown glass. cracked. dusty. smelly. white background. comic style
+    icon: icons/055-small-empty-bottle-that-once-held-very-strong-perfume.png
+    prompt: >-
+      game item icon. small. empty. glass. bottle. old. cracked. smelly. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
     tags:
       - trash
       - smelly-unpleasant
-    icon: icons/055-small-empty-bottle-that-once-held-very-strong-perfume.png
   - name: '"Certificate of Authenticity" for an item not present'
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A "Certificate of Authenticity" for an item not present
-    prompt: game item icon. empty parchment. yellowed. torn. scribbled text. brown ink. white background. comic style
+    icon: icons/056-certificate-of-authenticity-for-an-item-not-present.png
+    prompt: >-
+      game item icon. empty parchment. yellowed. worn. creased. faded ink. seal broken. white background. comic style.
+      avoid any kind of frames. avoid duplicated items..
     tags:
       - trash
       - items-of-questionable-value
-    icon: icons/056-certificate-of-authenticity-for-an-item-not-present.png
   - name: IOI (I Owe You) written on a scrap of leather for 1 copper
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A IOI (I Owe You) written on a scrap of leather for 1 copper
-    prompt: game item icon. worn leather scrap. brown. torn. IOI written. comic style. white background.
+    icon: icons/057-ioi-i-owe-you-written-on-a-scrap-of-leather-for-1-copper.png
+    prompt: >-
+      game item icon. scrap leather. worn. brown. IOI written. copper coin. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
     tags:
       - trash
       - items-of-questionable-value
-    icon: icons/057-ioi-i-owe-you-written-on-a-scrap-of-leather-for-1-copper.png
   - name: single earring (the mate is lost)
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A single earring (the mate is lost)
-    prompt: game item icon. single earring. tarnished metal. worn. broken clasp. white background. comic style
+    icon: icons/058-single-earring-the-mate-is-lost.png
+    prompt: >-
+      game item icon. single earring. tarnished. silver. broken. small. worn. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
     tags:
       - trash
       - items-of-questionable-value
-    icon: icons/058-single-earring-the-mate-is-lost.png
   - name: glass eye that looks in two directions at once
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A glass eye that looks in two directions at once
+    icon: icons/059-glass-eye-that-looks-in-two-directions-at-once.png
     prompt: >-
-      game item icon. glass eye. two pupils. one pupil looking left. one pupil looking right. white background. comic
-      style
+      game item icon. a loose glass eye with two pupils. white background. comic style. avoid any kind of frames. avoid
+      duplicated items..
     tags:
       - trash
       - items-of-questionable-value
-    icon: icons/059-glass-eye-that-looks-in-two-directions-at-once.png
   - name: whistle that makes no sound when blown
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A whistle that makes no sound when blown
-    prompt: game item icon. silent whistle. dull metal. rusty. white background. comic style
+    icon: icons/060-whistle-that-makes-no-sound-when-blown.png
+    prompt: >-
+      game item icon. whistle. small. brass. tarnished. rusty. useless. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - items-of-questionable-value
-    icon: icons/060-whistle-that-makes-no-sound-when-blown.png
   - name: wooden tooth
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A wooden tooth
-    prompt: game item icon. wooden tooth. worn. brown. small. simple. white background. comic style
+    icon: icons/061-wooden-tooth.png
+    prompt: >-
+      game item icon. wooden. tooth. brown. weathered. white background. comic style. avoid any kind of frames. avoid
+      duplicated items..
     tags:
       - trash
       - items-of-questionable-value
-    icon: icons/061-wooden-tooth.png
   - name: '"magic" bean (it is just a kidney bean)'
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A "magic" bean (it is just a kidney bean)
-    prompt: game item icon. small. brown. kidney bean shape. speckled. worn. white background. comic style
+    icon: icons/062-magic-bean-it-is-just-a-kidney-bean.png
+    prompt: >-
+      game item icon. kidney bean. brown. speckled. small. worn. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - items-of-questionable-value
-    icon: icons/062-magic-bean-it-is-just-a-kidney-bean.png
   - name: tiny cage for a cricket (cricket has escaped)
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A tiny cage for a cricket (cricket has escaped)
-    prompt: game item icon. tiny cage. rusty. empty. no cricket. white background. comic style
+    icon: icons/063-tiny-cage-for-a-cricket-cricket-has-escaped.png
+    prompt: >-
+      game item icon. tiny cage. rusty. bars. small. empty. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
     tags:
       - trash
       - items-of-questionable-value
-    icon: icons/063-tiny-cage-for-a-cricket-cricket-has-escaped.png
   - name: collection of colorful poultry feathers
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A collection of colorful poultry feathers
-    prompt: game item icon. colorful feathers. fluffy. soft. various shapes. white background. comic style
+    icon: icons/064-collection-of-colorful-poultry-feathers.png
+    prompt: >-
+      game item icon. pile of colorful feathers. white background. comic style. avoid any kind of frames. avoid
+      duplicated items..
     tags:
       - trash
       - items-of-questionable-value
-    icon: icons/064-collection-of-colorful-poultry-feathers.png
   - name: stone that looks vaguely like a famous deity
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A stone that looks vaguely like a famous deity
-    prompt: game item icon. rough stone. grey. faintly smiling face. comic style. white background.
+    icon: icons/065-stone-that-looks-vaguely-like-a-famous-deity.png
+    prompt: >-
+      game item icon. stone. grey. rough. humanoid. blocky. simple. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - items-of-questionable-value
-    icon: icons/065-stone-that-looks-vaguely-like-a-famous-deity.png
   - name: small lead soldier with its head broken off
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A small lead soldier with its head broken off
-    prompt: game item icon. small lead soldier. broken head. common metal. worn. white background. comic style
+    icon: icons/066-small-lead-soldier-with-its-head-broken-off.png
+    prompt: >-
+      game item icon. small. lead. soldier. broken. headless. rusty. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - items-of-questionable-value
-    icon: icons/066-small-lead-soldier-with-its-head-broken-off.png
   - name: pouch of salt mixed with sand
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A pouch of salt mixed with sand
-    prompt: game item icon. pouch. brown. worn. frayed strings. white background. comic style
+    icon: icons/067-pouch-of-salt-mixed-with-sand.png
+    prompt: >-
+      game item icon. pouch. worn. beige. mixed. salt. sand. rough. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - items-of-questionable-value
-    icon: icons/067-pouch-of-salt-mixed-with-sand.png
   - name: comb with half its teeth missing
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A comb with half its teeth missing
-    prompt: game item icon. old comb. worn. rusty. missing teeth. white background. comic style
+    icon: icons/068-comb-with-half-its-teeth-missing.png
+    prompt: >-
+      game item icon. comb. worn. rusty. half teeth missing. small. simple. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
     tags:
       - trash
       - items-of-questionable-value
-    icon: icons/068-comb-with-half-its-teeth-missing.png
   - name: doll made of corn husks
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A doll made of corn husks
-    prompt: game item icon. corn husk doll. worn. tattered. brown. white background. comic style
+    icon: icons/069-doll-made-of-corn-husks.png
+    prompt: >-
+      game item icon. corn husk doll. worn. rural. white background. comic style. avoid any kind of frames. avoid
+      duplicated items..
     tags:
       - trash
       - items-of-questionable-value
-    icon: icons/069-doll-made-of-corn-husks.png
   - name: jar of fireflies (all deceased)
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A jar of fireflies (all deceased)
-    prompt: game item icon. dead fireflies. jar. glass. brown. white background. comic style
+    icon: icons/070-jar-of-fireflies-all-deceased.png
+    prompt: >-
+      game item icon. jar. glass. old. dusty. fireflies. dead. tiny. yellow. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
     tags:
       - trash
       - items-of-questionable-value
-    icon: icons/070-jar-of-fireflies-all-deceased.png
   - name: fossilized seashell
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A fossilized seashell
-    prompt: game item icon. fossilized seashell. weathered. beige. cracked. white background. comic style
+    icon: icons/071-fossilized-seashell.png
+    prompt: >-
+      game item icon. fossilized. seashell. worn. beige. cracked. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/071-fossilized-seashell.png
   - name: bit of fluff from a Blink Dog’s tail (reputedly)
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A bit of fluff from a Blink Dog’s tail (reputedly)
-    prompt: game item icon. fluffy white fiber. brown base. white background. comic style
+    icon: icons/072-bit-of-fluff-from-a-blink-dog-s-tail-reputedly.png
+    prompt: >-
+      game item icon. a small taft of hair. white background. comic style. avoid any kind of frames. avoid duplicated
+      items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/072-bit-of-fluff-from-a-blink-dog-s-tail-reputedly.png
   - name: leather strap with a broken buckle
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A leather strap with a broken buckle
-    prompt: game item icon. broken buckle. leather strap. frayed. worn. brown. white background. comic style
+    icon: icons/073-leather-strap-with-a-broken-buckle.png
+    prompt: >-
+      game item icon. leather strap. broken buckle. worn. frayed. brown. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/073-leather-strap-with-a-broken-buckle.png
   - name: clay pipe bowl with no stem
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A clay pipe bowl with no stem
-    prompt: game item icon. clay pipe. broken. brown. cracked. worn. white background. comic style
+    icon: icons/074-clay-pipe-bowl-with-no-stem.png
+    prompt: >-
+      game item icon. clay. bowl. broken. no stem. rusty. white background. comic style. avoid any kind of frames. avoid
+      duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/074-clay-pipe-bowl-with-no-stem.png
   - name: handful of iron filings
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A handful of iron filings
-    prompt: game item icon. small. metallic. grey. scattered. loose. white background. comic style
+    icon: icons/075-handful-of-iron-filings.png
+    prompt: >-
+      game item icon. iron. filings. metallic. small. scattered. grey. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/075-handful-of-iron-filings.png
   - name: charred twig from a lightning-struck tree
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A charred twig from a lightning-struck tree
-    prompt: game item icon. charred twig. blackened wood. splintered. twisted. white background. comic style
+    icon: icons/076-charred-twig-from-a-lightning-struck-tree.png
+    prompt: >-
+      game item icon. charred. twig. wooden. blackened. splintered. twisted. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/076-charred-twig-from-a-lightning-struck-tree.png
   - name: list of names with "don't trust" written next to them
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A list of names with "don't trust" written next to them
+    icon: icons/077-list-of-names-with-don-t-trust-written-next-to-them.png
     prompt: >-
-      game item icon. list of names. don't trust written. common trash. miscellaneous debris. comic style. white
-      background
+      game item icon. a piece of parchment with a list of names. handwritten. faded ink. white background. comic style.
+      avoid any kind of frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/077-list-of-names-with-don-t-trust-written-next-to-them.png
   - name: rusted lock with no key
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A rusted lock with no key
-    prompt: game item icon. old lock. rusty. no key. brown. worn. white background. comic style
+    icon: icons/078-rusted-lock-with-no-key.png
+    prompt: >-
+      game item icon. rusted. old. metal. lock. no key. worn. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/078-rusted-lock-with-no-key.png
   - name: small, empty tinderbox
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A small, empty tinderbox
-    prompt: game item icon. small tinderbox. empty. rusty. worn. white background. comic style
+    icon: icons/079-small-empty-tinderbox.png
+    prompt: >-
+      game item icon. small. empty. metal. box. rusty. worn. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/079-small-empty-tinderbox.png
   - name: bundle of dried lavender that has lost its scent
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A bundle of dried lavender that has lost its scent
-    prompt: game item icon. dried lavender. brown. wilted. faded purple. white background. comic style
+    icon: icons/080-bundle-of-dried-lavender-that-has-lost-its-scent.png
+    prompt: >-
+      game item icon. dried lavender. brown. wilted. tangled. small. fragile. worn. white background. comic style. avoid
+      any kind of frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/080-bundle-of-dried-lavender-that-has-lost-its-scent.png
   - name: piece of "dragon scale" (actually just painted carp scale)
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A piece of "dragon scale" (actually just painted carp scale)
-    prompt: game item icon. painted carp scale. brown. worn. dirty. white background. comic style
+    icon: icons/081-piece-of-dragon-scale-actually-just-painted-carp-scale.png
+    prompt: >-
+      game item icon. painted carp scale. brown. worn. rough. small. irregular shape. white background. comic style.
+      avoid any kind of frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/081-piece-of-dragon-scale-actually-just-painted-carp-scale.png
   - name: tiny glass vial containing a single eyelash
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A tiny glass vial containing a single eyelash
-    prompt: game item icon. tiny glass vial. single eyelash. brown. dusty. white background. comic style
+    icon: icons/082-tiny-glass-vial-containing-a-single-eyelash.png
+    prompt: >-
+      game item icon. unlabeled tiny glass vial with a single eyelash in it. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/082-tiny-glass-vial-containing-a-single-eyelash.png
   - name: heavy brass coin from a fallen empire (worth zero)
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A heavy brass coin from a fallen empire (worth zero)
-    prompt: game item icon. heavy brass coin. worn. tarnished. dented. old. worthless. white background. comic style
+    icon: icons/083-heavy-brass-coin-from-a-fallen-empire-worth-zero.png
+    prompt: >-
+      game item icon. heavy brass coin. worn. tarnished. rusty. old. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/083-heavy-brass-coin-from-a-fallen-empire-worth-zero.png
   - name: crumpled poem about a barmaid named Helga
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A crumpled poem about a barmaid named Helga
-    prompt: game item icon. crumpled paper. torn edges. faded ink. scribbled words. comic style. white background.
+    icon: icons/084-crumpled-poem-about-a-barmaid-named-helga.png
+    prompt: >-
+      game item icon. crumpled paper. torn. brown. ink. old. unreadable scribbles. white background. comic style. avoid
+      any kind of frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/084-crumpled-poem-about-a-barmaid-named-helga.png
   - name: leather eye patch with no string
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A leather eye patch with no string
-    prompt: game item icon. leather eye patch. no strap. worn. brown. white background. comic style
+    icon: icons/085-leather-eye-patch-with-no-string.png
+    prompt: >-
+      game item icon. leather eye patch. no strap. worn. brown. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/085-leather-eye-patch-with-no-string.png
   - name: stopper from a potion bottle (no potion)
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A stopper from a potion bottle (no potion)
-    prompt: game item icon. cork stopper. brown. worn. cracked. white background. comic style
+    icon: icons/086-stopper-from-a-potion-bottle-no-potion.png
+    prompt: >-
+      game item icon. stopper. cork. brown. worn. cracked. small. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/086-stopper-from-a-potion-bottle-no-potion.png
   - name: handful of grave dirt
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A handful of grave dirt
-    prompt: game item icon. dry dirt. brown. specks. lumps. white background. comic style
+    icon: icons/087-handful-of-grave-dirt.png
+    prompt: >-
+      game item icon. dirt. brown. dry. crumbly. lumpy. small. handful. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/087-handful-of-grave-dirt.png
   - name: rusted spur from a boot
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A rusted spur from a boot
-    prompt: game item icon. rusty metal spur. old leather strap. worn. dirty. white background. comic style
+    icon: icons/088-rusted-spur-from-a-boot.png
+    prompt: >-
+      game item icon. rusted. spur. metal. worn. boot. fragment. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/088-rusted-spur-from-a-boot.png
   - name: knot of tangled fishing line
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A knot of tangled fishing line
-    prompt: game item icon. knotted fishing line. tangled. brown. frayed. white background. comic style
+    icon: icons/089-knot-of-tangled-fishing-line.png
+    prompt: >-
+      game item icon. tangled fishing line. knotted. brown. weathered. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/089-knot-of-tangled-fishing-line.png
   - name: small, chipped clay tile
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A small, chipped clay tile
-    prompt: game item icon. small. clay. chipped. cracked. worn. white background. comic style
+    icon: icons/090-small-chipped-clay-tile.png
+    prompt: >-
+      game item icon. small. chipped. clay. tile. brown. cracked. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/090-small-chipped-clay-tile.png
   - name: dried lemon peel
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A dried lemon peel
-    prompt: game item icon. dried lemon peel. yellow. wrinkled. cracked. white background. comic style
+    prompt: >-
+      game item icon. dried lemon peel. white background. comic style. avoid any kind of frames. avoid duplicated
+      items..
     tags:
       - trash
       - miscellaneous-debris
@@ -880,80 +1056,98 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A shard of obsidian (too small to be a weapon)
-    prompt: game item icon. dark grey shard. jagged edge. rough texture. small. white background. comic style
+    icon: icons/092-shard-of-obsidian-too-small-to-be-a-weapon.png
+    prompt: >-
+      game item icon. black. glassy. jagged. small. irregular. dark. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/092-shard-of-obsidian-too-small-to-be-a-weapon.png
   - name: bird skull painted blue
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A bird skull painted blue
-    prompt: game item icon. bird skull. painted blue. white background. comic style
+    icon: icons/093-bird-skull-painted-blue.png
+    prompt: >-
+      game item icon. bird. skull. painted. blue. white background. comic style. avoid any kind of frames. avoid
+      duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/093-bird-skull-painted-blue.png
   - name: bit of frayed silk ribbon
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A bit of frayed silk ribbon
-    prompt: game item icon. frayed. silk. ribbon. torn. brown. white background. comic style
+    icon: icons/094-bit-of-frayed-silk-ribbon.png
+    prompt: >-
+      game item icon. frayed. silk. ribbon. torn. yellowed. worn. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/094-bit-of-frayed-silk-ribbon.png
   - name: copper wire bent into the shape of a ring
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A copper wire bent into the shape of a ring
-    prompt: game item icon. copper wire. bent. ring shape. rusty. dirty. white background. comic style
+    icon: icons/095-copper-wire-bent-into-the-shape-of-a-ring.png
+    prompt: >-
+      game item icon. copper. wire. bent. ring. metallic. rusty. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/095-copper-wire-bent-into-the-shape-of-a-ring.png
   - name: recipe for "Rock Soup."
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A recipe for "Rock Soup."
-    prompt: game item icon. torn parchment. yellowed. scribbled. white background. comic style
+    icon: icons/096-recipe-for-rock-soup.png
+    prompt: >-
+      game item icon. recipe. paper. torn. yellowed. worn. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/096-recipe-for-rock-soup.png
   - name: single, very large iron staple
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A single, very large iron staple
-    prompt: game item icon. large iron staple. rusty. bent. single. common trash. white background. comic style
+    icon: icons/097-single-very-large-iron-staple.png
+    prompt: >-
+      game item icon. large iron staple. rusty. bent. single. metallic. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/097-single-very-large-iron-staple.png
   - name: pouch of pine needles
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A pouch of pine needles
-    prompt: game item icon. pine needles. brown. crumpled. small. worn. white background. comic style
+    icon: icons/098-pouch-of-pine-needles.png
+    prompt: >-
+      game item icon. pine needles. brown. dry. crumpled. small. fabric pouch. worn. white background. comic style.
+      avoid any kind of frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/098-pouch-of-pine-needles.png
   - name: broken compass needle that always points down
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A broken compass needle that always points down
-    prompt: game item icon. broken compass needle. bent. rusty. always points down. white background. comic style
+    icon: icons/099-broken-compass-needle-that-always-points-down.png
+    prompt: >-
+      game item icon. broken. compass. needle. bent. downwards. rusty. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/099-broken-compass-needle-that-always-points-down.png
   - name: smaller, even dirtier leather pouch (empty)
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A smaller, even dirtier leather pouch (empty)
-    prompt: game item icon. small leather pouch. dirty. torn. empty. brown. worn. comic style. white background.
+    icon: icons/100-smaller-even-dirtier-leather-pouch-empty.png
+    prompt: >-
+      game item icon. smaller. dirty. leather. pouch. empty. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/100-smaller-even-dirtier-leather-pouch-empty.png

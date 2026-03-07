@@ -52,6 +52,9 @@ type OllamaCardPromptGeneratorOptions = {
   fetchImpl?: FetchImpl;
 };
 
+const PROMPT_PREFIX = 'game item icon';
+const PROMPT_POSTFIX_FRAGMENTS = ['white background', 'comic style', 'avoid any kind of frames. avoid duplicated items.'];
+
 function cleanText(value: unknown): string {
   return String(value || '')
     .replace(/\r/g, ' ')
@@ -105,9 +108,9 @@ function buildSystemPrompt(): string {
     'You MUST output valid JSON in this exact format:',
     '{"prompt":"..."}',
     'PROMPT FORMAT:',
-    'Use this style exactly: "game item icon. [short visual fragments]. white background. comic style"',
-    'Use 2-8 concise fragments after "2d icon".',
-    'Example style: "game item ocn. dead frog. brown. dried. white background. comic style"',
+    'Return only the core object fragments.',
+    'Use 2-8 concise fragments.',
+    'Example style: "dead frog. brown. dried"',
     'Keep it compact and practical.',
     'Do not output anything except valid JSON.',
   ].join('\n');
@@ -143,10 +146,36 @@ function buildUserPrompt(card: LootCard): string {
   return [
     'Create prompt fields for this fantasy loot item.',
     'Use compact dot-separated prompt fragments.',
+    'Return only the item core fragments (no wrapper prefix/postfix fragments).',
     'No artist names.',
     'Output JSON only.',
     parts.join('\n'),
   ].join('\n\n');
+}
+
+function equalsIgnoreCase(a: string, b: string): boolean {
+  return a.trim().toLowerCase() === b.trim().toLowerCase();
+}
+
+function composeFinalPrompt(modelPrompt: string): string {
+  const disallowed = new Set([
+    PROMPT_PREFIX.toLowerCase(),
+    ...PROMPT_POSTFIX_FRAGMENTS.map((fragment) => fragment.toLowerCase()),
+  ]);
+
+  const coreFragments = splitPromptFragments(modelPrompt).filter(
+    (fragment) => !disallowed.has(fragment.toLowerCase()),
+  );
+
+  const uniqueCoreFragments: string[] = [];
+  for (const fragment of coreFragments) {
+    if (!uniqueCoreFragments.some((existing) => equalsIgnoreCase(existing, fragment))) {
+      uniqueCoreFragments.push(fragment);
+    }
+  }
+
+  const finalFragments = [PROMPT_PREFIX, ...uniqueCoreFragments, ...PROMPT_POSTFIX_FRAGMENTS];
+  return `${finalFragments.join('. ')}.`;
 }
 
 async function fetchJson(url: string, init: RequestInit, fetchImpl: FetchImpl): Promise<OllamaResponse> {
@@ -225,6 +254,6 @@ export class OllamaCardPromptGenerator implements CardPromptGenerator {
       throw new Error(`Model JSON missing required fields. Raw: ${responseText.slice(0, 250)}`);
     }
 
-    return { prompt};
+    return { prompt: composeFinalPrompt(prompt) };
   }
 }
