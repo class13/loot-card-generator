@@ -8,6 +8,7 @@ import {ComfyUIImageGenerator} from "./image-generation/comfy-ui/comfy-ui-image-
 import {ImageGenerator} from "./image-generation/image-generator.js";
 import {ImageParameters} from "./image-generation/image-parameters.js";
 import {ComfyUIOptions} from "./comfy-ui-options.js";
+import {createNanoBananaImageGenerator} from "./image-generation/nano-banana/nano-banana-image-generator.js";
 
 const DEFAULT_WIDTH = 1024;
 const DEFAULT_HEIGHT = 1024;
@@ -124,34 +125,7 @@ export function runIconGenerator(): void {
         const outputDir = path.resolve(options.outDir || path.join(yamlDir, 'icons'));
         fs.mkdirSync(outputDir, { recursive: true });
 
-        const comfyOptions: ComfyUIOptions = {
-          checkpoint: options.checkpoint,
-          cfg: options.cfg,
-          comfyUrl: options.comfyUrl,
-          denoise: options.denoise,
-          height: options.height,
-          limit: options.limit,
-          lora: options.lora,
-          loraStrengthClip: options.loraStrengthClip,
-          loraStrengthModel: options.loraStrengthModel,
-          sampler: options.sampler,
-          scheduler: options.scheduler,
-          seed: options.seed,
-          steps: options.steps,
-          width:options.width,
-        }
-        
-        const comfyUrl = comfyOptions.comfyUrl.replace(/\/+$/, '');
-
-        let comfyUI = new ComfyUIImageGenerator({
-          baseUrl: comfyUrl
-
-        })
-        await comfyUI.init(comfyOptions)
-
-        let generator: ImageGenerator = comfyUI
-
-
+        let generator: ImageGenerator = createNanoBananaImageGenerator()
 
         const updatedCards = [...cards];
         const shouldPersistYaml = Boolean(options.writeYaml || options.inPlace);
@@ -198,7 +172,9 @@ export function runIconGenerator(): void {
               prefix: prefix
             }
             const imageData = await generator.createImage(imageParameters);
+            console.log("received the imageData")
             fs.writeFileSync(outPath, imageData);
+            console.log(`saved image at ${outPath}`)
 
             const relativeIconPath = path.relative(yamlDir, outPath).split(path.sep).join('/');
             updatedCards[i] = { ...card, icon: relativeIconPath };
