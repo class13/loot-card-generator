@@ -51,7 +51,7 @@ export class NanoBananaImageGenerator implements ImageGenerator {
                 return Buffer.from(imageData, "base64")
             }
         }
-        throw new Error("AAAAAAAAAAAA")
+        throw new Error("Unexpected errors. I don't know how this happens.")
     }
 
 }

@@ -1,9 +1,7 @@
 export type LootCard = Record<string, unknown>;
 
 export interface GeneratedCardPrompts {
-  category: string;
   prompt: string;
-  negativePrompt: string;
 }
 
 export interface CardPromptGenerator {

@@ -73,34 +73,6 @@ function splitPromptFragments(value: unknown): string[] {
     .filter(Boolean);
 }
 
-function normalizePositivePrompt(value: unknown): string {
-  const fragments = splitPromptFragments(value).filter((part) => !/^2d icon$/i.test(part));
-  const parts = ['2d icon', ...fragments];
-  if (!parts.some((part) => /^<lora:game_icon_v1\.0:1>$/i.test(part))) {
-    parts.push('<lora:game_icon_v1.0:1>');
-  }
-  return parts.join('. ');
-}
-
-function normalizeNegativePrompt(value: unknown): string {
-  const rawParts = splitPromptFragments(value).map((part) => {
-    if (/^\(blurry:1\.3\)$/i.test(part) || /^blurry$/i.test(part)) return '(blurry:1.3)';
-    if (/^low ?res$/i.test(part)) return 'lowres';
-    return part;
-  });
-
-  const deduped: string[] = [];
-  const seen = new Set<string>();
-  for (const part of ['(blurry:1.3)', 'lowres', ...rawParts]) {
-    const key = part.toLowerCase();
-    if (!seen.has(key)) {
-      seen.add(key);
-      deduped.push(part);
-    }
-  }
-  return deduped.join('. ');
-}
-
 function extractJsonObject(text: string): OllamaModelOutput {
   const trimmed = text.trim();
   try {
@@ -131,16 +103,11 @@ function buildSystemPrompt(): string {
     '5. Avoid cinematic language and storytelling.',
     '6. Focus on concrete visual traits only.',
     'You MUST output valid JSON in this exact format:',
-    '{"category":"...","prompt":"...","negative_prompt":"..."}',
-    'CATEGORY RULES:',
-    'Classify the item into one of these only: weapon, armor, clothing, jewelry, potion, scroll, book, tool, container, artifact, other.',
+    '{"prompt":"..."}',
     'PROMPT FORMAT:',
-    'Use this style exactly: "2d icon. [short visual fragments]. <lora:game_icon_v1.0:1>"',
+    'Use this style exactly: "game item icon. [short visual fragments]. white background. comic style"',
     'Use 2-8 concise fragments after "2d icon".',
-    'Example style: "2d icon. dead frog. brown. dried. <lora:game_icon_v1.0:1>"',
-    'NEGATIVE_PROMPT FORMAT:',
-    'Always start with: "(blurry:1.3). lowres."',
-    'Then optionally append short exclusions as period-separated fragments (for example: "armor. character").',
+    'Example style: "game item ocn. dead frog. brown. dried. white background. comic style"',
     'Keep it compact and practical.',
     'Do not output anything except valid JSON.',
   ].join('\n');
@@ -252,17 +219,12 @@ export class OllamaCardPromptGenerator implements CardPromptGenerator {
       throw new Error(`Could not parse model output as JSON: ${message}. Raw: ${responseText.slice(0, 250)}`);
     }
 
-    const prompt = normalizePositivePrompt(parsed.prompt || parsed.positive_prompt);
-    const negativePrompt = normalizeNegativePrompt(parsed.negative_prompt);
-    const category = cleanText(parsed.category).toLowerCase();
+    const prompt = parsed.prompt || parsed.positive_prompt;
 
-    if (!prompt || !negativePrompt) {
+    if (!prompt) {
       throw new Error(`Model JSON missing required fields. Raw: ${responseText.slice(0, 250)}`);
     }
-    if (!ALLOWED_CATEGORIES.has(category)) {
-      throw new Error(`Model JSON has invalid or missing category. Raw: ${responseText.slice(0, 250)}`);
-    }
 
-    return { category, prompt, negativePrompt };
+    return { prompt};
   }
 }

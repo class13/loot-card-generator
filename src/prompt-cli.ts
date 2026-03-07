@@ -46,7 +46,7 @@ export function runPromptGenerator(): void {
     .version('1.0.0')
     .argument('<input>', 'YAML file path')
     .option('--ollama-url <url>', 'Ollama base URL', 'http://localhost:11434')
-    .option('--model <name>', 'Ollama model name', 'llama3.1')
+    .option('--model <name>', 'Ollama model name', 'llama3.1:8b')
     .option('--temperature <n>', 'Sampling temperature', (v: string) => toFloatInRange(v, 0.2, 0, 2), 0.2)
     .option('--top-p <n>', 'Top-p sampling value', (v: string) => toFloatInRange(v, 0.9, 0, 1), 0.9)
     .option('--max-tokens <n>', 'Max generated tokens', (v: string) => toPosInt(v, 220), 220)
@@ -96,8 +96,8 @@ export function runPromptGenerator(): void {
         for (const card of selected) {
           const index = cards.indexOf(card);
           console.log(chalk.cyan(`- ${card.name}`));
-          const { category, prompt, negativePrompt } = await generator.generateForCard(card);
-          cards[index] = { ...cards[index], category, prompt, negative_prompt: negativePrompt };
+          const { prompt } = await generator.generateForCard(card);
+          cards[index] = { ...cards[index], prompt };
           persistYaml();
         }
 
