@@ -77,6 +77,21 @@ Fast iteration example:
 node bin/loot-card-icons.js examples/loot.yaml --in-place --draft --limit 3
 ```
 
+## Remove White Backgrounds With rembg
+
+Use the batch helper script to remove backgrounds from generated images:
+
+```bash
+bin/remove-bg-rembg.sh items/icons items/icons-transparent
+```
+
+If your images are in another folder, pass that folder as the first argument.  
+Optional: choose model with `REMBG_MODEL` (default is `u2net`):
+
+```bash
+REMBG_MODEL=u2net_human_seg bin/remove-bg-rembg.sh examples/icons
+```
+
 ## Generate Prompts With Ollama
 
 Generate `prompt` and `negative_prompt` fields for each card using your local Ollama (`http://localhost:11434`):

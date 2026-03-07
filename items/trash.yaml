@@ -94,7 +94,6 @@ cards:
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A pouch of moth wings
-    icon: icons/008-pouch-of-moth-wings.png
     category: other
     prompt: >-
       game item icon. moth wings. brown. dry. fragile. crumpled. worn leather. white background. comic style. avoid any
@@ -103,6 +102,7 @@ cards:
     tags:
       - trash
       - the-organic-grotesque
+    icon: icons/008-pouch-of-moth-wings.png
   - name: jar of pickled leeches (all dead)
     rarity: common
     type: Trash (The Organic & Grotesque)
@@ -1045,13 +1045,13 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A dried lemon peel
+    icon: icons/091-dried-lemon-peel.png
     prompt: >-
       game item icon. dried lemon peel. white background. comic style. avoid any kind of frames. avoid duplicated
       items..
     tags:
       - trash
       - miscellaneous-debris
-    icon: icons/091-dried-lemon-peel.png
   - name: shard of obsidian (too small to be a weapon)
     rarity: common
     type: Trash (Miscellaneous Debris)
