@@ -1,7 +1,8 @@
 cards:
   - name: single, yellowed orc tooth
+    price: worthless
     rarity: common
-    type: Trash (The Organic & Grotesque)
+    type: Trash
     description: A single, yellowed orc tooth
     icon: icons-fit-1024/001-single-yellowed-orc-tooth.png
     category: other
@@ -13,8 +14,9 @@ cards:
       - trash
       - the-organic-grotesque
   - name: dried, flattened toad
+    price: worthless
     rarity: common
-    type: Trash (The Organic & Grotesque)
+    type: Trash
     description: A dried, flattened toad
     icon: icons-fit-1024/002-dried-flattened-toad.png
     category: other
@@ -26,8 +28,9 @@ cards:
       - trash
       - the-organic-grotesque
   - name: tangle of greasy, matted dwarf beard hair
+    price: worthless
     rarity: common
-    type: Trash (The Organic & Grotesque)
+    type: Trash
     description: A tangle of greasy, matted dwarf beard hair
     icon: icons-fit-1024/003-tangle-of-greasy-matted-dwarf-beard-hair.png
     category: other
@@ -39,8 +42,9 @@ cards:
       - trash
       - the-organic-grotesque
   - name: collection of "lucky" fingernail clippings
+    price: worthless
     rarity: common
-    type: Trash (The Organic & Grotesque)
+    type: Trash
     description: A collection of "lucky" fingernail clippings
     icon: icons-fit-1024/004-collection-of-lucky-fingernail-clippings.png
     category: jewelry
@@ -52,8 +56,9 @@ cards:
       - trash
       - the-organic-grotesque
   - name: vial of murky swamp water (smells like sulfur)
+    price: worthless
     rarity: common
-    type: Trash (The Organic & Grotesque)
+    type: Trash
     description: A vial of murky swamp water (smells like sulfur)
     icon: icons-fit-1024/005-vial-of-murky-swamp-water-smells-like-sulfur.png
     category: other
@@ -65,8 +70,9 @@ cards:
       - trash
       - the-organic-grotesque
   - name: rabbit’s foot that has gone completely bald
+    price: worthless
     rarity: common
-    type: Trash (The Organic & Grotesque)
+    type: Trash
     description: A rabbit’s foot that has gone completely bald
     icon: icons-fit-1024/006-rabbit-s-foot-that-has-gone-completely-bald.png
     category: jewelry
@@ -78,8 +84,9 @@ cards:
       - trash
       - the-organic-grotesque
   - name: petrified apple core
+    price: worthless
     rarity: common
-    type: Trash (The Organic & Grotesque)
+    type: Trash
     description: A petrified apple core
     icon: icons-fit-1024/007-petrified-apple-core.png
     category: other
@@ -91,8 +98,9 @@ cards:
       - trash
       - the-organic-grotesque
   - name: pouch of moth wings
+    price: worthless
     rarity: common
-    type: Trash (The Organic & Grotesque)
+    type: Trash
     description: A pouch of moth wings
     category: other
     prompt: >-
@@ -104,8 +112,9 @@ cards:
       - the-organic-grotesque
     icon: icons-fit-1024/008-pouch-of-moth-wings.png
   - name: jar of pickled leeches (all dead)
+    price: worthless
     rarity: common
-    type: Trash (The Organic & Grotesque)
+    type: Trash
     description: A jar of pickled leeches (all dead)
     icon: icons-fit-1024/009-jar-of-pickled-leeches-all-dead.png
     category: container
@@ -117,8 +126,9 @@ cards:
       - trash
       - the-organic-grotesque
   - name: snake skin that has mostly crumbled to dust
+    price: worthless
     rarity: common
-    type: Trash (The Organic & Grotesque)
+    type: Trash
     description: A snake skin that has mostly crumbled to dust
     icon: icons-fit-1024/010-snake-skin-that-has-mostly-crumbled-to-dust.png
     category: other
@@ -130,8 +140,9 @@ cards:
       - trash
       - the-organic-grotesque
   - name: bird’s nest made entirely of stolen sewing thread
+    price: worthless
     rarity: common
-    type: Trash (The Organic & Grotesque)
+    type: Trash
     description: A bird’s nest made entirely of stolen sewing thread
     icon: icons-fit-1024/011-bird-s-nest-made-entirely-of-stolen-sewing-thread.png
     category: other
@@ -143,8 +154,9 @@ cards:
       - trash
       - the-organic-grotesque
   - name: dried-up honeycomb with no honey
+    price: worthless
     rarity: common
-    type: Trash (The Organic & Grotesque)
+    type: Trash
     description: A dried-up honeycomb with no honey
     icon: icons-fit-1024/012-dried-up-honeycomb-with-no-honey.png
     category: other
@@ -156,8 +168,9 @@ cards:
       - trash
       - the-organic-grotesque
   - name: bag of chicken bones used for "divination."
+    price: worthless
     rarity: common
-    type: Trash (The Organic & Grotesque)
+    type: Trash
     description: A bag of chicken bones used for "divination."
     icon: icons-fit-1024/013-bag-of-chicken-bones-used-for-divination.png
     category: other
@@ -169,8 +182,9 @@ cards:
       - trash
       - the-organic-grotesque
   - name: very large, very dead beetle
+    price: worthless
     rarity: common
-    type: Trash (The Organic & Grotesque)
+    type: Trash
     description: A very large, very dead beetle
     icon: icons-fit-1024/014-very-large-very-dead-beetle.png
     category: other
@@ -182,8 +196,9 @@ cards:
       - trash
       - the-organic-grotesque
   - name: scrap of cured leather that still has fur (and fleas)
+    price: worthless
     rarity: common
-    type: Trash (The Organic & Grotesque)
+    type: Trash
     description: A scrap of cured leather that still has fur (and fleas)
     icon: icons-fit-1024/015-scrap-of-cured-leather-that-still-has-fur-and-fleas.png
     category: other
@@ -195,8 +210,9 @@ cards:
       - trash
       - the-organic-grotesque
   - name: bent iron nail
+    price: worthless
     rarity: common
-    type: Trash (Rusty & Broken Hardware)
+    type: Trash
     description: A bent iron nail
     icon: icons-fit-1024/016-bent-iron-nail.png
     category: other
@@ -206,8 +222,9 @@ cards:
       - trash
       - rusty-broken-hardware
   - name: key that fits no known lock in the region
+    price: worthless
     rarity: common
-    type: Trash (Rusty & Broken Hardware)
+    type: Trash
     description: A key that fits no known lock in the region
     icon: icons-fit-1024/017-key-that-fits-no-known-lock-in-the-region.png
     category: other
@@ -219,8 +236,9 @@ cards:
       - trash
       - rusty-broken-hardware
   - name: rusted buckle from a horse’s saddle
+    price: worthless
     rarity: common
-    type: Trash (Rusty & Broken Hardware)
+    type: Trash
     description: A rusted buckle from a horse’s saddle
     icon: icons-fit-1024/018-rusted-buckle-from-a-horse-s-saddle.png
     category: other
@@ -232,8 +250,9 @@ cards:
       - trash
       - rusty-broken-hardware
   - name: cracked glass marble with a chip in it
+    price: worthless
     rarity: common
-    type: Trash (Rusty & Broken Hardware)
+    type: Trash
     description: A cracked glass marble with a chip in it
     icon: icons-fit-1024/019-cracked-glass-marble-with-a-chip-in-it.png
     category: other
@@ -245,8 +264,9 @@ cards:
       - trash
       - rusty-broken-hardware
   - name: spoon that has been sharpened into a poor-quality shiv
+    price: worthless
     rarity: common
-    type: Trash (Rusty & Broken Hardware)
+    type: Trash
     description: A spoon that has been sharpened into a poor-quality shiv
     icon: icons-fit-1024/020-spoon-that-has-been-sharpened-into-a-poor-quality-shiv.png
     category: other
@@ -258,8 +278,9 @@ cards:
       - trash
       - rusty-broken-hardware
   - name: single link from a heavy iron chain
+    price: worthless
     rarity: common
-    type: Trash (Rusty & Broken Hardware)
+    type: Trash
     description: A single link from a heavy iron chain
     icon: icons-fit-1024/021-single-link-from-a-heavy-iron-chain.png
     category: other
@@ -271,8 +292,9 @@ cards:
       - trash
       - rusty-broken-hardware
   - name: brass button with a coat of arms no one recognizes
+    price: worthless
     rarity: common
-    type: Trash (Rusty & Broken Hardware)
+    type: Trash
     description: A brass button with a coat of arms no one recognizes
     icon: icons-fit-1024/022-brass-button-with-a-coat-of-arms-no-one-recognizes.png
     category: other
@@ -284,8 +306,9 @@ cards:
       - trash
       - rusty-broken-hardware
   - name: thimble with a hole worn through the top
+    price: worthless
     rarity: common
-    type: Trash (Rusty & Broken Hardware)
+    type: Trash
     description: A thimble with a hole worn through the top
     icon: icons-fit-1024/023-thimble-with-a-hole-worn-through-the-top.png
     category: other
@@ -297,8 +320,9 @@ cards:
       - trash
       - rusty-broken-hardware
   - name: rusted fishhook
+    price: worthless
     rarity: common
-    type: Trash (Rusty & Broken Hardware)
+    type: Trash
     description: A rusted fishhook
     icon: icons-fit-1024/024-rusted-fishhook.png
     category: other
@@ -310,8 +334,9 @@ cards:
       - trash
       - rusty-broken-hardware
   - name: pair of tweezers that don't quite meet in the middle
+    price: worthless
     rarity: common
-    type: Trash (Rusty & Broken Hardware)
+    type: Trash
     description: A pair of tweezers that don't quite meet in the middle
     icon: icons-fit-1024/025-pair-of-tweezers-that-don-t-quite-meet-in-the-middle.png
     category: tool
@@ -323,8 +348,9 @@ cards:
       - trash
       - rusty-broken-hardware
   - name: lead fishing weight
+    price: worthless
     rarity: common
-    type: Trash (Rusty & Broken Hardware)
+    type: Trash
     description: A lead fishing weight
     icon: icons-fit-1024/026-lead-fishing-weight.png
     category: other
@@ -336,8 +362,9 @@ cards:
       - trash
       - rusty-broken-hardware
   - name: copper ring that turns the wearer's finger green
+    price: worthless
     rarity: common
-    type: Trash (Rusty & Broken Hardware)
+    type: Trash
     description: A copper ring that turns the wearer's finger green
     icon: icons-fit-1024/027-copper-ring-that-turns-the-wearer-s-finger-green.png
     category: jewelry
@@ -349,8 +376,9 @@ cards:
       - trash
       - rusty-broken-hardware
   - name: dull, notched sewing needle
+    price: worthless
     rarity: common
-    type: Trash (Rusty & Broken Hardware)
+    type: Trash
     description: A dull, notched sewing needle
     icon: icons-fit-1024/028-dull-notched-sewing-needle.png
     prompt: >-
@@ -360,8 +388,9 @@ cards:
       - trash
       - rusty-broken-hardware
   - name: shard of a broken mirror (bad luck not included)
+    price: worthless
     rarity: common
-    type: Trash (Rusty & Broken Hardware)
+    type: Trash
     description: A shard of a broken mirror (bad luck not included)
     icon: icons-fit-1024/029-shard-of-a-broken-mirror-bad-luck-not-included.png
     prompt: >-
@@ -371,8 +400,9 @@ cards:
       - trash
       - rusty-broken-hardware
   - name: heavy, decorative iron nut (no bolt)
+    price: worthless
     rarity: common
-    type: Trash (Rusty & Broken Hardware)
+    type: Trash
     description: A heavy, decorative iron nut (no bolt)
     icon: icons-fit-1024/030-heavy-decorative-iron-nut-no-bolt.png
     prompt: >-
@@ -382,8 +412,9 @@ cards:
       - trash
       - rusty-broken-hardware
   - name: charcoal sketch of a very ugly dog
+    price: worthless
     rarity: common
-    type: Trash (Scraps & Curiosities)
+    type: Trash
     description: A charcoal sketch of a very ugly dog
     icon: icons-fit-1024/031-charcoal-sketch-of-a-very-ugly-dog.png
     prompt: >-
@@ -393,8 +424,9 @@ cards:
       - trash
       - scraps-curiosities
   - name: blood-stained handkerchief
+    price: worthless
     rarity: common
-    type: Trash (Scraps & Curiosities)
+    type: Trash
     description: A blood-stained handkerchief
     icon: icons-fit-1024/032-blood-stained-handkerchief.png
     prompt: >-
@@ -404,8 +436,9 @@ cards:
       - trash
       - scraps-curiosities
   - name: grocery list written in a language the party doesn't speak
+    price: worthless
     rarity: common
-    type: Trash (Scraps & Curiosities)
+    type: Trash
     description: A grocery list written in a language the party doesn't speak
     icon: icons-fit-1024/033-grocery-list-written-in-a-language-the-party-doesn-t-speak.png
     prompt: >-
@@ -415,8 +448,9 @@ cards:
       - trash
       - scraps-curiosities
   - name: single playing card (the Two of Clubs)
+    price: worthless
     rarity: common
-    type: Trash (Scraps & Curiosities)
+    type: Trash
     description: A single playing card (the Two of Clubs)
     icon: icons-fit-1024/034-single-playing-card-the-two-of-clubs.png
     prompt: >-
@@ -426,8 +460,9 @@ cards:
       - trash
       - scraps-curiosities
   - name: '"Map to Treasure" that is clearly a child''s drawing'
+    price: worthless
     rarity: common
-    type: Trash (Scraps & Curiosities)
+    type: Trash
     description: A "Map to Treasure" that is clearly a child's drawing
     icon: icons-fit-1024/035-map-to-treasure-that-is-clearly-a-child-s-drawing.png
     prompt: >-
@@ -437,8 +472,9 @@ cards:
       - trash
       - scraps-curiosities
   - name: bundle of sticks tied with a dirty ribbon
+    price: worthless
     rarity: common
-    type: Trash (Scraps & Curiosities)
+    type: Trash
     description: A bundle of sticks tied with a dirty ribbon
     icon: icons-fit-1024/036-bundle-of-sticks-tied-with-a-dirty-ribbon.png
     prompt: >-
@@ -448,8 +484,9 @@ cards:
       - trash
       - scraps-curiosities
   - name: smooth river stone with a hole naturally worn through it
+    price: worthless
     rarity: common
-    type: Trash (Scraps & Curiosities)
+    type: Trash
     description: A smooth river stone with a hole naturally worn through it
     icon: icons-fit-1024/037-smooth-river-stone-with-a-hole-naturally-worn-through-it.png
     prompt: >-
@@ -459,8 +496,9 @@ cards:
       - trash
       - scraps-curiosities
   - name: wad of chewed resin (ancient gum)
+    price: worthless
     rarity: common
-    type: Trash (Scraps & Curiosities)
+    type: Trash
     description: A wad of chewed resin (ancient gum)
     icon: icons-fit-1024/038-wad-of-chewed-resin-ancient-gum.png
     prompt: >-
@@ -470,8 +508,9 @@ cards:
       - trash
       - scraps-curiosities
   - name: small pouch of sawdust
+    price: worthless
     rarity: common
-    type: Trash (Scraps & Curiosities)
+    type: Trash
     description: A small pouch of sawdust
     icon: icons-fit-1024/039-small-pouch-of-sawdust.png
     prompt: >-
@@ -481,8 +520,9 @@ cards:
       - trash
       - scraps-curiosities
   - name: scorched piece of parchment
+    price: worthless
     rarity: common
-    type: Trash (Scraps & Curiosities)
+    type: Trash
     description: A scorched piece of parchment
     icon: icons-fit-1024/040-scorched-piece-of-parchment.png
     prompt: >-
@@ -492,8 +532,9 @@ cards:
       - trash
       - scraps-curiosities
   - name: single wooden die with two "4"s and no "6."
+    price: worthless
     rarity: common
-    type: Trash (Scraps & Curiosities)
+    type: Trash
     description: A single wooden die with two "4"s and no "6."
     icon: icons-fit-1024/041-single-wooden-die-with-two-4-s-and-no-6.png
     prompt: >-
@@ -503,8 +544,9 @@ cards:
       - trash
       - scraps-curiosities
   - name: wax seal from a letter, broken into three pieces
+    price: worthless
     rarity: common
-    type: Trash (Scraps & Curiosities)
+    type: Trash
     description: A wax seal from a letter, broken into three pieces
     icon: icons-fit-1024/042-wax-seal-from-a-letter-broken-into-three-pieces.png
     prompt: >-
@@ -514,8 +556,9 @@ cards:
       - trash
       - scraps-curiosities
   - name: frayed length of twine, exactly 4 inches long
+    price: worthless
     rarity: common
-    type: Trash (Scraps & Curiosities)
+    type: Trash
     description: A frayed length of twine, exactly 4 inches long
     icon: icons-fit-1024/043-frayed-length-of-twine-exactly-4-inches-long.png
     prompt: >-
@@ -525,8 +568,9 @@ cards:
       - trash
       - scraps-curiosities
   - name: cork from an expensive bottle of wine (bottle missing)
+    price: worthless
     rarity: common
-    type: Trash (Scraps & Curiosities)
+    type: Trash
     description: A cork from an expensive bottle of wine (bottle missing)
     icon: icons-fit-1024/044-cork-from-an-expensive-bottle-of-wine-bottle-missing.png
     prompt: >-
@@ -536,8 +580,9 @@ cards:
       - trash
       - scraps-curiosities
   - name: handful of colorful, but worthless, glass beads
+    price: worthless
     rarity: common
-    type: Trash (Scraps & Curiosities)
+    type: Trash
     description: A handful of colorful, but worthless, glass beads
     icon: icons-fit-1024/045-handful-of-colorful-but-worthless-glass-beads.png
     prompt: >-
@@ -547,8 +592,9 @@ cards:
       - trash
       - scraps-curiosities
   - name: piece of extremely hard, moldy hardtack
+    price: worthless
     rarity: common
-    type: Trash (Smelly & Unpleasant)
+    type: Trash
     description: A piece of extremely hard, moldy hardtack
     icon: icons-fit-1024/046-piece-of-extremely-hard-moldy-hardtack.png
     prompt: >-
@@ -558,8 +604,9 @@ cards:
       - trash
       - smelly-unpleasant
   - name: damp lump of sheep's wool
+    price: worthless
     rarity: common
-    type: Trash (Smelly & Unpleasant)
+    type: Trash
     description: A damp lump of sheep's wool
     icon: icons-fit-1024/047-damp-lump-of-sheep-s-wool.png
     prompt: >-
@@ -569,8 +616,9 @@ cards:
       - trash
       - smelly-unpleasant
   - name: small tin of "ointment" that smells like rancid fish
+    price: worthless
     rarity: common
-    type: Trash (Smelly & Unpleasant)
+    type: Trash
     description: A small tin of "ointment" that smells like rancid fish
     icon: icons-fit-1024/048-small-tin-of-ointment-that-smells-like-rancid-fish.png
     prompt: >-
@@ -580,8 +628,9 @@ cards:
       - trash
       - smelly-unpleasant
   - name: wet rag that refuses to dry
+    price: worthless
     rarity: common
-    type: Trash (Smelly & Unpleasant)
+    type: Trash
     description: A wet rag that refuses to dry
     icon: icons-fit-1024/049-wet-rag-that-refuses-to-dry.png
     prompt: >-
@@ -591,8 +640,9 @@ cards:
       - trash
       - smelly-unpleasant
   - name: pouch of pipe tobacco that has gone moldy
+    price: worthless
     rarity: common
-    type: Trash (Smelly & Unpleasant)
+    type: Trash
     description: A pouch of pipe tobacco that has gone moldy
     icon: icons-fit-1024/050-pouch-of-pipe-tobacco-that-has-gone-moldy.png
     prompt: >-
@@ -602,8 +652,9 @@ cards:
       - trash
       - smelly-unpleasant
   - name: clove of garlic that has started to sprout
+    price: worthless
     rarity: common
-    type: Trash (Smelly & Unpleasant)
+    type: Trash
     description: A clove of garlic that has started to sprout
     icon: icons-fit-1024/051-clove-of-garlic-that-has-started-to-sprout.png
     prompt: >-
@@ -613,8 +664,9 @@ cards:
       - trash
       - smelly-unpleasant
   - name: piece of chalk that’s been ground down to a nub
+    price: worthless
     rarity: common
-    type: Trash (Smelly & Unpleasant)
+    type: Trash
     description: A piece of chalk that’s been ground down to a nub
     icon: icons-fit-1024/052-piece-of-chalk-that-s-been-ground-down-to-a-nub.png
     prompt: >-
@@ -624,8 +676,9 @@ cards:
       - trash
       - smelly-unpleasant
   - name: half-melted tallow candle
+    price: worthless
     rarity: common
-    type: Trash (Smelly & Unpleasant)
+    type: Trash
     description: A half-melted tallow candle
     icon: icons-fit-1024/053-half-melted-tallow-candle.png
     prompt: >-
@@ -635,8 +688,9 @@ cards:
       - trash
       - smelly-unpleasant
   - name: handful of acorns with tiny faces carved into them
+    price: worthless
     rarity: common
-    type: Trash (Smelly & Unpleasant)
+    type: Trash
     description: A handful of acorns with tiny faces carved into them
     icon: icons-fit-1024/054-handful-of-acorns-with-tiny-faces-carved-into-them.png
     prompt: >-
@@ -646,8 +700,9 @@ cards:
       - trash
       - smelly-unpleasant
   - name: small, empty bottle that once held very strong perfume
+    price: worthless
     rarity: common
-    type: Trash (Smelly & Unpleasant)
+    type: Trash
     description: A small, empty bottle that once held very strong perfume
     icon: icons-fit-1024/055-small-empty-bottle-that-once-held-very-strong-perfume.png
     prompt: >-
@@ -657,8 +712,9 @@ cards:
       - trash
       - smelly-unpleasant
   - name: '"Certificate of Authenticity" for an item not present'
+    price: worthless
     rarity: common
-    type: Trash (Items of "Questionable" Value)
+    type: Trash
     description: A "Certificate of Authenticity" for an item not present
     icon: icons-fit-1024/056-certificate-of-authenticity-for-an-item-not-present.png
     prompt: >-
@@ -668,8 +724,9 @@ cards:
       - trash
       - items-of-questionable-value
   - name: IOI (I Owe You) written on a scrap of leather for 1 copper
+    price: worthless
     rarity: common
-    type: Trash (Items of "Questionable" Value)
+    type: Trash
     description: A IOI (I Owe You) written on a scrap of leather for 1 copper
     icon: icons-fit-1024/057-ioi-i-owe-you-written-on-a-scrap-of-leather-for-1-copper.png
     prompt: >-
@@ -679,8 +736,9 @@ cards:
       - trash
       - items-of-questionable-value
   - name: single earring (the mate is lost)
+    price: worthless
     rarity: common
-    type: Trash (Items of "Questionable" Value)
+    type: Trash
     description: A single earring (the mate is lost)
     icon: icons-fit-1024/058-single-earring-the-mate-is-lost.png
     prompt: >-
@@ -690,8 +748,9 @@ cards:
       - trash
       - items-of-questionable-value
   - name: glass eye that looks in two directions at once
+    price: worthless
     rarity: common
-    type: Trash (Items of "Questionable" Value)
+    type: Trash
     description: A glass eye that looks in two directions at once
     icon: icons-fit-1024/059-glass-eye-that-looks-in-two-directions-at-once.png
     prompt: >-
@@ -701,8 +760,9 @@ cards:
       - trash
       - items-of-questionable-value
   - name: whistle that makes no sound when blown
+    price: worthless
     rarity: common
-    type: Trash (Items of "Questionable" Value)
+    type: Trash
     description: A whistle that makes no sound when blown
     icon: icons-fit-1024/060-whistle-that-makes-no-sound-when-blown.png
     prompt: >-
@@ -712,8 +772,9 @@ cards:
       - trash
       - items-of-questionable-value
   - name: wooden tooth
+    price: worthless
     rarity: common
-    type: Trash (Items of "Questionable" Value)
+    type: Trash
     description: A wooden tooth
     icon: icons-fit-1024/061-wooden-tooth.png
     prompt: >-
@@ -723,8 +784,9 @@ cards:
       - trash
       - items-of-questionable-value
   - name: '"magic" bean (it is just a kidney bean)'
+    price: worthless
     rarity: common
-    type: Trash (Items of "Questionable" Value)
+    type: Trash
     description: A "magic" bean (it is just a kidney bean)
     icon: icons-fit-1024/062-magic-bean-it-is-just-a-kidney-bean.png
     prompt: >-
@@ -734,8 +796,9 @@ cards:
       - trash
       - items-of-questionable-value
   - name: tiny cage for a cricket (cricket has escaped)
+    price: worthless
     rarity: common
-    type: Trash (Items of "Questionable" Value)
+    type: Trash
     description: A tiny cage for a cricket (cricket has escaped)
     icon: icons-fit-1024/063-tiny-cage-for-a-cricket-cricket-has-escaped.png
     prompt: >-
@@ -745,8 +808,9 @@ cards:
       - trash
       - items-of-questionable-value
   - name: collection of colorful poultry feathers
+    price: worthless
     rarity: common
-    type: Trash (Items of "Questionable" Value)
+    type: Trash
     description: A collection of colorful poultry feathers
     icon: icons-fit-1024/064-collection-of-colorful-poultry-feathers.png
     prompt: >-
@@ -756,8 +820,9 @@ cards:
       - trash
       - items-of-questionable-value
   - name: stone that looks vaguely like a famous deity
+    price: worthless
     rarity: common
-    type: Trash (Items of "Questionable" Value)
+    type: Trash
     description: A stone that looks vaguely like a famous deity
     icon: icons-fit-1024/065-stone-that-looks-vaguely-like-a-famous-deity.png
     prompt: >-
@@ -767,8 +832,9 @@ cards:
       - trash
       - items-of-questionable-value
   - name: small lead soldier with its head broken off
+    price: worthless
     rarity: common
-    type: Trash (Items of "Questionable" Value)
+    type: Trash
     description: A small lead soldier with its head broken off
     icon: icons-fit-1024/066-small-lead-soldier-with-its-head-broken-off.png
     prompt: >-
@@ -778,8 +844,9 @@ cards:
       - trash
       - items-of-questionable-value
   - name: pouch of salt mixed with sand
+    price: worthless
     rarity: common
-    type: Trash (Items of "Questionable" Value)
+    type: Trash
     description: A pouch of salt mixed with sand
     icon: icons-fit-1024/067-pouch-of-salt-mixed-with-sand.png
     prompt: >-
@@ -789,8 +856,9 @@ cards:
       - trash
       - items-of-questionable-value
   - name: comb with half its teeth missing
+    price: worthless
     rarity: common
-    type: Trash (Items of "Questionable" Value)
+    type: Trash
     description: A comb with half its teeth missing
     icon: icons-fit-1024/068-comb-with-half-its-teeth-missing.png
     prompt: >-
@@ -800,8 +868,9 @@ cards:
       - trash
       - items-of-questionable-value
   - name: doll made of corn husks
+    price: worthless
     rarity: common
-    type: Trash (Items of "Questionable" Value)
+    type: Trash
     description: A doll made of corn husks
     icon: icons-fit-1024/069-doll-made-of-corn-husks.png
     prompt: >-
@@ -811,8 +880,9 @@ cards:
       - trash
       - items-of-questionable-value
   - name: jar of fireflies (all deceased)
+    price: worthless
     rarity: common
-    type: Trash (Items of "Questionable" Value)
+    type: Trash
     description: A jar of fireflies (all deceased)
     icon: icons-fit-1024/070-jar-of-fireflies-all-deceased.png
     prompt: >-
@@ -822,8 +892,9 @@ cards:
       - trash
       - items-of-questionable-value
   - name: fossilized seashell
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A fossilized seashell
     icon: icons-fit-1024/071-fossilized-seashell.png
     prompt: >-
@@ -833,8 +904,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: bit of fluff from a Blink Dog’s tail (reputedly)
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A bit of fluff from a Blink Dog’s tail (reputedly)
     icon: icons-fit-1024/072-bit-of-fluff-from-a-blink-dog-s-tail-reputedly.png
     prompt: >-
@@ -844,8 +916,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: leather strap with a broken buckle
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A leather strap with a broken buckle
     icon: icons-fit-1024/073-leather-strap-with-a-broken-buckle.png
     prompt: >-
@@ -855,8 +928,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: clay pipe bowl with no stem
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A clay pipe bowl with no stem
     icon: icons-fit-1024/074-clay-pipe-bowl-with-no-stem.png
     prompt: >-
@@ -866,8 +940,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: handful of iron filings
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A handful of iron filings
     icon: icons-fit-1024/075-handful-of-iron-filings.png
     prompt: >-
@@ -877,8 +952,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: charred twig from a lightning-struck tree
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A charred twig from a lightning-struck tree
     icon: icons-fit-1024/076-charred-twig-from-a-lightning-struck-tree.png
     prompt: >-
@@ -888,8 +964,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: list of names with "don't trust" written next to them
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A list of names with "don't trust" written next to them
     icon: icons-fit-1024/077-list-of-names-with-don-t-trust-written-next-to-them.png
     prompt: >-
@@ -899,8 +976,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: rusted lock with no key
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A rusted lock with no key
     icon: icons-fit-1024/078-rusted-lock-with-no-key.png
     prompt: >-
@@ -910,8 +988,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: small, empty tinderbox
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A small, empty tinderbox
     icon: icons-fit-1024/079-small-empty-tinderbox.png
     prompt: >-
@@ -921,8 +1000,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: bundle of dried lavender that has lost its scent
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A bundle of dried lavender that has lost its scent
     icon: icons-fit-1024/080-bundle-of-dried-lavender-that-has-lost-its-scent.png
     prompt: >-
@@ -932,8 +1012,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: piece of "dragon scale" (actually just painted carp scale)
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A piece of "dragon scale" (actually just painted carp scale)
     icon: icons-fit-1024/081-piece-of-dragon-scale-actually-just-painted-carp-scale.png
     prompt: >-
@@ -943,8 +1024,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: tiny glass vial containing a single eyelash
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A tiny glass vial containing a single eyelash
     icon: icons-fit-1024/082-tiny-glass-vial-containing-a-single-eyelash.png
     prompt: >-
@@ -954,8 +1036,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: heavy brass coin from a fallen empire (worth zero)
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A heavy brass coin from a fallen empire (worth zero)
     icon: icons-fit-1024/083-heavy-brass-coin-from-a-fallen-empire-worth-zero.png
     prompt: >-
@@ -965,8 +1048,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: crumpled poem about a barmaid named Helga
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A crumpled poem about a barmaid named Helga
     icon: icons-fit-1024/084-crumpled-poem-about-a-barmaid-named-helga.png
     prompt: >-
@@ -976,8 +1060,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: leather eye patch with no string
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A leather eye patch with no string
     icon: icons-fit-1024/085-leather-eye-patch-with-no-string.png
     prompt: >-
@@ -987,8 +1072,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: stopper from a potion bottle (no potion)
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A stopper from a potion bottle (no potion)
     icon: icons-fit-1024/086-stopper-from-a-potion-bottle-no-potion.png
     prompt: >-
@@ -998,8 +1084,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: handful of grave dirt
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A handful of grave dirt
     icon: icons-fit-1024/087-handful-of-grave-dirt.png
     prompt: >-
@@ -1009,8 +1096,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: rusted spur from a boot
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A rusted spur from a boot
     icon: icons-fit-1024/088-rusted-spur-from-a-boot.png
     prompt: >-
@@ -1020,8 +1108,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: knot of tangled fishing line
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A knot of tangled fishing line
     icon: icons-fit-1024/089-knot-of-tangled-fishing-line.png
     prompt: >-
@@ -1031,8 +1120,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: small, chipped clay tile
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A small, chipped clay tile
     icon: icons-fit-1024/090-small-chipped-clay-tile.png
     prompt: >-
@@ -1042,8 +1132,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: dried lemon peel
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A dried lemon peel
     icon: icons-fit-1024/091-dried-lemon-peel.png
     prompt: >-
@@ -1053,8 +1144,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: shard of obsidian (too small to be a weapon)
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A shard of obsidian (too small to be a weapon)
     icon: icons-fit-1024/092-shard-of-obsidian-too-small-to-be-a-weapon.png
     prompt: >-
@@ -1064,8 +1156,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: bird skull painted blue
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A bird skull painted blue
     icon: icons-fit-1024/093-bird-skull-painted-blue.png
     prompt: >-
@@ -1075,8 +1168,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: bit of frayed silk ribbon
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A bit of frayed silk ribbon
     icon: icons-fit-1024/094-bit-of-frayed-silk-ribbon.png
     prompt: >-
@@ -1086,8 +1180,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: copper wire bent into the shape of a ring
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A copper wire bent into the shape of a ring
     icon: icons-fit-1024/095-copper-wire-bent-into-the-shape-of-a-ring.png
     prompt: >-
@@ -1097,8 +1192,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: recipe for "Rock Soup."
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A recipe for "Rock Soup."
     icon: icons-fit-1024/096-recipe-for-rock-soup.png
     prompt: >-
@@ -1108,8 +1204,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: single, very large iron staple
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A single, very large iron staple
     icon: icons-fit-1024/097-single-very-large-iron-staple.png
     prompt: >-
@@ -1119,8 +1216,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: pouch of pine needles
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A pouch of pine needles
     icon: icons-fit-1024/098-pouch-of-pine-needles.png
     prompt: >-
@@ -1130,8 +1228,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: broken compass needle that always points down
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A broken compass needle that always points down
     icon: icons-fit-1024/099-broken-compass-needle-that-always-points-down.png
     prompt: >-
@@ -1141,8 +1240,9 @@ cards:
       - trash
       - miscellaneous-debris
   - name: smaller, even dirtier leather pouch (empty)
+    price: worthless
     rarity: common
-    type: Trash (Miscellaneous Debris)
+    type: Trash
     description: A smaller, even dirtier leather pouch (empty)
     icon: icons-fit-1024/100-smaller-even-dirtier-leather-pouch-empty.png
     prompt: >-
