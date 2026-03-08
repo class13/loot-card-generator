@@ -213,9 +213,10 @@
 .card__description {
   font-size: 6pt;
   line-height: 1.45;
-  color: var(--color-text);
+  color: var(--color-flavor);
   overflow: hidden;
   display: -webkit-box;
+  text-align: center;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 8;
 }
