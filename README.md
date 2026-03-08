@@ -92,6 +92,21 @@ Optional: choose model with `REMBG_MODEL` (default is `u2net`):
 REMBG_MODEL=u2net_human_seg bin/remove-bg-rembg.sh examples/icons
 ```
 
+## Fit Transparent Icons To 1024 Canvas
+
+After background removal, normalize each icon so the visible object fills a
+`1024x1024` image using its alpha bounding box, with a small edge margin:
+
+```bash
+bin/fit-icons-to-canvas.py items/icons-transparent items/icons-fit-1024
+```
+
+Optional tuning:
+
+```bash
+bin/fit-icons-to-canvas.py items/icons-transparent items/icons-fit-1024 --size 1024 --margin 48 --alpha-threshold 1
+```
+
 ## Generate Prompts With Ollama
 
 Generate `prompt` and `negative_prompt` fields for each card using your local Ollama (`http://localhost:11434`):
