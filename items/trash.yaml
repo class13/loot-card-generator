@@ -1,5 +1,5 @@
 cards:
-  - name: single, yellowed orc tooth
+  - name: orc tooth
     price: worthless
     rarity: common
     type: Trash
@@ -13,7 +13,7 @@ cards:
     tags:
       - trash
       - the-organic-grotesque
-  - name: dried, flattened toad
+  - name: toad
     price: worthless
     rarity: common
     type: Trash
@@ -27,7 +27,7 @@ cards:
     tags:
       - trash
       - the-organic-grotesque
-  - name: tangle of greasy, matted dwarf beard hair
+  - name: beard hair
     price: worthless
     rarity: common
     type: Trash
@@ -41,7 +41,7 @@ cards:
     tags:
       - trash
       - the-organic-grotesque
-  - name: collection of "lucky" fingernail clippings
+  - name: fingernail clippings
     price: worthless
     rarity: common
     type: Trash
@@ -55,7 +55,7 @@ cards:
     tags:
       - trash
       - the-organic-grotesque
-  - name: vial of murky swamp water (smells like sulfur)
+  - name: swamp water
     price: worthless
     rarity: common
     type: Trash
@@ -69,7 +69,7 @@ cards:
     tags:
       - trash
       - the-organic-grotesque
-  - name: rabbit’s foot that has gone completely bald
+  - name: rabbit’s foot
     price: worthless
     rarity: common
     type: Trash
@@ -97,7 +97,7 @@ cards:
     tags:
       - trash
       - the-organic-grotesque
-  - name: pouch of moth wings
+  - name: moth wings
     price: worthless
     rarity: common
     type: Trash
@@ -111,7 +111,7 @@ cards:
       - trash
       - the-organic-grotesque
     icon: icons-fit-1024/008-pouch-of-moth-wings.png
-  - name: jar of pickled leeches (all dead)
+  - name: pickled leeches
     price: worthless
     rarity: common
     type: Trash
@@ -125,7 +125,7 @@ cards:
     tags:
       - trash
       - the-organic-grotesque
-  - name: snake skin that has mostly crumbled to dust
+  - name: snake skin
     price: worthless
     rarity: common
     type: Trash
@@ -139,7 +139,7 @@ cards:
     tags:
       - trash
       - the-organic-grotesque
-  - name: bird’s nest made entirely of stolen sewing thread
+  - name: bird’s nest
     price: worthless
     rarity: common
     type: Trash
@@ -153,7 +153,7 @@ cards:
     tags:
       - trash
       - the-organic-grotesque
-  - name: dried-up honeycomb with no honey
+  - name: honeycomb
     price: worthless
     rarity: common
     type: Trash
@@ -167,7 +167,7 @@ cards:
     tags:
       - trash
       - the-organic-grotesque
-  - name: bag of chicken bones used for "divination."
+  - name: chicken bones
     price: worthless
     rarity: common
     type: Trash
@@ -181,7 +181,7 @@ cards:
     tags:
       - trash
       - the-organic-grotesque
-  - name: very large, very dead beetle
+  - name: dead beetle
     price: worthless
     rarity: common
     type: Trash
@@ -195,7 +195,7 @@ cards:
     tags:
       - trash
       - the-organic-grotesque
-  - name: scrap of cured leather that still has fur (and fleas)
+  - name: scrap of cured leather
     price: worthless
     rarity: common
     type: Trash
@@ -209,7 +209,7 @@ cards:
     tags:
       - trash
       - the-organic-grotesque
-  - name: bent iron nail
+  - name: rusty nail
     price: worthless
     rarity: common
     type: Trash
@@ -221,7 +221,7 @@ cards:
     tags:
       - trash
       - rusty-broken-hardware
-  - name: key that fits no known lock in the region
+  - name: key
     price: worthless
     rarity: common
     type: Trash
@@ -235,7 +235,7 @@ cards:
     tags:
       - trash
       - rusty-broken-hardware
-  - name: rusted buckle from a horse’s saddle
+  - name: rusted buckle
     price: worthless
     rarity: common
     type: Trash
@@ -249,7 +249,7 @@ cards:
     tags:
       - trash
       - rusty-broken-hardware
-  - name: cracked glass marble with a chip in it
+  - name: glass marble
     price: worthless
     rarity: common
     type: Trash
@@ -263,7 +263,7 @@ cards:
     tags:
       - trash
       - rusty-broken-hardware
-  - name: spoon that has been sharpened into a poor-quality shiv
+  - name: spoon
     price: worthless
     rarity: common
     type: Trash
@@ -277,7 +277,7 @@ cards:
     tags:
       - trash
       - rusty-broken-hardware
-  - name: single link from a heavy iron chain
+  - name: chain link
     price: worthless
     rarity: common
     type: Trash
@@ -291,7 +291,7 @@ cards:
     tags:
       - trash
       - rusty-broken-hardware
-  - name: brass button with a coat of arms no one recognizes
+  - name: brass button
     price: worthless
     rarity: common
     type: Trash
@@ -305,7 +305,7 @@ cards:
     tags:
       - trash
       - rusty-broken-hardware
-  - name: thimble with a hole worn through the top
+  - name: thimble
     price: worthless
     rarity: common
     type: Trash
@@ -333,7 +333,7 @@ cards:
     tags:
       - trash
       - rusty-broken-hardware
-  - name: pair of tweezers that don't quite meet in the middle
+  - name: pair of tweezers
     price: worthless
     rarity: common
     type: Trash
@@ -361,7 +361,7 @@ cards:
     tags:
       - trash
       - rusty-broken-hardware
-  - name: copper ring that turns the wearer's finger green
+  - name: copper ring
     price: worthless
     rarity: common
     type: Trash
@@ -375,7 +375,7 @@ cards:
     tags:
       - trash
       - rusty-broken-hardware
-  - name: dull, notched sewing needle
+  - name: sewing needle
     price: worthless
     rarity: common
     type: Trash
@@ -387,7 +387,7 @@ cards:
     tags:
       - trash
       - rusty-broken-hardware
-  - name: shard of a broken mirror (bad luck not included)
+  - name: shard of a broken mirror
     price: worthless
     rarity: common
     type: Trash
@@ -399,7 +399,7 @@ cards:
     tags:
       - trash
       - rusty-broken-hardware
-  - name: heavy, decorative iron nut (no bolt)
+  - name: iron nut
     price: worthless
     rarity: common
     type: Trash
@@ -411,7 +411,7 @@ cards:
     tags:
       - trash
       - rusty-broken-hardware
-  - name: charcoal sketch of a very ugly dog
+  - name: drawing of a dog
     price: worthless
     rarity: common
     type: Trash
@@ -423,7 +423,7 @@ cards:
     tags:
       - trash
       - scraps-curiosities
-  - name: blood-stained handkerchief
+  - name: handkerchief
     price: worthless
     rarity: common
     type: Trash
@@ -435,7 +435,7 @@ cards:
     tags:
       - trash
       - scraps-curiosities
-  - name: grocery list written in a language the party doesn't speak
+  - name: grocery list
     price: worthless
     rarity: common
     type: Trash
@@ -447,7 +447,7 @@ cards:
     tags:
       - trash
       - scraps-curiosities
-  - name: single playing card (the Two of Clubs)
+  - name: playing card
     price: worthless
     rarity: common
     type: Trash
@@ -459,7 +459,7 @@ cards:
     tags:
       - trash
       - scraps-curiosities
-  - name: '"Map to Treasure" that is clearly a child''s drawing'
+  - name: treasure map
     price: worthless
     rarity: common
     type: Trash
@@ -471,7 +471,7 @@ cards:
     tags:
       - trash
       - scraps-curiosities
-  - name: bundle of sticks tied with a dirty ribbon
+  - name: bundle of sticks
     price: worthless
     rarity: common
     type: Trash
@@ -483,7 +483,7 @@ cards:
     tags:
       - trash
       - scraps-curiosities
-  - name: smooth river stone with a hole naturally worn through it
+  - name: smooth river stone
     price: worthless
     rarity: common
     type: Trash
@@ -495,7 +495,7 @@ cards:
     tags:
       - trash
       - scraps-curiosities
-  - name: wad of chewed resin (ancient gum)
+  - name: chewed resin
     price: worthless
     rarity: common
     type: Trash
@@ -507,7 +507,7 @@ cards:
     tags:
       - trash
       - scraps-curiosities
-  - name: small pouch of sawdust
+  - name: sawdust
     price: worthless
     rarity: common
     type: Trash
@@ -519,7 +519,7 @@ cards:
     tags:
       - trash
       - scraps-curiosities
-  - name: scorched piece of parchment
+  - name: scorched parchment
     price: worthless
     rarity: common
     type: Trash
@@ -531,7 +531,7 @@ cards:
     tags:
       - trash
       - scraps-curiosities
-  - name: single wooden die with two "4"s and no "6."
+  - name: wooden die
     price: worthless
     rarity: common
     type: Trash
@@ -543,7 +543,7 @@ cards:
     tags:
       - trash
       - scraps-curiosities
-  - name: wax seal from a letter, broken into three pieces
+  - name: wax seal
     price: worthless
     rarity: common
     type: Trash
@@ -555,7 +555,7 @@ cards:
     tags:
       - trash
       - scraps-curiosities
-  - name: frayed length of twine, exactly 4 inches long
+  - name: twine
     price: worthless
     rarity: common
     type: Trash
@@ -567,7 +567,7 @@ cards:
     tags:
       - trash
       - scraps-curiosities
-  - name: cork from an expensive bottle of wine (bottle missing)
+  - name: cork
     price: worthless
     rarity: common
     type: Trash
@@ -579,7 +579,7 @@ cards:
     tags:
       - trash
       - scraps-curiosities
-  - name: handful of colorful, but worthless, glass beads
+  - name: glass beads
     price: worthless
     rarity: common
     type: Trash
@@ -591,7 +591,7 @@ cards:
     tags:
       - trash
       - scraps-curiosities
-  - name: piece of extremely hard, moldy hardtack
+  - name: moldy hardtack
     price: worthless
     rarity: common
     type: Trash
@@ -603,7 +603,7 @@ cards:
     tags:
       - trash
       - smelly-unpleasant
-  - name: damp lump of sheep's wool
+  - name: sheep's wool
     price: worthless
     rarity: common
     type: Trash
@@ -615,7 +615,7 @@ cards:
     tags:
       - trash
       - smelly-unpleasant
-  - name: small tin of "ointment" that smells like rancid fish
+  - name: '"ointment"'
     price: worthless
     rarity: common
     type: Trash
@@ -627,7 +627,7 @@ cards:
     tags:
       - trash
       - smelly-unpleasant
-  - name: wet rag that refuses to dry
+  - name: wet rag
     price: worthless
     rarity: common
     type: Trash
@@ -639,7 +639,7 @@ cards:
     tags:
       - trash
       - smelly-unpleasant
-  - name: pouch of pipe tobacco that has gone moldy
+  - name: pouch of pipe tobacco
     price: worthless
     rarity: common
     type: Trash
@@ -651,7 +651,7 @@ cards:
     tags:
       - trash
       - smelly-unpleasant
-  - name: clove of garlic that has started to sprout
+  - name: clove of garlic
     price: worthless
     rarity: common
     type: Trash
@@ -663,7 +663,7 @@ cards:
     tags:
       - trash
       - smelly-unpleasant
-  - name: piece of chalk that’s been ground down to a nub
+  - name: chalk
     price: worthless
     rarity: common
     type: Trash
@@ -687,7 +687,7 @@ cards:
     tags:
       - trash
       - smelly-unpleasant
-  - name: handful of acorns with tiny faces carved into them
+  - name: handful of acorns
     price: worthless
     rarity: common
     type: Trash
@@ -699,7 +699,7 @@ cards:
     tags:
       - trash
       - smelly-unpleasant
-  - name: small, empty bottle that once held very strong perfume
+  - name: empty bottle
     price: worthless
     rarity: common
     type: Trash
@@ -711,7 +711,7 @@ cards:
     tags:
       - trash
       - smelly-unpleasant
-  - name: '"Certificate of Authenticity" for an item not present'
+  - name: authenticity certificate
     price: worthless
     rarity: common
     type: Trash
@@ -723,7 +723,7 @@ cards:
     tags:
       - trash
       - items-of-questionable-value
-  - name: IOI (I Owe You) written on a scrap of leather for 1 copper
+  - name: IOI note
     price: worthless
     rarity: common
     type: Trash
@@ -735,7 +735,7 @@ cards:
     tags:
       - trash
       - items-of-questionable-value
-  - name: single earring (the mate is lost)
+  - name: earring
     price: worthless
     rarity: common
     type: Trash
@@ -747,7 +747,7 @@ cards:
     tags:
       - trash
       - items-of-questionable-value
-  - name: glass eye that looks in two directions at once
+  - name: glass eye
     price: worthless
     rarity: common
     type: Trash
@@ -759,7 +759,7 @@ cards:
     tags:
       - trash
       - items-of-questionable-value
-  - name: whistle that makes no sound when blown
+  - name: whistle
     price: worthless
     rarity: common
     type: Trash
@@ -783,7 +783,7 @@ cards:
     tags:
       - trash
       - items-of-questionable-value
-  - name: '"magic" bean (it is just a kidney bean)'
+  - name: magic bean
     price: worthless
     rarity: common
     type: Trash
@@ -795,7 +795,7 @@ cards:
     tags:
       - trash
       - items-of-questionable-value
-  - name: tiny cage for a cricket (cricket has escaped)
+  - name: tiny cage
     price: worthless
     rarity: common
     type: Trash
@@ -807,7 +807,7 @@ cards:
     tags:
       - trash
       - items-of-questionable-value
-  - name: collection of colorful poultry feathers
+  - name: poultry feathers
     price: worthless
     rarity: common
     type: Trash
@@ -819,7 +819,7 @@ cards:
     tags:
       - trash
       - items-of-questionable-value
-  - name: stone that looks vaguely like a famous deity
+  - name: stone
     price: worthless
     rarity: common
     type: Trash
@@ -831,7 +831,7 @@ cards:
     tags:
       - trash
       - items-of-questionable-value
-  - name: small lead soldier with its head broken off
+  - name: small lead soldier
     price: worthless
     rarity: common
     type: Trash
@@ -843,7 +843,7 @@ cards:
     tags:
       - trash
       - items-of-questionable-value
-  - name: pouch of salt mixed with sand
+  - name: pouch of salt
     price: worthless
     rarity: common
     type: Trash
@@ -855,7 +855,7 @@ cards:
     tags:
       - trash
       - items-of-questionable-value
-  - name: comb with half its teeth missing
+  - name: comb
     price: worthless
     rarity: common
     type: Trash
@@ -867,7 +867,7 @@ cards:
     tags:
       - trash
       - items-of-questionable-value
-  - name: doll made of corn husks
+  - name: doll
     price: worthless
     rarity: common
     type: Trash
@@ -879,7 +879,7 @@ cards:
     tags:
       - trash
       - items-of-questionable-value
-  - name: jar of fireflies (all deceased)
+  - name: jar of fireflies
     price: worthless
     rarity: common
     type: Trash
@@ -903,7 +903,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: bit of fluff from a Blink Dog’s tail (reputedly)
+  - name: bit of fluff
     price: worthless
     rarity: common
     type: Trash
@@ -915,7 +915,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: leather strap with a broken buckle
+  - name: leather strap
     price: worthless
     rarity: common
     type: Trash
@@ -927,7 +927,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: clay pipe bowl with no stem
+  - name: clay pipe bowl
     price: worthless
     rarity: common
     type: Trash
@@ -951,7 +951,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: charred twig from a lightning-struck tree
+  - name: charred twig
     price: worthless
     rarity: common
     type: Trash
@@ -963,7 +963,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: list of names with "don't trust" written next to them
+  - name: list of names
     price: worthless
     rarity: common
     type: Trash
@@ -975,7 +975,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: rusted lock with no key
+  - name: rusted lock
     price: worthless
     rarity: common
     type: Trash
@@ -987,7 +987,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: small, empty tinderbox
+  - name: empty tinderbox
     price: worthless
     rarity: common
     type: Trash
@@ -999,7 +999,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: bundle of dried lavender that has lost its scent
+  - name: bundle of dried lavender
     price: worthless
     rarity: common
     type: Trash
@@ -1011,7 +1011,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: piece of "dragon scale" (actually just painted carp scale)
+  - name: piece of "dragon scale"
     price: worthless
     rarity: common
     type: Trash
@@ -1023,7 +1023,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: tiny glass vial containing a single eyelash
+  - name: tiny glass vial
     price: worthless
     rarity: common
     type: Trash
@@ -1035,7 +1035,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: heavy brass coin from a fallen empire (worth zero)
+  - name: heavy brass coin
     price: worthless
     rarity: common
     type: Trash
@@ -1059,7 +1059,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: leather eye patch with no string
+  - name: leather eye patch
     price: worthless
     rarity: common
     type: Trash
@@ -1071,7 +1071,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: stopper from a potion bottle (no potion)
+  - name: stopper
     price: worthless
     rarity: common
     type: Trash
@@ -1095,7 +1095,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: rusted spur from a boot
+  - name: rusted spur
     price: worthless
     rarity: common
     type: Trash
@@ -1119,7 +1119,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: small, chipped clay tile
+  - name: chipped clay tile
     price: worthless
     rarity: common
     type: Trash
@@ -1143,7 +1143,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: shard of obsidian (too small to be a weapon)
+  - name: shard of obsidian
     price: worthless
     rarity: common
     type: Trash
@@ -1179,7 +1179,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: copper wire bent into the shape of a ring
+  - name: copper wire ring
     price: worthless
     rarity: common
     type: Trash
@@ -1227,7 +1227,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: broken compass needle that always points down
+  - name: broken compass needle
     price: worthless
     rarity: common
     type: Trash
@@ -1239,7 +1239,7 @@ cards:
     tags:
       - trash
       - miscellaneous-debris
-  - name: smaller, even dirtier leather pouch (empty)
+  - name: dirty leather pouch
     price: worthless
     rarity: common
     type: Trash
