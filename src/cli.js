@@ -71,6 +71,7 @@ export function run() {
           }
         }
       } catch (err) {
+        console.error(err)
         console.error(chalk.red('\n✖  Error: ') + err.message);
         process.exit(1);
       }

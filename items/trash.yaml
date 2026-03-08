@@ -3,7 +3,7 @@ cards:
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A single, yellowed orc tooth
-    icon: icons/001-single-yellowed-orc-tooth.png
+    icon: icons-fit-1024/001-single-yellowed-orc-tooth.png
     category: other
     prompt: >-
       game item icon. yellowed. orc tooth. single. small. worn. white background. comic style. avoid any kind of frames.
@@ -16,7 +16,7 @@ cards:
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A dried, flattened toad
-    icon: icons/002-dried-flattened-toad.png
+    icon: icons-fit-1024/002-dried-flattened-toad.png
     category: other
     prompt: >-
       game item icon. dried. flattened. toad. brown. warty. grimy. white background. comic style. avoid any kind of
@@ -29,7 +29,7 @@ cards:
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A tangle of greasy, matted dwarf beard hair
-    icon: icons/003-tangle-of-greasy-matted-dwarf-beard-hair.png
+    icon: icons-fit-1024/003-tangle-of-greasy-matted-dwarf-beard-hair.png
     category: other
     prompt: >-
       game item icon. greasy. matted. brown. tangled. beard hair. wiry. unkempt. white background. comic style. avoid
@@ -42,7 +42,7 @@ cards:
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A collection of "lucky" fingernail clippings
-    icon: icons/004-collection-of-lucky-fingernail-clippings.png
+    icon: icons-fit-1024/004-collection-of-lucky-fingernail-clippings.png
     category: jewelry
     prompt: >-
       game item icon. nail clippings. yellowed. brittle. tangled. small. irregular. organic. white background. comic
@@ -55,7 +55,7 @@ cards:
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A vial of murky swamp water (smells like sulfur)
-    icon: icons/005-vial-of-murky-swamp-water-smells-like-sulfur.png
+    icon: icons-fit-1024/005-vial-of-murky-swamp-water-smells-like-sulfur.png
     category: other
     prompt: >-
       game item icon. murky water. vial. brown. cloudy. smelly. grimy. white background. comic style. avoid any kind of
@@ -68,7 +68,7 @@ cards:
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A rabbit’s foot that has gone completely bald
-    icon: icons/006-rabbit-s-foot-that-has-gone-completely-bald.png
+    icon: icons-fit-1024/006-rabbit-s-foot-that-has-gone-completely-bald.png
     category: jewelry
     prompt: >-
       game item icon. bald. rabbit's foot. brown. dry. wrinkled. worn. white background. comic style. avoid any kind of
@@ -81,7 +81,7 @@ cards:
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A petrified apple core
-    icon: icons/007-petrified-apple-core.png
+    icon: icons-fit-1024/007-petrified-apple-core.png
     category: other
     prompt: >-
       game item icon. petrified. brown. dry. wooden. cracked. small. organic. white background. comic style. avoid any
@@ -102,12 +102,12 @@ cards:
     tags:
       - trash
       - the-organic-grotesque
-    icon: icons/008-pouch-of-moth-wings.png
+    icon: icons-fit-1024/008-pouch-of-moth-wings.png
   - name: jar of pickled leeches (all dead)
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A jar of pickled leeches (all dead)
-    icon: icons/009-jar-of-pickled-leeches-all-dead.png
+    icon: icons-fit-1024/009-jar-of-pickled-leeches-all-dead.png
     category: container
     prompt: >-
       game item icon. pickled leeches. dead. glass jar. murky liquid. greenish tint. small size. white background. comic
@@ -120,7 +120,7 @@ cards:
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A snake skin that has mostly crumbled to dust
-    icon: icons/010-snake-skin-that-has-mostly-crumbled-to-dust.png
+    icon: icons-fit-1024/010-snake-skin-that-has-mostly-crumbled-to-dust.png
     category: other
     prompt: >-
       game item icon. crumbled. brown. dusty. snake skin. worn. fragile. white background. comic style. avoid any kind
@@ -133,7 +133,7 @@ cards:
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A bird’s nest made entirely of stolen sewing thread
-    icon: icons/011-bird-s-nest-made-entirely-of-stolen-sewing-thread.png
+    icon: icons-fit-1024/011-bird-s-nest-made-entirely-of-stolen-sewing-thread.png
     category: other
     prompt: >-
       game item icon. bird's nest. sewing thread. tangled. brown. organic. white background. comic style. avoid any kind
@@ -146,7 +146,7 @@ cards:
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A dried-up honeycomb with no honey
-    icon: icons/012-dried-up-honeycomb-with-no-honey.png
+    icon: icons-fit-1024/012-dried-up-honeycomb-with-no-honey.png
     category: other
     prompt: >-
       game item icon. dried honeycomb. cracked. brown. empty. white background. comic style. avoid any kind of frames.
@@ -159,7 +159,7 @@ cards:
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A bag of chicken bones used for "divination."
-    icon: icons/013-bag-of-chicken-bones-used-for-divination.png
+    icon: icons-fit-1024/013-bag-of-chicken-bones-used-for-divination.png
     category: other
     prompt: >-
       game item icon. bag of chicken bones. brown. gnarled. twisted. old. weathered. white background. comic style.
@@ -172,7 +172,7 @@ cards:
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A very large, very dead beetle
-    icon: icons/014-very-large-very-dead-beetle.png
+    icon: icons-fit-1024/014-very-large-very-dead-beetle.png
     category: other
     prompt: >-
       game item icon. large. dead. beetle. brown. exoskeleton. grimy. white background. comic style. avoid any kind of
@@ -185,7 +185,7 @@ cards:
     rarity: common
     type: Trash (The Organic & Grotesque)
     description: A scrap of cured leather that still has fur (and fleas)
-    icon: icons/015-scrap-of-cured-leather-that-still-has-fur-and-fleas.png
+    icon: icons-fit-1024/015-scrap-of-cured-leather-that-still-has-fur-and-fleas.png
     category: other
     prompt: >-
       game item icon. cured leather. brown. fuzzy. fleas. organic. grotesque. white background. comic style. avoid any
@@ -198,7 +198,7 @@ cards:
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A bent iron nail
-    icon: icons/016-bent-iron-nail.png
+    icon: icons-fit-1024/016-bent-iron-nail.png
     category: other
     prompt: game item icon. rusty iron nail. white background. comic style. avoid any kind of frames. avoid duplicated items..
     negative_prompt: (blurry:1.3). lowres
@@ -209,7 +209,7 @@ cards:
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A key that fits no known lock in the region
-    icon: icons/017-key-that-fits-no-known-lock-in-the-region.png
+    icon: icons-fit-1024/017-key-that-fits-no-known-lock-in-the-region.png
     category: other
     prompt: >-
       game item icon. rusted. broken. old key. worn. tarnished. small. insignificant. white background. comic style.
@@ -222,7 +222,7 @@ cards:
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A rusted buckle from a horse’s saddle
-    icon: icons/018-rusted-buckle-from-a-horse-s-saddle.png
+    icon: icons-fit-1024/018-rusted-buckle-from-a-horse-s-saddle.png
     category: other
     prompt: >-
       game item icon. rusted. buckle. horse saddle. rusty metal. broken hardware. worn leather. white background. comic
@@ -235,7 +235,7 @@ cards:
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A cracked glass marble with a chip in it
-    icon: icons/019-cracked-glass-marble-with-a-chip-in-it.png
+    icon: icons-fit-1024/019-cracked-glass-marble-with-a-chip-in-it.png
     category: other
     prompt: >-
       game item icon. a cracked marble (you know the toy, not the material). white background. comic style. avoid any
@@ -248,7 +248,7 @@ cards:
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A spoon that has been sharpened into a poor-quality shiv
-    icon: icons/020-spoon-that-has-been-sharpened-into-a-poor-quality-shiv.png
+    icon: icons-fit-1024/020-spoon-that-has-been-sharpened-into-a-poor-quality-shiv.png
     category: other
     prompt: >-
       game item icon. poorly sharpened. rusty. metal. pointed. crude. broken spoon. white background. comic style. avoid
@@ -261,7 +261,7 @@ cards:
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A single link from a heavy iron chain
-    icon: icons/021-single-link-from-a-heavy-iron-chain.png
+    icon: icons-fit-1024/021-single-link-from-a-heavy-iron-chain.png
     category: other
     prompt: >-
       game item icon. iron. chain link. rusty. broken. heavy. white background. comic style. avoid any kind of frames.
@@ -274,7 +274,7 @@ cards:
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A brass button with a coat of arms no one recognizes
-    icon: icons/022-brass-button-with-a-coat-of-arms-no-one-recognizes.png
+    icon: icons-fit-1024/022-brass-button-with-a-coat-of-arms-no-one-recognizes.png
     category: other
     prompt: >-
       game item icon. brass. button. coat of arms. rusty. broken. white background. comic style. avoid any kind of
@@ -287,7 +287,7 @@ cards:
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A thimble with a hole worn through the top
-    icon: icons/023-thimble-with-a-hole-worn-through-the-top.png
+    icon: icons-fit-1024/023-thimble-with-a-hole-worn-through-the-top.png
     category: other
     prompt: >-
       game item icon. thimble. worn. rusty. hole. metal. small. white background. comic style. avoid any kind of frames.
@@ -300,7 +300,7 @@ cards:
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A rusted fishhook
-    icon: icons/024-rusted-fishhook.png
+    icon: icons-fit-1024/024-rusted-fishhook.png
     category: other
     prompt: >-
       game item icon. rusted. fishhook. rusty metal. old. broken. white background. comic style. avoid any kind of
@@ -313,7 +313,7 @@ cards:
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A pair of tweezers that don't quite meet in the middle
-    icon: icons/025-pair-of-tweezers-that-don-t-quite-meet-in-the-middle.png
+    icon: icons-fit-1024/025-pair-of-tweezers-that-don-t-quite-meet-in-the-middle.png
     category: tool
     prompt: >-
       game item icon. tweezers. rusty. broken. mismatched. small. grimy. worn. white background. comic style. avoid any
@@ -326,7 +326,7 @@ cards:
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A lead fishing weight
-    icon: icons/026-lead-fishing-weight.png
+    icon: icons-fit-1024/026-lead-fishing-weight.png
     category: other
     prompt: >-
       game item icon. lead. fishing weight. rusty. metal. heavy. rounded. worn. white background. comic style. avoid any
@@ -339,7 +339,7 @@ cards:
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A copper ring that turns the wearer's finger green
-    icon: icons/027-copper-ring-that-turns-the-wearer-s-finger-green.png
+    icon: icons-fit-1024/027-copper-ring-that-turns-the-wearer-s-finger-green.png
     category: jewelry
     prompt: >-
       game item icon. rusty copper ring. white background. comic style. avoid any kind of frames. avoid duplicated
@@ -352,7 +352,7 @@ cards:
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A dull, notched sewing needle
-    icon: icons/028-dull-notched-sewing-needle.png
+    icon: icons-fit-1024/028-dull-notched-sewing-needle.png
     prompt: >-
       game item icon. dull. notched. sewing needle. rusty. old. metal. bent. white background. comic style. avoid any
       kind of frames. avoid duplicated items..
@@ -363,7 +363,7 @@ cards:
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A shard of a broken mirror (bad luck not included)
-    icon: icons/029-shard-of-a-broken-mirror-bad-luck-not-included.png
+    icon: icons-fit-1024/029-shard-of-a-broken-mirror-bad-luck-not-included.png
     prompt: >-
       game item icon. shard. broken. mirror. rusty. metal. jagged. small. white background. comic style. avoid any kind
       of frames. avoid duplicated items..
@@ -374,7 +374,7 @@ cards:
     rarity: common
     type: Trash (Rusty & Broken Hardware)
     description: A heavy, decorative iron nut (no bolt)
-    icon: icons/030-heavy-decorative-iron-nut-no-bolt.png
+    icon: icons-fit-1024/030-heavy-decorative-iron-nut-no-bolt.png
     prompt: >-
       game item icon. iron. heavy. decorative. rusty. broken. flat. round. white background. comic style. avoid any kind
       of frames. avoid duplicated items..
@@ -385,7 +385,7 @@ cards:
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A charcoal sketch of a very ugly dog
-    icon: icons/031-charcoal-sketch-of-a-very-ugly-dog.png
+    icon: icons-fit-1024/031-charcoal-sketch-of-a-very-ugly-dog.png
     prompt: >-
       game item icon. a piece of parchment with a childs drawing of a dog. white background. comic style. avoid any kind
       of frames. avoid duplicated items..
@@ -396,7 +396,7 @@ cards:
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A blood-stained handkerchief
-    icon: icons/032-blood-stained-handkerchief.png
+    icon: icons-fit-1024/032-blood-stained-handkerchief.png
     prompt: >-
       game item icon. blood-stained. white. torn. crumpled. dirty. worn. white background. comic style. avoid any kind
       of frames. avoid duplicated items..
@@ -407,7 +407,7 @@ cards:
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A grocery list written in a language the party doesn't speak
-    icon: icons/033-grocery-list-written-in-a-language-the-party-doesn-t-speak.png
+    icon: icons-fit-1024/033-grocery-list-written-in-a-language-the-party-doesn-t-speak.png
     prompt: >-
       game item icon. grocery list. handwritten. foreign script. yellowed paper. worn creases. white background. comic
       style. avoid any kind of frames. avoid duplicated items..
@@ -418,7 +418,7 @@ cards:
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A single playing card (the Two of Clubs)
-    icon: icons/034-single-playing-card-the-two-of-clubs.png
+    icon: icons-fit-1024/034-single-playing-card-the-two-of-clubs.png
     prompt: >-
       game item icon. playing card. two of clubs. worn. torn edges. browned paper. simple design. white background.
       comic style. avoid any kind of frames. avoid duplicated items..
@@ -429,7 +429,7 @@ cards:
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A "Map to Treasure" that is clearly a child's drawing
-    icon: icons/035-map-to-treasure-that-is-clearly-a-child-s-drawing.png
+    icon: icons-fit-1024/035-map-to-treasure-that-is-clearly-a-child-s-drawing.png
     prompt: >-
       game item icon. child's drawing. crayon. scribbled. yellow. torn. paper. crumpled. white background. comic style.
       avoid any kind of frames. avoid duplicated items..
@@ -440,7 +440,7 @@ cards:
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A bundle of sticks tied with a dirty ribbon
-    icon: icons/036-bundle-of-sticks-tied-with-a-dirty-ribbon.png
+    icon: icons-fit-1024/036-bundle-of-sticks-tied-with-a-dirty-ribbon.png
     prompt: >-
       game item icon. bundle of sticks. tied with ribbon. dirty. wooden. rough. white background. comic style. avoid any
       kind of frames. avoid duplicated items..
@@ -451,7 +451,7 @@ cards:
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A smooth river stone with a hole naturally worn through it
-    icon: icons/037-smooth-river-stone-with-a-hole-naturally-worn-through-it.png
+    icon: icons-fit-1024/037-smooth-river-stone-with-a-hole-naturally-worn-through-it.png
     prompt: >-
       game item icon. smooth river stone. hole. worn. natural. white background. comic style. avoid any kind of frames.
       avoid duplicated items..
@@ -462,7 +462,7 @@ cards:
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A wad of chewed resin (ancient gum)
-    icon: icons/038-wad-of-chewed-resin-ancient-gum.png
+    icon: icons-fit-1024/038-wad-of-chewed-resin-ancient-gum.png
     prompt: >-
       game item icon. chewed. resin. wad. brown. rough. white background. comic style. avoid any kind of frames. avoid
       duplicated items..
@@ -473,7 +473,7 @@ cards:
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A small pouch of sawdust
-    icon: icons/039-small-pouch-of-sawdust.png
+    icon: icons-fit-1024/039-small-pouch-of-sawdust.png
     prompt: >-
       game item icon. small. pouch. brown. dusty. worn. tattered. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -484,7 +484,7 @@ cards:
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A scorched piece of parchment
-    icon: icons/040-scorched-piece-of-parchment.png
+    icon: icons-fit-1024/040-scorched-piece-of-parchment.png
     prompt: >-
       game item icon. scorched. parchment. brown. torn. frayed. worn. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -495,7 +495,7 @@ cards:
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A single wooden die with two "4"s and no "6."
-    icon: icons/041-single-wooden-die-with-two-4-s-and-no-6.png
+    icon: icons-fit-1024/041-single-wooden-die-with-two-4-s-and-no-6.png
     prompt: >-
       game item icon. wooden dice. worn. white background. comic style. avoid any kind of frames. avoid duplicated
       items..
@@ -506,7 +506,7 @@ cards:
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A wax seal from a letter, broken into three pieces
-    icon: icons/042-wax-seal-from-a-letter-broken-into-three-pieces.png
+    icon: icons-fit-1024/042-wax-seal-from-a-letter-broken-into-three-pieces.png
     prompt: >-
       game item icon. wax. seal. broken. three pieces. yellowed. cracked. white background. comic style. avoid any kind
       of frames. avoid duplicated items..
@@ -517,7 +517,7 @@ cards:
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A frayed length of twine, exactly 4 inches long
-    icon: icons/043-frayed-length-of-twine-exactly-4-inches-long.png
+    icon: icons-fit-1024/043-frayed-length-of-twine-exactly-4-inches-long.png
     prompt: >-
       game item icon. frayed twine. brown. 4 inches long. tangled. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -528,7 +528,7 @@ cards:
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A cork from an expensive bottle of wine (bottle missing)
-    icon: icons/044-cork-from-an-expensive-bottle-of-wine-bottle-missing.png
+    icon: icons-fit-1024/044-cork-from-an-expensive-bottle-of-wine-bottle-missing.png
     prompt: >-
       game item icon. cork. brown. worn. small. wooden. cracked. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -539,7 +539,7 @@ cards:
     rarity: common
     type: Trash (Scraps & Curiosities)
     description: A handful of colorful, but worthless, glass beads
-    icon: icons/045-handful-of-colorful-but-worthless-glass-beads.png
+    icon: icons-fit-1024/045-handful-of-colorful-but-worthless-glass-beads.png
     prompt: >-
       game item icon. colorful glass beads. small. irregular shapes. various colors. worthless. trash. white background.
       comic style. avoid any kind of frames. avoid duplicated items..
@@ -550,7 +550,7 @@ cards:
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A piece of extremely hard, moldy hardtack
-    icon: icons/046-piece-of-extremely-hard-moldy-hardtack.png
+    icon: icons-fit-1024/046-piece-of-extremely-hard-moldy-hardtack.png
     prompt: >-
       game item icon. moldy. hard. brown. cracked. dry. stale. white background. comic style. avoid any kind of frames.
       avoid duplicated items..
@@ -561,7 +561,7 @@ cards:
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A damp lump of sheep's wool
-    icon: icons/047-damp-lump-of-sheep-s-wool.png
+    icon: icons-fit-1024/047-damp-lump-of-sheep-s-wool.png
     prompt: >-
       game item icon. damp. grey. lumpy. woolly. dirty. smelly. white background. comic style. avoid any kind of frames.
       avoid duplicated items..
@@ -572,7 +572,7 @@ cards:
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A small tin of "ointment" that smells like rancid fish
-    icon: icons/048-small-tin-of-ointment-that-smells-like-rancid-fish.png
+    icon: icons-fit-1024/048-small-tin-of-ointment-that-smells-like-rancid-fish.png
     prompt: >-
       game item icon. small tin. metal. rusty. smelly. rancid fish scent. white background. comic style. avoid any kind
       of frames. avoid duplicated items..
@@ -583,7 +583,7 @@ cards:
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A wet rag that refuses to dry
-    icon: icons/049-wet-rag-that-refuses-to-dry.png
+    icon: icons-fit-1024/049-wet-rag-that-refuses-to-dry.png
     prompt: >-
       game item icon. wet rag. dirty. stained. smelly. grey. tattered. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -594,7 +594,7 @@ cards:
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A pouch of pipe tobacco that has gone moldy
-    icon: icons/050-pouch-of-pipe-tobacco-that-has-gone-moldy.png
+    icon: icons-fit-1024/050-pouch-of-pipe-tobacco-that-has-gone-moldy.png
     prompt: >-
       game item icon. moldy. brown. wrinkled. tobacco pouch. old leather. stained. white background. comic style. avoid
       any kind of frames. avoid duplicated items..
@@ -605,7 +605,7 @@ cards:
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A clove of garlic that has started to sprout
-    icon: icons/051-clove-of-garlic-that-has-started-to-sprout.png
+    icon: icons-fit-1024/051-clove-of-garlic-that-has-started-to-sprout.png
     prompt: >-
       game item icon. green sprout. small. brown. wrinkled. smelly. trash. white background. comic style. avoid any kind
       of frames. avoid duplicated items..
@@ -616,7 +616,7 @@ cards:
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A piece of chalk that’s been ground down to a nub
-    icon: icons/052-piece-of-chalk-that-s-been-ground-down-to-a-nub.png
+    icon: icons-fit-1024/052-piece-of-chalk-that-s-been-ground-down-to-a-nub.png
     prompt: >-
       game item icon. leftover piece of chalk. white background. comic style. avoid any kind of frames. avoid duplicated
       items..
@@ -627,7 +627,7 @@ cards:
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A half-melted tallow candle
-    icon: icons/053-half-melted-tallow-candle.png
+    icon: icons-fit-1024/053-half-melted-tallow-candle.png
     prompt: >-
       game item icon. melted. tallow. candle. smelly. brown. drips. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -638,7 +638,7 @@ cards:
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A handful of acorns with tiny faces carved into them
-    icon: icons/054-handful-of-acorns-with-tiny-faces-carved-into-them.png
+    icon: icons-fit-1024/054-handful-of-acorns-with-tiny-faces-carved-into-them.png
     prompt: >-
       game item icon. acorns. tiny faces. carved. wooden. weathered. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -649,7 +649,7 @@ cards:
     rarity: common
     type: Trash (Smelly & Unpleasant)
     description: A small, empty bottle that once held very strong perfume
-    icon: icons/055-small-empty-bottle-that-once-held-very-strong-perfume.png
+    icon: icons-fit-1024/055-small-empty-bottle-that-once-held-very-strong-perfume.png
     prompt: >-
       game item icon. small. empty. glass. bottle. old. cracked. smelly. white background. comic style. avoid any kind
       of frames. avoid duplicated items..
@@ -660,7 +660,7 @@ cards:
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A "Certificate of Authenticity" for an item not present
-    icon: icons/056-certificate-of-authenticity-for-an-item-not-present.png
+    icon: icons-fit-1024/056-certificate-of-authenticity-for-an-item-not-present.png
     prompt: >-
       game item icon. empty parchment. yellowed. worn. creased. faded ink. seal broken. white background. comic style.
       avoid any kind of frames. avoid duplicated items..
@@ -671,7 +671,7 @@ cards:
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A IOI (I Owe You) written on a scrap of leather for 1 copper
-    icon: icons/057-ioi-i-owe-you-written-on-a-scrap-of-leather-for-1-copper.png
+    icon: icons-fit-1024/057-ioi-i-owe-you-written-on-a-scrap-of-leather-for-1-copper.png
     prompt: >-
       game item icon. scrap leather. worn. brown. IOI written. copper coin. white background. comic style. avoid any
       kind of frames. avoid duplicated items..
@@ -682,7 +682,7 @@ cards:
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A single earring (the mate is lost)
-    icon: icons/058-single-earring-the-mate-is-lost.png
+    icon: icons-fit-1024/058-single-earring-the-mate-is-lost.png
     prompt: >-
       game item icon. single earring. tarnished. silver. broken. small. worn. white background. comic style. avoid any
       kind of frames. avoid duplicated items..
@@ -693,7 +693,7 @@ cards:
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A glass eye that looks in two directions at once
-    icon: icons/059-glass-eye-that-looks-in-two-directions-at-once.png
+    icon: icons-fit-1024/059-glass-eye-that-looks-in-two-directions-at-once.png
     prompt: >-
       game item icon. a loose glass eye with two pupils. white background. comic style. avoid any kind of frames. avoid
       duplicated items..
@@ -704,7 +704,7 @@ cards:
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A whistle that makes no sound when blown
-    icon: icons/060-whistle-that-makes-no-sound-when-blown.png
+    icon: icons-fit-1024/060-whistle-that-makes-no-sound-when-blown.png
     prompt: >-
       game item icon. whistle. small. brass. tarnished. rusty. useless. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -715,7 +715,7 @@ cards:
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A wooden tooth
-    icon: icons/061-wooden-tooth.png
+    icon: icons-fit-1024/061-wooden-tooth.png
     prompt: >-
       game item icon. wooden. tooth. brown. weathered. white background. comic style. avoid any kind of frames. avoid
       duplicated items..
@@ -726,7 +726,7 @@ cards:
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A "magic" bean (it is just a kidney bean)
-    icon: icons/062-magic-bean-it-is-just-a-kidney-bean.png
+    icon: icons-fit-1024/062-magic-bean-it-is-just-a-kidney-bean.png
     prompt: >-
       game item icon. kidney bean. brown. speckled. small. worn. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -737,7 +737,7 @@ cards:
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A tiny cage for a cricket (cricket has escaped)
-    icon: icons/063-tiny-cage-for-a-cricket-cricket-has-escaped.png
+    icon: icons-fit-1024/063-tiny-cage-for-a-cricket-cricket-has-escaped.png
     prompt: >-
       game item icon. tiny cage. rusty. bars. small. empty. white background. comic style. avoid any kind of frames.
       avoid duplicated items..
@@ -748,7 +748,7 @@ cards:
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A collection of colorful poultry feathers
-    icon: icons/064-collection-of-colorful-poultry-feathers.png
+    icon: icons-fit-1024/064-collection-of-colorful-poultry-feathers.png
     prompt: >-
       game item icon. pile of colorful feathers. white background. comic style. avoid any kind of frames. avoid
       duplicated items..
@@ -759,7 +759,7 @@ cards:
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A stone that looks vaguely like a famous deity
-    icon: icons/065-stone-that-looks-vaguely-like-a-famous-deity.png
+    icon: icons-fit-1024/065-stone-that-looks-vaguely-like-a-famous-deity.png
     prompt: >-
       game item icon. stone. grey. rough. humanoid. blocky. simple. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -770,7 +770,7 @@ cards:
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A small lead soldier with its head broken off
-    icon: icons/066-small-lead-soldier-with-its-head-broken-off.png
+    icon: icons-fit-1024/066-small-lead-soldier-with-its-head-broken-off.png
     prompt: >-
       game item icon. small. lead. soldier. broken. headless. rusty. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -781,7 +781,7 @@ cards:
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A pouch of salt mixed with sand
-    icon: icons/067-pouch-of-salt-mixed-with-sand.png
+    icon: icons-fit-1024/067-pouch-of-salt-mixed-with-sand.png
     prompt: >-
       game item icon. pouch. worn. beige. mixed. salt. sand. rough. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -792,7 +792,7 @@ cards:
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A comb with half its teeth missing
-    icon: icons/068-comb-with-half-its-teeth-missing.png
+    icon: icons-fit-1024/068-comb-with-half-its-teeth-missing.png
     prompt: >-
       game item icon. comb. worn. rusty. half teeth missing. small. simple. white background. comic style. avoid any
       kind of frames. avoid duplicated items..
@@ -803,7 +803,7 @@ cards:
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A doll made of corn husks
-    icon: icons/069-doll-made-of-corn-husks.png
+    icon: icons-fit-1024/069-doll-made-of-corn-husks.png
     prompt: >-
       game item icon. corn husk doll. worn. rural. white background. comic style. avoid any kind of frames. avoid
       duplicated items..
@@ -814,7 +814,7 @@ cards:
     rarity: common
     type: Trash (Items of "Questionable" Value)
     description: A jar of fireflies (all deceased)
-    icon: icons/070-jar-of-fireflies-all-deceased.png
+    icon: icons-fit-1024/070-jar-of-fireflies-all-deceased.png
     prompt: >-
       game item icon. jar. glass. old. dusty. fireflies. dead. tiny. yellow. white background. comic style. avoid any
       kind of frames. avoid duplicated items..
@@ -825,7 +825,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A fossilized seashell
-    icon: icons/071-fossilized-seashell.png
+    icon: icons-fit-1024/071-fossilized-seashell.png
     prompt: >-
       game item icon. fossilized. seashell. worn. beige. cracked. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -836,7 +836,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A bit of fluff from a Blink Dog’s tail (reputedly)
-    icon: icons/072-bit-of-fluff-from-a-blink-dog-s-tail-reputedly.png
+    icon: icons-fit-1024/072-bit-of-fluff-from-a-blink-dog-s-tail-reputedly.png
     prompt: >-
       game item icon. a small taft of hair. white background. comic style. avoid any kind of frames. avoid duplicated
       items..
@@ -847,7 +847,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A leather strap with a broken buckle
-    icon: icons/073-leather-strap-with-a-broken-buckle.png
+    icon: icons-fit-1024/073-leather-strap-with-a-broken-buckle.png
     prompt: >-
       game item icon. leather strap. broken buckle. worn. frayed. brown. white background. comic style. avoid any kind
       of frames. avoid duplicated items..
@@ -858,7 +858,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A clay pipe bowl with no stem
-    icon: icons/074-clay-pipe-bowl-with-no-stem.png
+    icon: icons-fit-1024/074-clay-pipe-bowl-with-no-stem.png
     prompt: >-
       game item icon. clay. bowl. broken. no stem. rusty. white background. comic style. avoid any kind of frames. avoid
       duplicated items..
@@ -869,7 +869,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A handful of iron filings
-    icon: icons/075-handful-of-iron-filings.png
+    icon: icons-fit-1024/075-handful-of-iron-filings.png
     prompt: >-
       game item icon. iron. filings. metallic. small. scattered. grey. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -880,7 +880,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A charred twig from a lightning-struck tree
-    icon: icons/076-charred-twig-from-a-lightning-struck-tree.png
+    icon: icons-fit-1024/076-charred-twig-from-a-lightning-struck-tree.png
     prompt: >-
       game item icon. charred. twig. wooden. blackened. splintered. twisted. white background. comic style. avoid any
       kind of frames. avoid duplicated items..
@@ -891,7 +891,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A list of names with "don't trust" written next to them
-    icon: icons/077-list-of-names-with-don-t-trust-written-next-to-them.png
+    icon: icons-fit-1024/077-list-of-names-with-don-t-trust-written-next-to-them.png
     prompt: >-
       game item icon. a piece of parchment with a list of names. handwritten. faded ink. white background. comic style.
       avoid any kind of frames. avoid duplicated items..
@@ -902,7 +902,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A rusted lock with no key
-    icon: icons/078-rusted-lock-with-no-key.png
+    icon: icons-fit-1024/078-rusted-lock-with-no-key.png
     prompt: >-
       game item icon. rusted. old. metal. lock. no key. worn. white background. comic style. avoid any kind of frames.
       avoid duplicated items..
@@ -913,7 +913,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A small, empty tinderbox
-    icon: icons/079-small-empty-tinderbox.png
+    icon: icons-fit-1024/079-small-empty-tinderbox.png
     prompt: >-
       game item icon. small. empty. metal. box. rusty. worn. white background. comic style. avoid any kind of frames.
       avoid duplicated items..
@@ -924,7 +924,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A bundle of dried lavender that has lost its scent
-    icon: icons/080-bundle-of-dried-lavender-that-has-lost-its-scent.png
+    icon: icons-fit-1024/080-bundle-of-dried-lavender-that-has-lost-its-scent.png
     prompt: >-
       game item icon. dried lavender. brown. wilted. tangled. small. fragile. worn. white background. comic style. avoid
       any kind of frames. avoid duplicated items..
@@ -935,7 +935,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A piece of "dragon scale" (actually just painted carp scale)
-    icon: icons/081-piece-of-dragon-scale-actually-just-painted-carp-scale.png
+    icon: icons-fit-1024/081-piece-of-dragon-scale-actually-just-painted-carp-scale.png
     prompt: >-
       game item icon. painted carp scale. brown. worn. rough. small. irregular shape. white background. comic style.
       avoid any kind of frames. avoid duplicated items..
@@ -946,7 +946,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A tiny glass vial containing a single eyelash
-    icon: icons/082-tiny-glass-vial-containing-a-single-eyelash.png
+    icon: icons-fit-1024/082-tiny-glass-vial-containing-a-single-eyelash.png
     prompt: >-
       game item icon. unlabeled tiny glass vial with a single eyelash in it. white background. comic style. avoid any
       kind of frames. avoid duplicated items..
@@ -957,7 +957,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A heavy brass coin from a fallen empire (worth zero)
-    icon: icons/083-heavy-brass-coin-from-a-fallen-empire-worth-zero.png
+    icon: icons-fit-1024/083-heavy-brass-coin-from-a-fallen-empire-worth-zero.png
     prompt: >-
       game item icon. heavy brass coin. worn. tarnished. rusty. old. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -968,7 +968,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A crumpled poem about a barmaid named Helga
-    icon: icons/084-crumpled-poem-about-a-barmaid-named-helga.png
+    icon: icons-fit-1024/084-crumpled-poem-about-a-barmaid-named-helga.png
     prompt: >-
       game item icon. crumpled paper. torn. brown. ink. old. unreadable scribbles. white background. comic style. avoid
       any kind of frames. avoid duplicated items..
@@ -979,7 +979,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A leather eye patch with no string
-    icon: icons/085-leather-eye-patch-with-no-string.png
+    icon: icons-fit-1024/085-leather-eye-patch-with-no-string.png
     prompt: >-
       game item icon. leather eye patch. no strap. worn. brown. white background. comic style. avoid any kind of frames.
       avoid duplicated items..
@@ -990,7 +990,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A stopper from a potion bottle (no potion)
-    icon: icons/086-stopper-from-a-potion-bottle-no-potion.png
+    icon: icons-fit-1024/086-stopper-from-a-potion-bottle-no-potion.png
     prompt: >-
       game item icon. stopper. cork. brown. worn. cracked. small. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -1001,7 +1001,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A handful of grave dirt
-    icon: icons/087-handful-of-grave-dirt.png
+    icon: icons-fit-1024/087-handful-of-grave-dirt.png
     prompt: >-
       game item icon. dirt. brown. dry. crumbly. lumpy. small. handful. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -1012,7 +1012,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A rusted spur from a boot
-    icon: icons/088-rusted-spur-from-a-boot.png
+    icon: icons-fit-1024/088-rusted-spur-from-a-boot.png
     prompt: >-
       game item icon. rusted. spur. metal. worn. boot. fragment. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -1023,7 +1023,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A knot of tangled fishing line
-    icon: icons/089-knot-of-tangled-fishing-line.png
+    icon: icons-fit-1024/089-knot-of-tangled-fishing-line.png
     prompt: >-
       game item icon. tangled fishing line. knotted. brown. weathered. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -1034,7 +1034,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A small, chipped clay tile
-    icon: icons/090-small-chipped-clay-tile.png
+    icon: icons-fit-1024/090-small-chipped-clay-tile.png
     prompt: >-
       game item icon. small. chipped. clay. tile. brown. cracked. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -1045,7 +1045,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A dried lemon peel
-    icon: icons/091-dried-lemon-peel.png
+    icon: icons-fit-1024/091-dried-lemon-peel.png
     prompt: >-
       game item icon. dried lemon peel. white background. comic style. avoid any kind of frames. avoid duplicated
       items..
@@ -1056,7 +1056,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A shard of obsidian (too small to be a weapon)
-    icon: icons/092-shard-of-obsidian-too-small-to-be-a-weapon.png
+    icon: icons-fit-1024/092-shard-of-obsidian-too-small-to-be-a-weapon.png
     prompt: >-
       game item icon. black. glassy. jagged. small. irregular. dark. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -1067,7 +1067,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A bird skull painted blue
-    icon: icons/093-bird-skull-painted-blue.png
+    icon: icons-fit-1024/093-bird-skull-painted-blue.png
     prompt: >-
       game item icon. bird. skull. painted. blue. white background. comic style. avoid any kind of frames. avoid
       duplicated items..
@@ -1078,7 +1078,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A bit of frayed silk ribbon
-    icon: icons/094-bit-of-frayed-silk-ribbon.png
+    icon: icons-fit-1024/094-bit-of-frayed-silk-ribbon.png
     prompt: >-
       game item icon. frayed. silk. ribbon. torn. yellowed. worn. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -1089,7 +1089,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A copper wire bent into the shape of a ring
-    icon: icons/095-copper-wire-bent-into-the-shape-of-a-ring.png
+    icon: icons-fit-1024/095-copper-wire-bent-into-the-shape-of-a-ring.png
     prompt: >-
       game item icon. copper. wire. bent. ring. metallic. rusty. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -1100,7 +1100,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A recipe for "Rock Soup."
-    icon: icons/096-recipe-for-rock-soup.png
+    icon: icons-fit-1024/096-recipe-for-rock-soup.png
     prompt: >-
       game item icon. recipe. paper. torn. yellowed. worn. white background. comic style. avoid any kind of frames.
       avoid duplicated items..
@@ -1111,7 +1111,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A single, very large iron staple
-    icon: icons/097-single-very-large-iron-staple.png
+    icon: icons-fit-1024/097-single-very-large-iron-staple.png
     prompt: >-
       game item icon. large iron staple. rusty. bent. single. metallic. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -1122,7 +1122,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A pouch of pine needles
-    icon: icons/098-pouch-of-pine-needles.png
+    icon: icons-fit-1024/098-pouch-of-pine-needles.png
     prompt: >-
       game item icon. pine needles. brown. dry. crumpled. small. fabric pouch. worn. white background. comic style.
       avoid any kind of frames. avoid duplicated items..
@@ -1133,7 +1133,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A broken compass needle that always points down
-    icon: icons/099-broken-compass-needle-that-always-points-down.png
+    icon: icons-fit-1024/099-broken-compass-needle-that-always-points-down.png
     prompt: >-
       game item icon. broken. compass. needle. bent. downwards. rusty. white background. comic style. avoid any kind of
       frames. avoid duplicated items..
@@ -1144,7 +1144,7 @@ cards:
     rarity: common
     type: Trash (Miscellaneous Debris)
     description: A smaller, even dirtier leather pouch (empty)
-    icon: icons/100-smaller-even-dirtier-leather-pouch-empty.png
+    icon: icons-fit-1024/100-smaller-even-dirtier-leather-pouch-empty.png
     prompt: >-
       game item icon. smaller. dirty. leather. pouch. empty. white background. comic style. avoid any kind of frames.
       avoid duplicated items..

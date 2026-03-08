@@ -4,7 +4,7 @@ import path from 'path';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const keywordMap = JSON.parse(
-  readFileSync(path.join(__dirname, '../data/icon-keywords.json'), 'utf8'),
+  readFileSync(path.join(__dirname, '../../data/icon-keywords.json'), 'utf8'),
 );
 
 /**

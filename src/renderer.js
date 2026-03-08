@@ -7,8 +7,8 @@ import { buildStyleBlock } from './theme.js';
 import { findIconUrl } from './icon-finder.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const TEMPLATES_DIR = path.resolve(__dirname, '..', 'templates');
-const ASSETS_DIR = path.resolve(__dirname, '..', 'assets');
+const TEMPLATES_DIR = path.resolve(__dirname, '..', '..', 'templates');
+const ASSETS_DIR = path.resolve(__dirname, '..', '..', 'assets');
 
 /**
  * Convert minimal Markdown (`**bold**`, `*italic*`) to HTML.
