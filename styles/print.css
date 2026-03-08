@@ -25,9 +25,9 @@ body {
   height: 297mm;
   padding: 10mm;
   display: grid;
-  grid-template-columns: repeat(var(--columns, 3), var(--card-width, 63mm));
-  grid-template-rows: repeat(var(--rows, 3), var(--card-height, 88mm));
-  gap: 4mm;
+  grid-template-columns: repeat(var(--columns, 3), var(--card-width, 67mm));
+  grid-template-rows: repeat(var(--rows, 3), var(--card-height, 92mm));
+  gap: 0;
   justify-content: center;
   align-content: center;
   background: white;

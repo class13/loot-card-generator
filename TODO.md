@@ -1,3 +1,4 @@
 - [x] regenerate the prompts
-- [ ] go through all the images. delete them if they dont fit. and adapt the prompt generally or specifically
-- [ ] regenerate the deleted images
+- [x] go through all the images. delete them if they dont fit. and adapt the prompt generally or specifically
+- [x] regenerate the deleted images
+- [x] add missing gray border at first card of page
