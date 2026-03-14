@@ -1,0 +1,253 @@
+cards:
+  - name: d20 gold
+    rarity: common
+    quantity: 1
+    type: Coinage
+    description: A gold coinage unit worth 1d20 gp.
+    price: 1d20 gp
+    prompt: >-
+      game item icon. a large pile of gold coins. white background. comic style.avoid any kind of frames. avoid
+      duplicated items.
+    tags:
+      - coinage
+      - gold
+      - d20
+    icon: coin-icons/001-d20-gold-unit.png
+  - name: d12 gold
+    rarity: common
+    quantity: 2
+    type: Coinage
+    description: A gold coinage unit worth 1d12 gp.
+    price: 1d12 gp
+    prompt: >-
+      game item icon. a medium-large pile of gold coins. white background. comic style.avoid any kind of frames. avoid
+      duplicated items.
+    tags:
+      - coinage
+      - gold
+      - d12
+    icon: coin-icons/002-d12-gold-unit.png
+  - name: d10 gold
+    rarity: common
+    quantity: 3
+    type: Coinage
+    description: A gold coinage unit worth 1d10 gp.
+    price: 1d10 gp
+    prompt: >-
+      game item icon. a medium pile of gold coins. white background. comic style.avoid any kind of frames. avoid
+      duplicated items.
+    tags:
+      - coinage
+      - gold
+      - d10
+    icon: coin-icons/003-d10-gold-unit.png
+  - name: d8 gold
+    rarity: common
+    quantity: 4
+    type: Coinage
+    description: A gold coinage unit worth 1d8 gp.
+    price: 1d8 gp
+    prompt: >-
+      game item icon. a modest pile of gold coins. white background. comic style.avoid any kind of frames. avoid
+      duplicated items.
+    tags:
+      - coinage
+      - gold
+      - d8
+    icon: coin-icons/004-d8-gold-unit.png
+  - name: d6 gold
+    rarity: common
+    quantity: 5
+    type: Coinage
+    description: A gold coinage unit worth 1d6 gp.
+    price: 1d6 gp
+    prompt: >-
+      game item icon. a small pile of gold coins. white background. comic style.avoid any kind of frames. avoid
+      duplicated items.
+    tags:
+      - coinage
+      - gold
+      - d6
+    icon: coin-icons/005-d6-gold-unit.png
+  - name: d4 gold
+    rarity: common
+    quantity: 5
+    type: Coinage
+    description: A gold coinage unit worth 1d4 gp.
+    price: 1d4 gp
+    prompt: >-
+      game item icon. a tiny pile of gold coins. white background. comic style.avoid any kind of frames. avoid
+      duplicated items.
+    tags:
+      - coinage
+      - gold
+      - d4
+    icon: coin-icons/006-d4-gold-unit.png
+  - name: d20 silver
+    rarity: common
+    quantity: 2
+    type: Coinage
+    description: A silver coinage unit worth 1d20 sp.
+    price: 1d20 sp
+    prompt: >-
+      game item icon. a large pile of silver coins. white background. comic style.avoid any kind of frames. avoid
+      duplicated items.
+    tags:
+      - coinage
+      - silver
+      - d20
+    icon: coin-icons/007-d20-silver-unit.png
+  - name: d12 silver
+    rarity: common
+    quantity: 3
+    type: Coinage
+    description: A silver coinage unit worth 1d12 sp.
+    price: 1d12 sp
+    prompt: >-
+      game item icon. a medium-large pile of silver coins. white background. comic style.avoid any kind of frames. avoid
+      duplicated items.
+    tags:
+      - coinage
+      - silver
+      - d12
+    icon: coin-icons/008-d12-silver-unit.png
+  - name: d10 silver
+    rarity: common
+    quantity: 5
+    type: Coinage
+    description: A silver coinage unit worth 1d10 sp.
+    price: 1d10 sp
+    prompt: >-
+      game item icon. a medium pile of silver coins. white background. comic style.avoid any kind of frames. avoid
+      duplicated items.
+    tags:
+      - coinage
+      - silver
+      - d10
+    icon: coin-icons/009-d10-silver-unit.png
+  - name: d8 silver
+    rarity: common
+    quantity: 6
+    type: Coinage
+    description: A silver coinage unit worth 1d8 sp.
+    price: 1d8 sp
+    prompt: >-
+      game item icon. a modest pile of silver coins. white background. comic style.avoid any kind of frames. avoid
+      duplicated items.
+    tags:
+      - coinage
+      - silver
+      - d8
+    icon: coin-icons/010-d8-silver-unit.png
+  - name: d6 silver
+    rarity: common
+    quantity: 8
+    type: Coinage
+    description: A silver coinage unit worth 1d6 sp.
+    price: 1d6 sp
+    prompt: >-
+      game item icon. a small pile of silver coins. white background. comic style.avoid any kind of frames. avoid
+      duplicated items.
+    tags:
+      - coinage
+      - silver
+      - d6
+    icon: coin-icons/011-d6-silver-unit.png
+  - name: d4 silver
+    rarity: common
+    quantity: 11
+    type: Coinage
+    description: A silver coinage unit worth 1d4 sp.
+    price: 1d4 sp
+    prompt: >-
+      game item icon. a tiny pile of silver coins. white background. comic style.avoid any kind of frames. avoid
+      duplicated items.
+    tags:
+      - coinage
+      - silver
+      - d4
+    icon: coin-icons/012-d4-silver-unit.png
+  - name: d20 copper
+    rarity: common
+    quantity: 3
+    type: Coinage
+    description: A copper coinage unit worth 1d20 cp.
+    price: 1d20 cp
+    prompt: >-
+      game item icon. a large pile of copper coins. white background. comic style.avoid any kind of frames. avoid
+      duplicated items.
+    tags:
+      - coinage
+      - copper
+      - d20
+    icon: coin-icons/013-d20-copper-unit.png
+  - name: d12 copper
+    rarity: common
+    quantity: 5
+    type: Coinage
+    description: A copper coinage unit worth 1d12 cp.
+    price: 1d12 cp
+    prompt: >-
+      game item icon. a medium-large pile of copper coins. white background. comic style.avoid any kind of frames. avoid
+      duplicated items.
+    tags:
+      - coinage
+      - copper
+      - d12
+    icon: coin-icons/014-d12-copper-unit.png
+  - name: d10 copper
+    rarity: common
+    quantity: 7
+    type: Coinage
+    description: A copper coinage unit worth 1d10 cp.
+    price: 1d10 cp
+    prompt: >-
+      game item icon. a medium pile of copper coins. white background. comic style.avoid any kind of frames. avoid
+      duplicated items.
+    tags:
+      - coinage
+      - copper
+      - d10
+    icon: coin-icons/015-d10-copper-unit.png
+  - name: d8 copper
+    rarity: common
+    quantity: 8
+    type: Coinage
+    description: A copper coinage unit worth 1d8 cp.
+    price: 1d8 cp
+    prompt: >-
+      game item icon. a modest pile of copper coins. white background. comic style.avoid any kind of frames. avoid
+      duplicated items.
+    tags:
+      - coinage
+      - copper
+      - d8
+    icon: coin-icons/016-d8-copper-unit.png
+  - name: d6 copper
+    rarity: common
+    quantity: 10
+    type: Coinage
+    description: A copper coinage unit worth 1d6 cp.
+    price: 1d6 cp
+    prompt: >-
+      game item icon. a small pile of copper coins. white background. comic style.avoid any kind of frames. avoid
+      duplicated items.
+    tags:
+      - coinage
+      - copper
+      - d6
+    icon: coin-icons/017-d6-copper-unit.png
+  - name: d4 copper
+    rarity: common
+    quantity: 12
+    type: Coinage
+    description: A copper coinage unit worth 1d4 cp.
+    price: 1d4 cp
+    prompt: >-
+      game item icon. a tiny pile of copper coins. white background. comic style.avoid any kind of frames. avoid
+      duplicated items.
+    tags:
+      - coinage
+      - copper
+      - d4
+    icon: coin-icons/018-d4-copper-unit.png

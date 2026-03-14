@@ -22,6 +22,8 @@
     "handlebars": "^4.7.8",
     "js-yaml": "^4.1.0",
     "puppeteer": "^22.0.0",
+    "quicktype": "^23.2.6",
+    "yamljs": "^0.3.0",
     "zod": "^3.22.0"
   },
   "devDependencies": {

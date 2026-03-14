@@ -1,0 +1,82 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Schema",
+    "definitions": {
+        "Schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "cards": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Card"
+                    }
+                }
+            },
+            "required": [
+                "cards"
+            ],
+            "title": "Schema"
+        },
+        "Card": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "icon": {
+                    "type": "string"
+                },
+                "rarity": {
+                    "$ref": "#/definitions/Rarity"
+                },
+                "quantity": {
+                    "type": "integer"
+                },
+                "type": {
+                    "$ref": "#/definitions/Type"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "string"
+                },
+                "prompt": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "description",
+                "name",
+                "price",
+                "quantity",
+                "rarity",
+                "tags",
+                "type"
+            ],
+            "title": "Card"
+        },
+        "Rarity": {
+            "type": "string",
+            "enum": [
+                "common"
+            ],
+            "title": "Rarity"
+        },
+        "Type": {
+            "type": "string",
+            "enum": [
+                "Coinage"
+            ],
+            "title": "Type"
+        }
+    }
+}
