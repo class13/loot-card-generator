@@ -151,6 +151,7 @@ The top-level key is `cards`, which holds a list of card objects.
 cards:
   - name: My Item
     rarity: rare
+    quantity: 3
     description: Does something **cool**.
 ```
 
@@ -160,6 +161,7 @@ cards:
 |---|---|---|---|
 | `name` | ✅ | string | Card heading |
 | `rarity` | ✅ | enum | Controls border and label colour — see values below |
+| `quantity` | — | integer | Number of copies to place in the output PDF for this card (default: `1`) |
 | `description` | ✅ | string | Main body text. Supports `**bold**` and `*italic*`. Use a YAML block scalar (`\|`) for multiple lines. |
 | `type` | — | string | Subtitle beneath the rarity label (e.g. `Wondrous Item (requires attunement)`) |
 | `flavor` | — | string | Italic quote shown at the bottom of the card body with a gold left border |

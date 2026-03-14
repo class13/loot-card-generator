@@ -8,6 +8,7 @@ const rarityValues = ['common', 'uncommon', 'rare', 'very rare', 'legendary', 'a
 const CardSchema = z.object({
   name: z.string().min(1),
   rarity: z.enum(rarityValues),
+  quantity: z.number().int().positive().optional(),
   type: z.string().optional(),
   description: z.string().min(1),
   flavor: z.string().optional(),

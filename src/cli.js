@@ -6,6 +6,19 @@ import { loadYaml } from './loader.js';
 import { renderHtml } from './renderer.js';
 import { generatePdf } from './pdf.js';
 
+/**
+ * Expand cards based on optional `quantity` field (default: 1).
+ *
+ * @param {object[]} cards
+ * @returns {object[]}
+ */
+function expandCardsByQuantity(cards) {
+  return cards.flatMap((card) => {
+    const quantity = card.quantity ?? 1;
+    return Array.from({ length: quantity }, () => ({ ...card }));
+  });
+}
+
 export function run() {
   program
     .name('loot-cards')
@@ -26,10 +39,18 @@ export function run() {
         console.log(chalk.cyan('⚙  Loading') + ' ' + input);
         const { cards, yamlDir } = loadYaml(input);
         console.log(chalk.green(`✔  Loaded ${cards.length} card(s)`));
+        const expandedCards = expandCardsByQuantity(cards);
+        if (expandedCards.length !== cards.length) {
+          console.log(
+            chalk.green(
+              `✔  Expanded to ${expandedCards.length} card(s) after applying quantity values`,
+            ),
+          );
+        }
 
         // ── 2. Render HTML ─────────────────────────────────────
         console.log(chalk.cyan('⚙  Rendering HTML…'));
-        const html = await renderHtml(cards, {
+        const html = await renderHtml(expandedCards, {
           yamlDir,
           columns: options.columns,
           rows: options.rows,
