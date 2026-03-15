@@ -57,9 +57,7 @@
                 "description",
                 "name",
                 "price",
-                "quantity",
                 "rarity",
-                "tags",
                 "type"
             ],
             "title": "Card"
@@ -74,7 +72,8 @@
         "Type": {
             "type": "string",
             "enum": [
-                "Coinage"
+                "Coinage",
+                "Treasure"
             ],
             "title": "Type"
         }

@@ -1,0 +1,1029 @@
+cards:
+  - name: Bent Brooch
+    rarity: common
+    type: Treasure
+    description: A tarnished silver brooch with a crooked pin and faded floral engraving.
+    price: 1 gp
+    icon: treasure-icons/001-bent-brooch.png
+    prompt: >-
+      game item icon. tarnished silver. crooked pin. faded floral engraving. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Brass Ring
+    rarity: common
+    type: Treasure
+    description: A simple brass ring, polished by years of wear but worth little.
+    price: 1 gp
+    icon: treasure-icons/002-brass-ring.png
+    prompt: >-
+      game item icon. brass. ring. simple. polished. worn. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
+    tags: []
+  - name: Ivory Die
+    rarity: common
+    type: Treasure
+    description: A single carved ivory gaming die with slightly rounded edges.
+    price: 1 gp
+    icon: treasure-icons/003-ivory-die.png
+    prompt: >-
+      game item icon. ivory. die. rounded edges. smooth. small. single. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Glass Bead
+    rarity: common
+    type: Treasure
+    description: A bright blue glass bead once part of a decorative necklace.
+    price: 1 gp
+    icon: treasure-icons/004-glass-bead.png
+    prompt: >-
+      game item icon. bright blue. glass. bead. smooth. white background. comic style. avoid any kind of frames. avoid
+      duplicated items..
+    tags: []
+  - name: Tin Locket
+    rarity: common
+    type: Treasure
+    description: A small tin locket with no portrait inside.
+    price: 1 gp
+    icon: treasure-icons/005-tin-locket.png
+    prompt: >-
+      game item icon. small tin locket. no portrait. metal. plain. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Bone Comb
+    rarity: common
+    type: Treasure
+    description: A plain comb carved from bone, still sturdy enough to use.
+    price: 1 gp
+    icon: treasure-icons/006-bone-comb.png
+    prompt: >-
+      game item icon. bone. comb. plain. worn. wooden texture. yellowed. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
+    tags: []
+  - name: Copper Charm
+    rarity: common
+    type: Treasure
+    description: A tiny copper charm shaped like a sun, worn smooth.
+    price: 1 gp
+    icon: treasure-icons/007-copper-charm.png
+    prompt: >-
+      game item icon. tiny copper. sun shape. worn smooth. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
+    tags: []
+  - name: Pewter Spoon
+    rarity: common
+    type: Treasure
+    description: A slightly bent pewter spoon with a noble crest scratched into it.
+    price: 1 gp
+    icon: treasure-icons/008-pewter-spoon.png
+    prompt: >-
+      game item icon. pewter. spoon. bent. crest. noble. scratched. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Clay Idol
+    rarity: common
+    type: Treasure
+    description: A thumb-sized clay idol of a forgotten household spirit.
+    price: 1 gp
+    icon: treasure-icons/009-clay-idol.png
+    prompt: >-
+      game item icon. clay. thumb-sized. idol. household spirit. worn. terracotta. white background. comic style. avoid
+      any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Silk Ribbon
+    rarity: common
+    type: Treasure
+    description: A faded but genuine silk ribbon once used to tie back fine hair.
+    price: 1 gp
+    icon: treasure-icons/010-silk-ribbon.png
+    prompt: >-
+      game item icon. silk. ribbon. faded. yellowed. frayed. thin. delicate. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Scent Vial
+    rarity: common
+    type: Treasure
+    description: A tiny crystal vial holding the last traces of old perfume.
+    price: 1 gp
+    icon: treasure-icons/011-scent-vial.png
+    prompt: >-
+      game item icon. tiny crystal vial. old perfume. brown liquid. small stopper. delicate. white background. comic
+      style. avoid any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Lacquer Pin
+    rarity: common
+    type: Treasure
+    description: A red lacquered hairpin with a chipped tip.
+    price: 1 gp
+    icon: treasure-icons/012-lacquer-pin.png
+    prompt: >-
+      game item icon. red. lacquered. hairpin. chipped tip. small. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Bronze Button
+    rarity: common
+    type: Treasure
+    description: A decorative bronze button from an expensive old coat.
+    price: 1 gp
+    icon: treasure-icons/013-bronze-button.png
+    prompt: >-
+      game item icon. bronze. button. circular. flat. metallic. worn. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Shell Cameo
+    rarity: common
+    type: Treasure
+    description: A tiny shell cameo with a rough but recognizable portrait.
+    price: 1 gp
+    icon: treasure-icons/014-shell-cameo.png
+    prompt: >-
+      game item icon. tiny shell. cameo. portrait. rough. worn. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
+    tags: []
+  - name: Carved Token
+    rarity: common
+    type: Treasure
+    description: A wooden token etched with a merchant guild seal.
+    price: 1 gp
+    icon: treasure-icons/015-carved-token.png
+    prompt: >-
+      game item icon. wooden token. etched. merchant guild seal. simple border. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Silver Bell
+    rarity: common
+    type: Treasure
+    description: A little silver handbell with a clear, delicate tone.
+    price: 2 gp
+    icon: treasure-icons/016-silver-bell.png
+    prompt: >-
+      game item icon. silver. bell. small. shiny. metallic. delicate. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Amber Bead
+    rarity: common
+    type: Treasure
+    description: A polished amber bead warm to the touch and honey-colored.
+    price: 2 gp
+    icon: treasure-icons/017-amber-bead.png
+    prompt: >-
+      game item icon. amber. bead. warm. honey-colored. polished. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Velvet Gloves
+    rarity: common
+    type: Treasure
+    description: A pair of fine velvet gloves sized for a wealthy courtier.
+    price: 2 gp
+    icon: treasure-icons/019-velvet-gloves.png
+    prompt: >-
+      game item icon. velvet. gloves. fine. soft. purple. gold trim. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Ornate Pipe
+    rarity: common
+    type: Treasure
+    description: A carved pipe with decorative inlays and a long stem.
+    price: 2 gp
+    icon: treasure-icons/019-ornate-pipe.png
+    prompt: >-
+      game item icon. carved wooden pipe. white background. comic style. avoid any kind of frames. avoid duplicated
+      items.
+    tags: []
+  - name: Bronze Pendant
+    rarity: common
+    type: Treasure
+    description: A heavy bronze pendant shaped like a wolf’s head.
+    price: 2 gp
+    icon: treasure-icons/021-bronze-pendan.png
+    prompt: >-
+      game item icon. bronze. pendant. wolf's head. heavy. metal. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Painted Fan
+    rarity: common
+    type: Treasure
+    description: A folding hand fan painted with cranes over a river.
+    price: 2 gp
+    icon: treasure-icons/022-painted-fan.png
+    prompt: >-
+      game item icon. painted. fan. folding. cranes. river. water. wood. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
+    tags: []
+  - name: Silver Earring
+    rarity: common
+    type: Treasure
+    description: A single dangling silver earring set with a cloudy stone.
+    price: 2 gp
+    icon: treasure-icons/023-silver-earring.png
+    prompt: >-
+      game item icon. silver. earring. dangling. cloudy stone. small. circular. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Gilded Thimble
+    rarity: common
+    type: Treasure
+    description: A sewing thimble plated in thin gold leaf.
+    price: 2 gp
+    icon: treasure-icons/024-gilded-thimble.png
+    prompt: >-
+      game item icon. gilded. thimble. small. golden. metal. ornate. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Ivory Whistle
+    rarity: common
+    type: Treasure
+    description: A carved ivory whistle that gives off a soft, pure note.
+    price: 2 gp
+    icon: treasure-icons/025-ivory-whistle.png
+    prompt: >-
+      game item icon. ivory. whistle. curved. smooth. small. ornate. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Satin Sash
+    rarity: common
+    type: Treasure
+    description: A rich satin sash dyed deep crimson and lightly perfumed.
+    price: 2 gp
+    icon: treasure-icons/026-satin-sash.png
+    prompt: >-
+      game item icon. satin. crimson. deep. lightly perfumed. rolled. tied. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Pearl Button
+    rarity: common
+    type: Treasure
+    description: A lustrous mother-of-pearl button from noble clothing.
+    price: 2 gp
+    icon: treasure-icons/027-pearl-button.png
+    prompt: >-
+      game item icon. lustrous. mother-of-pearl. button. rounded. small. shiny. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Etched Flask
+    rarity: common
+    type: Treasure
+    description: A silvered flask with mountain scenes etched around its sides.
+    price: 2 gp
+    icon: treasure-icons/029-etched-flask.png
+    prompt: >-
+      game item icon. silver. flask. etched. mountain scenes. common. treasure. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Mini Portrait
+    rarity: common
+    type: Treasure
+    description: A tiny painted portrait of an unknown aristocrat.
+    price: 2 gp
+    icon: treasure-icons/028-mini-portrait.png
+    prompt: game item icon. tiny. painted. portrait. old. worn. white background. comic style. avoid duplicated items..
+    tags: []
+  - name: Carved Brooch
+    rarity: common
+    type: Treasure
+    description: A polished wooden brooch carved in the shape of an owl.
+    price: 2 gp
+    icon: treasure-icons/029-carved-brooch.png
+    prompt: >-
+      game item icon. polished wood pendant. carved owl. white background. comic style. avoid any kind of frames. avoid
+      duplicated items. avoid cutoff item.
+    tags: []
+  - name: Silver Locket
+    rarity: common
+    type: Treasure
+    description: A neatly worked silver locket engraved with curling vines.
+    price: 3 gp
+    icon: treasure-icons/030-silver-locket.png
+    prompt: >-
+      game item icon. silver. locket. engraved. vines. curling. ornate. white background. comic style. avoid any kind of
+      frames. avoid duplicated items. avoid cutoff item.
+    tags: []
+  - name: Amber Pendant
+    rarity: common
+    type: Treasure
+    description: A pendant of warm amber wrapped in delicate wire.
+    price: 3 gp
+    icon: treasure-icons/031-amber-pendant.png
+    prompt: >-
+      game item icon. amber. pendant. warm. delicate wire. wrapped. white background. comic style. avoid any kind of
+      frames. avoid duplicated items. avoid cut off item.
+    tags: []
+  - name: Silver Fork
+    rarity: common
+    type: Treasure
+    description: A well-balanced silver dining fork from an old manor set.
+    price: 3 gp
+    icon: treasure-icons/032-silver-fork.png
+    prompt: >-
+      game item icon. silver. fork. curved. slender. ornate. handle. simple. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Silk Veil
+    rarity: common
+    type: Treasure
+    description: A translucent silk veil stitched with tiny silver thread.
+    price: 3 gp
+    icon: treasure-icons/033-silk-veil.png
+    prompt: >-
+      game item icon. translucent silk. silver thread. tiny stitches. delicate fabric. white background. comic style.
+      avoid any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Ivory Figurine
+    rarity: common
+    type: Treasure
+    description: A small ivory figurine of a sleeping cat.
+    price: 3 gp
+    icon: treasure-icons/036-ivory-figurine.png
+    prompt: >-
+      game item icon. ivory. figurine. small. sleeping cat. feline ears. whiskers. white background. comic style. avoid
+      any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Gemmed Buckle
+    rarity: common
+    type: Treasure
+    description: A boot buckle fitted with a tiny polished garnet.
+    price: 3 gp
+    icon: treasure-icons/037-gemmed-buckle.png
+    prompt: >-
+      game item icon. polished garnet. metal buckle. small. worn leather strap. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Gilt Goblet
+    rarity: common
+    type: Treasure
+    description: A metal goblet with worn gilding around the rim and stem.
+    price: 3 gp
+    icon: treasure-icons/038-gilt-goblet.png
+    prompt: >-
+      game item icon. gilt. metal. goblet. rim. worn. stem. rounded. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Jasper Beads
+    rarity: common
+    type: Treasure
+    description: A strand of red jasper prayer beads with a bronze tassel cap.
+    price: 3 gp
+    icon: treasure-icons/039-jasper-beads.png
+    prompt: >-
+      game item icon. red jasper. prayer beads. bronze tassel. stringed. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
+    tags: []
+  - name: Enamel Box
+    rarity: common
+    type: Treasure
+    description: A palm-sized enamel box painted with blue flowers.
+    price: 3 gp
+    icon: treasure-icons/040-enamel-box.png
+    prompt: >-
+      game item icon. palm-sized. enamel. box. blue. flowers. painted. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Perfume Flask
+    rarity: common
+    type: Treasure
+    description: A glass perfume flask with a silver stopper and faint fragrance.
+    price: 3 gp
+    icon: treasure-icons/039-perfume-flask.png
+    prompt: >-
+      game item icon. glass. perfume flask. silver stopper. small. delicate. white background. comic style. avoid any
+      kind of frames. avoid duplicated items. avoid text or label.
+    tags: []
+  - name: Coral Pin
+    rarity: common
+    type: Treasure
+    description: A coral hatpin carved into the shape of a rosebud.
+    price: 4 gp
+    icon: treasure-icons/042-coral-pin.png
+    prompt: >-
+      game item icon. coral. rosebud. hatpin. small. delicate. ornate. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Silver Chain
+    rarity: common
+    type: Treasure
+    description: A thin but elegant silver chain suitable for a pendant.
+    price: 4 gp
+    icon: treasure-icons/041-silver-chain.png
+    prompt: >-
+      game item icon. thin. silver. chain. elegant. simple. pendant. white background. comic style. avoid any kind of
+      frames. avoid duplicated items. avoid cut off item.
+    tags: []
+  - name: Velvet Cap
+    rarity: common
+    type: Treasure
+    description: A noble’s velvet cap adorned with decorative stitching.
+    price: 4 gp
+    icon: treasure-icons/044-velvet-cap.png
+    prompt: >-
+      game item icon. velvet. cap. soft. purple. gold stitching. ornate. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
+    tags: []
+  - name: Carved Tankard
+    rarity: common
+    type: Treasure
+    description: A sturdy tankard decorated with fine carved hunting scenes.
+    price: 4 gp
+    icon: treasure-icons/045-carved-tankard.png
+    prompt: >-
+      game item icon. sturdy tankard. carved. hunting scenes. metal. brown. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Jade Token
+    rarity: common
+    type: Treasure
+    description: A smooth jade gaming token bearing an unfamiliar sigil.
+    price: 4 gp
+    icon: treasure-icons/044-jade-token.png
+    prompt: >-
+      game item icon. jade. token. smooth. green. sigil. intricate. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Gold Earring
+    rarity: common
+    type: Treasure
+    description: A single gold hoop earring of tasteful craftsmanship.
+    price: 4 gp
+    icon: treasure-icons/047-gold-earring.png
+    prompt: >-
+      game item icon. gold. hoop. earring. simple. intricate. metal. shiny. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Marble Idol
+    rarity: common
+    type: Treasure
+    description: A white marble idol of a serene, unknown saint.
+    price: 4 gp
+    icon: treasure-icons/048-marble-idol.png
+    prompt: >-
+      game item icon. white marble. smooth. serene saint. closed eyes. calm expression. small pedestal. white
+      background. comic style. avoid any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Silver Mirror
+    rarity: common
+    type: Treasure
+    description: A hand mirror with a silver backing and a few black specks in the glass.
+    price: 4 gp
+    icon: treasure-icons/047-silver-mirror.png
+    prompt: >-
+      game item icon. silver. mirror. round. ornate. white background. comic style. avoid any kind of frames. avoid
+      duplicated items..
+    tags: []
+  - name: Fine Scarf
+    rarity: common
+    type: Treasure
+    description: A soft embroidered scarf woven with unusually fine thread.
+    price: 4 gp
+    icon: treasure-icons/048-fine-scarf.png
+    prompt: >-
+      game item icon. soft. embroidered scarf. fine thread. delicate. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Lacquer Mask
+    rarity: common
+    type: Treasure
+    description: A small lacquered festival mask painted in bright colors.
+    price: 4 gp
+    icon: treasure-icons/051-lacquer-mask.png
+    prompt: >-
+      game item icon. lacquer. mask. small. painted. bright colors. festival. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Gold Clasp
+    rarity: common
+    type: Treasure
+    description: A gold cloak clasp shaped like intertwining leaves.
+    price: 5 gp
+    icon: treasure-icons/052-gold-clasp.png
+    prompt: >-
+      game item icon. gold. clasp. leaves. intertwined. ornate. small. shiny. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Crystal Stopper
+    rarity: common
+    type: Treasure
+    description: A crystal bottle stopper cut to catch and scatter light.
+    price: 5 gp
+    icon: treasure-icons/053-crystal-stopper.png
+    prompt: >-
+      game item icon. crystal. bottle stopper. cut. faceted. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
+    tags: []
+  - name: Silver Chalice
+    rarity: common
+    type: Treasure
+    description: A modest silver chalice engraved with wheat and grapes.
+    price: 5 gp
+    icon: treasure-icons/054-silver-chalice.png
+    prompt: >-
+      game item icon. silver. chalice. engraved. wheat. grapes. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
+    tags: []
+  - name: Opal Pin
+    rarity: common
+    type: Treasure
+    description: A fine pin set with a shimmering opal no larger than a fingernail.
+    price: 5 gp
+    icon: treasure-icons/055-opal-pin.png
+    prompt: >-
+      game item icon. opalescent. small. pin. metallic. shiny. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
+    tags: []
+  - name: Etched Bracelet
+    rarity: common
+    type: Treasure
+    description: A bronze bracelet etched with knotwork and old blessings.
+    price: 5 gp
+    icon: treasure-icons/054-etched-bracelet.png
+    prompt: >-
+      game item icon. bronze. etched. knotwork. old blessings. bracelet. flat. white background. comic style. avoid any
+      kind of frames. avoid duplicated items.
+    tags: []
+  - name: Ivory Mask
+    rarity: common
+    type: Treasure
+    description: A smooth ivory masquerade mask with narrow eye slits.
+    price: 5 gp
+    icon: treasure-icons/057-ivory-mask.png
+    prompt: >-
+      game item icon. ivory. smooth. mask. narrow eye slits. rounded edges. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Silk Slippers
+    rarity: common
+    type: Treasure
+    description: A pair of embroidered silk slippers made for indoor luxury.
+    price: 5 gp
+    icon: treasure-icons/058-silk-slippers.png
+    prompt: >-
+      game item icon. silk. slippers. embroidered. soft. pastel colors. delicate. white background. comic style. avoid
+      any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Silver Seal
+    rarity: common
+    type: Treasure
+    description: A silver seal stamp with the crest of a minor house.
+    price: 5 gp
+    icon: treasure-icons/057-silver-seal.png
+    prompt: >-
+      game item icon. silver. seal. stamp. crest. minor house. small. white background. comic style. avoid any kind of
+      frames. avoid duplicated items. avoid text.
+    tags: []
+  - name: Agate Cameo
+    rarity: common
+    type: Treasure
+    description: A layered agate cameo carved into a noble profile.
+    price: 5 gp
+    icon: treasure-icons/060-agate-cameo.png
+    prompt: >-
+      game item icon. agate cameo. layered. noble profile. smooth. rounded edges. white background. comic style. avoid
+      any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Decorated Horn
+    rarity: common
+    type: Treasure
+    description: A drinking horn capped in brass and wrapped in dyed leather.
+    price: 5 gp
+    icon: treasure-icons/061-decorated-horn.png
+    prompt: >-
+      game item icon. brass cap. leather wrap. drinking horn. brown leather. gold trim. white background. comic style.
+      avoid any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Pearl Brooch
+    rarity: common
+    type: Treasure
+    description: A silver brooch centered by a single creamy pearl.
+    price: 5 gp
+    icon: treasure-icons/062-pearl-brooch.png
+    prompt: >-
+      game item icon. silver. brooch. pearl. creamy. centered. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
+    tags: []
+  - name: Gold Filigree
+    rarity: common
+    type: Treasure
+    description: A delicate length of ornamental gold filigree from some larger item.
+    price: 6 gp
+    icon: treasure-icons/063-gold-filigree.png
+    prompt: >-
+      game item icon. gold. filigree. delicate. thin. curved. ornate. shiny. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Jade Bracelet
+    rarity: common
+    type: Treasure
+    description: A polished jade bracelet cool and heavy in the hand.
+    price: 6 gp
+    icon: treasure-icons/064-jade-bracelet.png
+    prompt: >-
+      game item icon. jade. bracelet. polished. cool. heavy. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
+    tags: []
+  - name: Silver Censer
+    rarity: common
+    type: Treasure
+    description: A hanging silver censer with tiny pierced star patterns.
+    price: 6 gp
+    icon: treasure-icons/065-silver-censer.png
+    prompt: >-
+      game item icon. silver. censer. hanging. pierced. star. patterns. tiny. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Carved Reliquary
+    rarity: common
+    type: Treasure
+    description: A small carved reliquary box lined with faded velvet.
+    price: 6 gp
+    icon: treasure-icons/066-carved-reliquary.png
+    prompt: >-
+      game item icon. small carved wooden box. lined. velvet. faded. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Garnet Ring
+    rarity: common
+    type: Treasure
+    description: A gold ring set with a deep red garnet.
+    price: 6 gp
+    icon: treasure-icons/067-garnet-ring.png
+    prompt: >-
+      game item icon. gold. ring. deep red. garnet. set. circular. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Gilded Dagger
+    rarity: common
+    type: Treasure
+    description: A ceremonial dagger with a gilded hilt and blunted edge.
+    price: 6 gp
+    icon: treasure-icons/068-gilded-dagger.png
+    prompt: >-
+      game item icon. gilded. dagger. blunted. metallic. curved. short. handle. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Fine Decanter
+    rarity: common
+    type: Treasure
+    description: A crystal decanter etched with elegant curling reeds.
+    price: 6 gp
+    icon: treasure-icons/069-fine-decanter.png
+    prompt: >-
+      game item icon. crystal decanter. etched. curling reeds. elegant. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Silver Tiara
+    rarity: common
+    type: Treasure
+    description: A delicate silver tiara suited to a minor noble or performer.
+    price: 7 gp
+    icon: treasure-icons/070-silver-tiara.png
+    prompt: >-
+      game item icon. delicate. silver. tiara. ornate. filigree. small. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Ivory Chessman
+    rarity: common
+    type: Treasure
+    description: A masterfully carved ivory chess piece from a luxury set.
+    price: 7 gp
+    icon: treasure-icons/071-ivory-chessman.png
+    prompt: >-
+      game item icon. ivory chess piece. intricately carved. ornate details. small. white background. comic style. avoid
+      any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Gold Locket
+    rarity: common
+    type: Treasure
+    description: A gold locket with room for two tiny portraits inside.
+    price: 7 gp
+    icon: treasure-icons/070-gold-locket.png
+    prompt: >-
+      game item icon. gold. locket. ornate. no image inside. chain. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Sapphire Stud
+    rarity: common
+    type: Treasure
+    description: A single ear stud bearing a small but bright sapphire.
+    price: 7 gp
+    icon: treasure-icons/071-sapphire-stud.png
+    prompt: >-
+      game item icon. sapphire. stud. small. metal. ear. accessory. simple. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Embroidered Vest
+    rarity: common
+    type: Treasure
+    description: A richly embroidered vest made for formal occasions.
+    price: 7 gp
+    prompt: >-
+      game item icon. embroidered. vest. rich. formal. gold thread. intricate. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+    icon: treasure-icons/072-embroidered-vest.png
+  - name: Silver Laurel
+    rarity: common
+    type: Treasure
+    description: A silver circlet shaped like overlapping laurel leaves.
+    price: 7 gp
+    icon: treasure-icons/075-silver-laurel.png
+    prompt: >-
+      game item icon. silver. circlet. laurel leaves. overlapping. common treasure. white background. comic style. avoid
+      any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Onyx Pendant
+    rarity: common
+    type: Treasure
+    description: A smooth black onyx pendant hanging from braided cord.
+    price: 8 gp
+    icon: treasure-icons/076-onyx-pendant.png
+    prompt: >-
+      game item icon. onyx. black. smooth. pendant. braided cord. simple. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
+    tags: []
+  - name: Gold Goblet
+    rarity: common
+    type: Treasure
+    description: A small gold goblet worked with scenes of harvest revels.
+    price: 8 gp
+    icon: treasure-icons/075-gold-goblet.png
+    prompt: >-
+      game item icon. gold. goblet. small. ornate. scenes of harvest. revels. ancient. white background. comic style.
+      avoid any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Pearl Earrings
+    rarity: common
+    type: Treasure
+    description: A matched pair of pearl earrings on silver hooks.
+    price: 8 gp
+    icon: treasure-icons/078-pearl-earrings.png
+    prompt: >-
+      game item icon. pearls. white. rounded. silver. hooks. small. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Jade Statuette
+    rarity: common
+    type: Treasure
+    description: A jade statuette of a crouching lion with inlaid eyes.
+    price: 8 gp
+    icon: treasure-icons/077-jade-statuette.png
+    prompt: >-
+      game item icon. jade. statuette. crouching lion. inlaid eyes. green. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
+    tags: []
+  - name: Silver Candelabrum
+    rarity: common
+    type: Treasure
+    description: A three-armed silver candelabrum blackened by old wax smoke.
+    price: 8 gp
+    icon: treasure-icons/078-silver-candelabrum.png
+    prompt: >-
+      game item icon. silver. candelabrum. three-armed. blackened. wax-smoked. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Ruby Brooch
+    rarity: common
+    type: Treasure
+    description: A gold brooch set with a small ruby and intricate scrollwork.
+    price: 8 gp
+    icon: treasure-icons/081-ruby-brooch.png
+    prompt: >-
+      game item icon. gold. small ruby. intricate scrollwork. brooch. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Fur Mantle
+    rarity: common
+    type: Treasure
+    description: A finely preserved fur mantle lined with satin.
+    price: 9 gp
+    icon: treasure-icons/082-fur-mantle.png
+    prompt: >-
+      game item icon. fur. mantle. lined. satin. brown. soft. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
+    tags: []
+  - name: Moonstone Charm
+    rarity: common
+    type: Treasure
+    description: A moonstone charm that glows softly in bright light.
+    price: 9 gp
+    icon: treasure-icons/081-moonstone-charm.png
+    prompt: >-
+      game item icon. moonstone. charm. soft. white background. comic style. avoid any kind of frames. avoid duplicated
+      items. avoid magic.
+    tags: []
+  - name: Gold Bracelet
+    rarity: common
+    type: Treasure
+    description: A heavy gold bracelet hammered into braided patterns.
+    price: 9 gp
+    icon: treasure-icons/084-gold-bracelet.png
+    prompt: >-
+      game item icon. gold. heavy. braided. patterns. hammered. metal. ornate. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Silver Mask
+    rarity: common
+    type: Treasure
+    description: A polished silver half-mask once used in noble revels.
+    price: 9 gp
+    icon: treasure-icons/085-silver-mask.png
+    prompt: >-
+      game item icon. silver. mask. half. polished. metallic. ornate. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Crystal Ewer
+    rarity: common
+    type: Treasure
+    description: A graceful crystal ewer with a narrow neck and silver handle.
+    price: 10 gp
+    icon: treasure-icons/086-crystal-ewer.png
+    prompt: >-
+      game item icon. crystal ewer. narrow neck. silver handle. ornate. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Emerald Clasp
+    rarity: common
+    type: Treasure
+    description: A cloak clasp of worked gold set with a green emerald chip.
+    price: 10 gp
+    icon: treasure-icons/087-emerald-clasp.png
+    prompt: >-
+      game item icon. gold. worked. green. emerald. chip. small. circular. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
+    tags: []
+  - name: Ivory Scepter
+    rarity: common
+    type: Treasure
+    description: A ceremonial ivory scepter tipped with silver leaves.
+    price: 10 gp
+    icon: treasure-icons/088-ivory-scepter.png
+    prompt: >-
+      game item icon. ivory. scepter. silver. leaves. pointed. ornate. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Gold Circlet
+    rarity: common
+    type: Treasure
+    description: A slender gold circlet fit for a courtly celebration.
+    price: 10 gp
+    icon: treasure-icons/089-gold-circlet.png
+    prompt: >-
+      game item icon. gold. circlet. slender. ornate. metallic. shiny. simple. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Pearl Necklace
+    rarity: common
+    type: Treasure
+    description: A short necklace of near-matched pearls on a silver thread.
+    price: 11 gp
+    icon: treasure-icons/090-pearl-necklace.png
+    prompt: >-
+      game item icon. pearls. white. matched. silver thread. delicate. short. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Jade Mirror
+    rarity: common
+    type: Treasure
+    description: A bronze-backed mirror framed in carved green jade.
+    price: 11 gp
+    icon: treasure-icons/089-jade-mirror.png
+    prompt: >-
+      game item icon. bronze. green jade. framed. mirror. circular. white background. comic style. avoid any kind of
+      frames. avoid duplicated items. avoid magic
+    tags: []
+  - name: Ruby Seal
+    rarity: common
+    type: Treasure
+    description: A noble seal ring set with a small but vivid ruby.
+    price: 11 gp
+    icon: treasure-icons/092-ruby-seal.png
+    prompt: >-
+      game item icon. ring. gold. ornate. small ruby. set. circular. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Golden Idol
+    rarity: common
+    type: Treasure
+    description: A small golden household idol with careful artisan detail.
+    price: 12 gp
+    icon: treasure-icons/093-golden-idol.png
+    prompt: >-
+      game item icon. small. golden. household idol. careful detail. artisan crafted. white background. comic style.
+      avoid any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Opal Bracelet
+    rarity: common
+    type: Treasure
+    description: An elegant bracelet set with several tiny opals.
+    price: 12 gp
+    icon: treasure-icons/092-opal-bracelet.png
+    prompt: >-
+      game item icon. opals. tiny. blue. set. on. silver. chain. elegant. white background. comic style. avoid any kind
+      of frames. avoid duplicated items. avoid cutoff item.
+    tags: []
+  - name: Sapphire Pendant
+    rarity: common
+    type: Treasure
+    description: A teardrop sapphire pendant on a fine silver chain.
+    price: 12 gp
+    icon: treasure-icons/093-sapphire-pendant.png
+    prompt: >-
+      game item icon. teardrop sapphire. fine silver chain. delicate. white background. comic style. avoid any kind of
+      frames. avoid duplicated items. avoid cut off item.
+    tags: []
+  - name: Jade Casket
+    rarity: common
+    type: Treasure
+    description: A fitted jade casket lined inside with faded blue silk.
+    price: 13 gp
+    icon: treasure-icons/096-jade-casket.png
+    prompt: >-
+      game item icon. jade. casket. lined. blue. silk. faded. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
+    tags: []
+  - name: Golden Diadem
+    rarity: common
+    type: Treasure
+    description: A golden diadem with leaf motifs and tiny inset stones.
+    price: 14 gp
+    icon: treasure-icons/097-golden-diadem.png
+    prompt: >-
+      game item icon. golden. diadem. leaf. motifs. tiny. stones. inset. white background. comic style. avoid any kind
+      of frames. avoid duplicated items..
+    tags: []
+  - name: Silver Harp
+    rarity: common
+    type: Treasure
+    description: A miniature silver harp made as a decorative art piece.
+    price: 15 gp
+    icon: treasure-icons/098-silver-harp.png
+    prompt: >-
+      game item icon. miniature. silver. harp. strings. curved. ornate. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Gemmed Idol
+    rarity: common
+    type: Treasure
+    description: A carved idol whose eyes are set with tiny semiprecious gems.
+    price: 15 gp
+    icon: treasure-icons/099-gemmed-idol.png
+    prompt: >-
+      game item icon. carved idol. semiprecious gems. tiny eyes. common treasure. white background. comic style. avoid
+      any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Ruby Necklace
+    rarity: common
+    type: Treasure
+    description: A necklace of gold links bearing three small rubies.
+    price: 16 gp
+    icon: treasure-icons/100-ruby-necklace.png
+    prompt: >-
+      game item icon. gold. links. small. rubies. three. circular. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Mini Painting
+    rarity: common
+    type: Treasure
+    description: A beautifully executed miniature painting in a gilded frame.
+    price: 17 gp
+    icon: treasure-icons/099-mini-painting.png
+    prompt: >-
+      game item icon. miniature painting. gilded frame. small. oil colors. delicate brushstrokes. white background.
+      comic style. avoid any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Opal Diadem
+    rarity: common
+    type: Treasure
+    description: A noble diadem crowned with a luminous central opal.
+    price: 18 gp
+    icon: treasure-icons/102-opal-diadem.png
+    prompt: >-
+      game item icon. diadem. gold. ornate. central opal. glowing. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Emerald Idol
+    rarity: common
+    type: Treasure
+    description: A heavy gold-and-stone idol set with tiny emerald chips.
+    price: 22 gp
+    icon: treasure-icons/103-emerald-idol.png
+    prompt: >-
+      game item icon. gold. heavy. stone. emerald chips. idol. small. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Noble Signet
+    rarity: common
+    type: Treasure
+    description: A massive golden signet ring bearing the seal of a lost house.
+    price: 25 gp
+    icon: treasure-icons/104-noble-signet.png
+    prompt: >-
+      game item icon. golden. massive. signet ring. circular. raised seal. crest. ornate. white background. comic style.
+      avoid any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Star Sapphire
+    rarity: common
+    type: Treasure
+    description: A large star sapphire of unusual clarity wrapped in cloth.
+    price: 30 gp
+    icon: treasure-icons/105-star-sapphire.png
+    prompt: >-
+      game item icon. large star sapphire. unusual clarity. blue. wrapped in cloth. white background. comic style. avoid
+      any kind of frames. avoid duplicated items..
+    tags: []

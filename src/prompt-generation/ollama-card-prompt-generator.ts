@@ -53,6 +53,7 @@ type OllamaCardPromptGeneratorOptions = {
 };
 
 const PROMPT_PREFIX = 'game item icon';
+// todo: add negative prompt. no labels. avoid cut off images
 const PROMPT_POSTFIX_FRAGMENTS = ['white background', 'comic style', 'avoid any kind of frames. avoid duplicated items.'];
 
 function cleanText(value: unknown): string {
