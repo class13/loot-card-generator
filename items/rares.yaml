@@ -1,0 +1,303 @@
+cards: 
+  - name: Potion of Greater Healing
+    rarity: rare
+    quantity: 8
+    type: Consumable
+    description: "You regain 4d4 + 4 hit points when you drink this potion."
+    icon: rare-icons/potion-of-greater-healing.png
+    tags: []
+  - name: Potion of Healing
+    rarity: rare
+    quantity: 12
+    type: Consumable
+    description: "You regain 2d4 + 2 hit points when you drink this potion, and its red liquid glimmers when agitated."
+    icon: rare-icons/potion-of-healing.png
+    tags: []
+  - name: Oil of Sharpness
+    rarity: rare
+    quantity: 3
+    type: Consumable
+    description: "This clear, sparkling oil coats a slashing or piercing weapon, making it magical and granting +3 to attack and damage rolls for 1 hour."
+    icon: rare-icons/oil-of-sharpness.png
+    tags: []
+  - name: Potion of Speed
+    rarity: rare
+    quantity: 5
+    type: Consumable
+    description: "When you drink this potion, you gain the effect of the Haste spell for 1 minute with no concentration required."
+    icon: rare-icons/potion-of-speed.png
+    tags: []
+  - name: Ring of Strength
+    rarity: rare
+    quantity: 1
+    type: Magic Item
+    description: "Grants +1 Strength while attuned; you can only be attuned to one of these rings at a time."
+    icon: rare-icons/ring-of-strength.png
+    prompt: >-
+      game item icon. a ring with a red gem in it. white background. comic style. avoid any kind of frames. avoid
+      duplicated items..
+    tags: []
+  - name: Ring of Charisma
+    rarity: rare
+    quantity: 1
+    type: Magic Item
+    description: "Grants +1 Charisma while attuned; you can only be attuned to one of these rings at a time."
+    icon: rare-icons/ring-of-charisma.png
+    prompt: >-
+      game item icon. a ring with a purple gem in it. white background. comic style. avoid any kind of frames. avoid
+      duplicated items..
+    tags: []
+  - name: Ring of Dexterity
+    rarity: rare
+    quantity: 1
+    type: Magic Item
+    description: "Grants +1 Dexterity while attuned; you can only be attuned to one of these rings at a time."
+    icon: rare-icons/ring-of-dexterity.png
+    prompt: >-
+      game item icon. a ring with a green gem in it. white background. comic style. avoid any kind of frames. avoid
+      duplicated items..
+    tags: []
+  - name: Ring of Wisdom
+    rarity: rare
+    quantity: 1
+    type: Magic Item
+    description: "Grants +1 Wisdom while attuned; you can only be attuned to one of these rings at a time."
+    icon: rare-icons/ring-of-wisdom.png
+    prompt: >-
+      game item icon. a ring with a white gem in it. white background. comic style. avoid any kind of frames. avoid
+      duplicated items..
+    tags: []
+  - name: Ring of Constitution
+    rarity: rare
+    quantity: 1
+    type: Magic Item
+    description: "Grants +1 Constitution while attuned; you can only be attuned to one of these rings at a time."
+    icon: rare-icons/ring-of-constitution.png
+    prompt: >-
+      game item icon. a ring with a black gem in it. white background. comic style. avoid any kind of frames. avoid
+      duplicated items..
+    tags: []
+  - name: Ring of Intelligence
+    rarity: rare
+    quantity: 1
+    type: Magic Item
+    description: "Grants +1 Intelligence while attuned; you can only be attuned to one of these rings at a time."
+    icon: rare-icons/ring-of-intelligence.png
+    prompt: >-
+      game item icon. a ring with a blue gem in it. white background. comic style. avoid any kind of frames. avoid
+      duplicated items..
+    tags: []
+  - name: Immovable Rod
+    rarity: rare
+    quantity: 1
+    type: Magic Item
+    description: "Pressing the button fixes this iron rod in place until it is pressed again; it can hold up to 8,000 pounds."
+    icon: rare-icons/immovable-rod.png
+    tags: []
+  - name: Mana Potion
+    rarity: rare
+    quantity: 10
+    type: Consumable
+    description: "Restores one of the drinker's highest-level spell slots when consumed."
+    icon: rare-icons/mana-potion.png
+    prompt: >-
+      game item icon. glowing blue liquid in a glass vial.  white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
+    tags: []
+  - name: Boots of Elvenkind
+    rarity: rare
+    quantity: 1
+    type: Magic Item
+    description: "These boots make your steps soundless and give you advantage on Dexterity (Stealth) checks that rely on moving silently."
+    icon: rare-icons/boots-of-elvenkind.png
+    tags: []
+  - name: Liquid Luck
+    rarity: rare
+    quantity: 6
+    type: Consumable
+    description: "This rare substance grants a +1 bonus to all rolls and checks for 1 hour and a useful gut-feeling divination about your current goals."
+    prompt: >-
+      game item icon. glittering liquid. iridescent colors. in small vial without label. white background. comic style.
+      avoid any kind of frames. avoid duplicated items..
+    tags: []
+    icon: rare-icons/liquid-luck.png
+  - name: Smoke Bomb
+    rarity: rare
+    quantity: 5
+    type: Consumable
+    description: "A bag of 3 smoke bombs; throw one up to 60 feet, and one round after it lands it creates a heavily obscured 20-foot-radius smoke cloud."
+    prompt: >-
+      game item icon. small leather pouch with smoke bombs. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
+    tags: []
+    icon: rare-icons/smoke-bomb.png
+  - name: Potion of Fire Resistance
+    rarity: rare
+    quantity: 5
+    type: Consumable
+    description: "When you drink this potion, you gain resistance to fire damage for 1 hour."
+    icon: rare-icons/potion-of-fire-resistance.png
+    prompt: >-
+      game item icon. warm glass bottle. golden cap. flames dancing. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
+  - name: Potion of Climbing
+    rarity: rare
+    quantity: 4
+    type: Consumable
+    description: "For 1 hour, this potion gives you a climbing speed equal to your walking speed and advantage on Athletics checks made to climb."
+    icon: rare-icons/potion-of-climbing.png
+    prompt: >-
+      game item icon. gritty liquid. brown bottle. corked. with a small label with an image of a mountain on it but no
+      text. white background. comic style. avoid any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Potion of Water Breathing
+    rarity: rare
+    quantity: 4
+    type: Consumable
+    description: "You can breathe underwater for 1 hour after drinking this cloudy green potion."
+    icon: rare-icons/potion-of-water-breathing.png
+    prompt: >-
+      game item icon. blue. glass bottle. stoppered. aquatic. bubbles. droplets. white background. comic style. avoid
+      any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Potion of Heroism
+    rarity: rare
+    quantity: 5
+    type: Consumable
+    description: "For 1 minute, the drinker is immune to being frightened and gains 2 temporary hit points at the start of each of its turns."
+    icon: rare-icons/potion-of-heroism.png
+    prompt: >-
+      game item icon. golden glowing liquid. glowing blue lines. in potion bottle. white background. comic style. avoid
+      any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Keoghtom's Ointment
+    rarity: rare
+    quantity: 2
+    type: Consumable
+    description: "This jar contains 1d4 + 1 doses; one dose restores 2d8 + 2 hit points, cures disease, and ends the poisoned condition."
+    icon: rare-icons/keoghtoms-ointment.png
+    prompt: >-
+      game item icon. small glass vial. golden lid. rolled parchment label. dried herbs. glowing blue liquid. white
+      background. comic style. avoid any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Potion of Invisibility
+    rarity: rare
+    quantity: 2
+    type: Consumable
+    description: "This potion's container looks empty, but when you drink it, you become invisible for 1 hour unless you attack or cast a spell."
+    icon: rare-icons/potion-of-invisibility.png
+    prompt: >-
+      game item icon. empty glass vial. stoppered. tiny label. white background. comic style. avoid any kind of frames.
+      avoid duplicated items..
+    tags: []
+  - name: Acid Flask
+    rarity: rare
+    quantity: 3
+    type: Consumable
+    description: "Splash or throw this vial as an improvised weapon; on a hit, the target takes 2d6 acid damage."
+    icon: rare-icons/acid-flask.png
+    prompt: >-
+      game item icon. stoppered flask. glass. corroded metal lid. green liquid inside. white background. comic style.
+      avoid any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Alchemist's Fire
+    rarity: rare
+    quantity: 2
+    type: Consumable
+    description: "This sticky fluid ignites on contact with air; on a hit, it deals 1d4 fire damage at the start of each turn until the flames are extinguished."
+    icon: rare-icons/alchemists-fire.png
+    prompt: >-
+      game item icon. volatile flask. golden. glowing flames. wisps of smoke. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+  - name: Cloak of Protection
+    rarity: rare
+    quantity: 1
+    type: Magic Item
+    description: "You gain a +1 bonus to AC and saving throws while you wear this cloak."
+    icon: rare-icons/cloak-of-protection.png
+    prompt: >-
+      game item icon. tattered cloak. dark blue. intricate silver threads. worn velvet texture. protective aura. white
+      background. comic style. avoid any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Bag of Holding
+    rarity: rare
+    quantity: 1
+    type: Magic Item
+    description: "This bag is far larger inside than out, can hold up to 500 pounds, and always weighs 15 pounds regardless of its contents."
+    icon: rare-icons/bag-of-holding.png
+    prompt: >-
+      game item icon. leather bag. worn. oversized. white background. comic style. avoid any kind of frames. avoid
+      duplicated items..
+    tags: []
+  - name: Scroll of Misty Step
+    rarity: rare
+    quantity: 4
+    type: Consumable
+    description: "This scroll lets you teleport up to 30 feet to an unoccupied space you can see, briefly surrounded by silvery mist."
+    icon: rare-icons/scroll-of-misty-step.png
+    prompt: >-
+      game item icon. scroll. parchment. yellowed. worn. mystical symbols. glowing runes. white background. comic style.
+      avoid any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Scroll of Shield
+    rarity: rare
+    quantity: 3
+    type: Consumable
+    description: "This scroll conjures an invisible barrier of magical force that grants +5 AC until the start of your next turn and negates magic missile."
+    icon: rare-icons/scroll-of-shield.png
+    prompt: >-
+      game item icon. scroll. parchment. yellowed. worn leather strap. intricate runes. glowing blue. white background.
+      comic style. avoid any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Scroll of Fireball
+    rarity: rare
+    quantity: 1
+    type: Consumable
+    description: "This scroll unleashes an explosion of flame in a 20-foot-radius sphere, dealing 8d6 fire damage on a failed Dexterity save."
+    icon: rare-icons/scroll-of-fireball.png
+    prompt: >-
+      game item icon. scroll. yellowed parchment. rolled up. flame script. ancient runes. white background. comic style.
+      avoid any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Scroll of Web
+    rarity: rare
+    quantity: 1
+    type: Consumable
+    description: "This scroll conjures thick, sticky webs that fill a 20-foot cube, restrain creatures, and burn away if exposed to fire."
+    icon: rare-icons/scroll-of-web.png
+    prompt: >-
+      game item icon. scroll. parchment. yellowed. worn. web-like patterns. intricate. white background. comic style.
+      avoid any kind of frames. avoid duplicated items..
+    tags: []
+  - name: Scroll of Dispel Magic
+    rarity: rare
+    quantity: 1
+    type: Consumable
+    description: "This scroll ends one spell effect of 3rd level or lower on a creature, object, or magical effect within range."
+    prompt: >-
+      game item icon. scroll. yellowed parchment. worn leather strap. intricate script. glowing runes. white background.
+      comic style. avoid any kind of frames. avoid duplicated items..
+    tags: []
+    icon: rare-icons/scroll-of-dispel-magic.png
+  - name: Antitoxin
+    rarity: rare
+    quantity: 2
+    type: Consumable
+    description: "A creature that drinks this vial gains advantage on saving throws against poison for 1 hour."
+    prompt: >-
+      game item icon. bitter liquid. small vial. glass. stoppered. green label. white background. comic style. avoid any
+      kind of frames. avoid duplicated items..
+    tags: []
+    icon: rare-icons/antitoxin.png
+  - name: Thunderstone
+    rarity: rare
+    quantity: 2
+    type: Consumable
+    description: "Throw this sparkling stone up to 20 feet; on impact it bursts with light and thunder, damaging nearby creatures and potentially blinding and deafening them."
+    icon: rare-icons/thunderstone.png
+    prompt: >-
+      game item icon. small stone. cracked surface. grey. worn texture. white background. comic style. avoid any kind of
+      frames. avoid duplicated items..
+    tags: []
