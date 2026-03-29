@@ -1,0 +1,7 @@
+interface:
+  display_name: "File To Item YAML"
+  short_description: "Convert source files into loot-card YAML"
+  default_prompt: "Use $file-to-item-yaml to convert this source file into the Loot Card Generator item YAML format."
+
+policy:
+  allow_implicit_invocation: true
