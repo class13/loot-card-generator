@@ -6,20 +6,18 @@ Generate print-ready A4 PDFs of D&D-style loot cards from a YAML file.
 
 ```bash
 npm install
-node bin/loot-cards.js examples/loot.yaml -o output.pdf
+node dist/bin/loot-cards.js examples/loot.yaml -o output.pdf
 ```
 
-## Generate Icons With ComfyUI
+## Generate Icons With Gemini
 
-Generate local icon images from your card YAML using ComfyUI (`http://localhost:8000`), an SDXL checkpoint, and the `game_icon_v1.0.safetensors` LoRA:
+Generate icon images from your card YAML using Gemini:
 
 ```bash
-node bin/loot-card-icons.js examples/loot.yaml --in-place
+node dist/bin/loot-card-icons.js examples/loot.yaml --in-place
 ```
 
 This generates PNG files in `icons/` (relative to the YAML directory), and writes `icon:` paths back to your YAML when `--in-place` is used.
-
-Place the LoRA file at `ComfyUI/models/loras/game_icon_v1.0.safetensors` and click **Refresh** in ComfyUI if needed.
 
 Prompt format per card:
 - `2d icon. {short object prompt}. white background. single object only, centered composition, isolated asset, one subject, full object in frame, no repeated elements.`
@@ -74,7 +72,7 @@ Options:
 Fast iteration example:
 
 ```bash
-node bin/loot-card-icons.js examples/loot.yaml --in-place --draft --limit 3
+node dist/bin/loot-card-icons.js examples/loot.yaml --in-place --draft --limit 3
 ```
 
 ## Remove White Backgrounds With rembg
@@ -82,14 +80,14 @@ node bin/loot-card-icons.js examples/loot.yaml --in-place --draft --limit 3
 Use the batch helper script to remove backgrounds from generated images:
 
 ```bash
-bin/remove-bg-rembg.sh items/icons items/icons-transparent
+dist/bin/remove-bg-rembg.sh items/icons items/icons-transparent
 ```
 
 If your images are in another folder, pass that folder as the first argument.  
 Optional: choose model with `REMBG_MODEL` (default is `u2net`):
 
 ```bash
-REMBG_MODEL=u2net_human_seg bin/remove-bg-rembg.sh examples/icons
+REMBG_MODEL=u2net_human_seg dist/bin/remove-bg-rembg.sh examples/icons
 ```
 
 ## Fit Transparent Icons To 1024 Canvas
@@ -98,13 +96,13 @@ After background removal, normalize each icon so the visible object fills a
 `1024x1024` image using its alpha bounding box, with a small edge margin:
 
 ```bash
-bin/fit-icons-to-canvas.py items/icons-transparent items/icons-fit-1024
+dist/bin/fit-icons-to-canvas.py items/icons-transparent items/icons-fit-1024
 ```
 
 Optional tuning:
 
 ```bash
-bin/fit-icons-to-canvas.py items/icons-transparent items/icons-fit-1024 --size 1024 --margin 48 --alpha-threshold 1
+dist/bin/fit-icons-to-canvas.py items/icons-transparent items/icons-fit-1024 --size 1024 --margin 48 --alpha-threshold 1
 ```
 
 ## Generate Prompts With Ollama
@@ -112,13 +110,13 @@ bin/fit-icons-to-canvas.py items/icons-transparent items/icons-fit-1024 --size 1
 Generate `prompt` and `negative_prompt` fields for each card using your local Ollama (`http://localhost:11434`):
 
 ```bash
-node bin/loot-card-prompts.js examples/loot.yaml --in-place --model llama3.1:8b
+node dist/bin/loot-card-prompts.js examples/loot.yaml --in-place --model llama3.1:8b
 ```
 
 Write to a separate file instead of overwriting:
 
 ```bash
-node bin/loot-card-prompts.js examples/loot.yaml --write-yaml examples/loot.with-prompts.yaml --model llama3.1
+node dist/bin/loot-card-prompts.js examples/loot.yaml --write-yaml examples/loot.with-prompts.yaml --model llama3.1
 ```
 
 ### Prompt CLI Reference
@@ -238,16 +236,16 @@ Options:
 
 ```bash
 # Preview layout in browser (fast, no PDF)
-node bin/loot-cards.js examples/loot.yaml --debug-html /tmp/preview.html && open /tmp/preview.html
+node dist/bin/loot-cards.js examples/loot.yaml --debug-html /tmp/preview.html && open /tmp/preview.html
 
 # 2-column layout, custom output path
-node bin/loot-cards.js examples/loot.yaml -c 2 -r 4 -o output.pdf
+node dist/bin/loot-cards.js examples/loot.yaml -c 2 -r 4 -o output.pdf
 
 # Apply a custom theme
-node bin/loot-cards.js examples/loot.yaml --theme examples/custom-theme.css -o output.pdf
+node dist/bin/loot-cards.js examples/loot.yaml --theme examples/custom-theme.css -o output.pdf
 
 # Auto-fill icons from game-icons.net for cards with no explicit icon
-node bin/loot-cards.js examples/loot.yaml --auto-icon -o output.pdf
+node dist/bin/loot-cards.js examples/loot.yaml --auto-icon -o output.pdf
 ```
 
 ## Auto-Icon (`--auto-icon`)
@@ -266,7 +264,7 @@ The lookup searches the card's `name`, `type`, and `tags` for keywords (e.g. `sw
 All visual values are CSS custom properties on `:root` in `styles/default.css`. To override them, create a CSS file that redeclares only the variables you want to change and pass it via `--theme`.
 
 ```bash
-node bin/loot-cards.js examples/loot.yaml --theme my-theme.css -o output.pdf
+node dist/bin/loot-cards.js examples/loot.yaml --theme my-theme.css -o output.pdf
 ```
 
 See `examples/custom-theme.css` for a minimal working example. Key properties:
